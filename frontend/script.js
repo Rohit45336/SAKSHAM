@@ -63,7 +63,7 @@ if (registerForm) {
         try {
 
             const response = await fetch(
-                "http://127.0.0.1:5000/api/students/register",
+                "https://saksham-backend-d0h9.onrender.com/api/students/register",
                 {
                     method: "POST",
 
@@ -158,7 +158,7 @@ if (loginForm) {
         try {
 
             const response = await fetch(
-                "http://127.0.0.1:5000/api/students/login",
+                "https://saksham-backend-d0h9.onrender.com/api/students/login",
                 {
                     method: "POST",
 
