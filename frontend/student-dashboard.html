@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Dashboard | SAKSHAM</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="dashboard-page">
+
+<!-- =========================================
+     TOP NAVIGATION
+========================================== -->
+
+<nav class="dashboard-navbar">
+
+    <div class="dashboard-logo">
+        <span class="logo-leaf">🌿</span>
+        SAKSHAM
+    </div>
+
+    <div class="dashboard-nav-center">
+
+        <a href="student-dashboard.html" class="active">
+            Dashboard
+        </a>
+
+        <a href="opportunities.html">
+            Opportunities
+        </a>
+
+        <a href="my-applications.html">
+            Applications
+        </a>
+
+    </div>
+
+    <div class="dashboard-nav-right">
+
+        <span class="welcome-text">
+            Student Portal
+        </span>
+
+        <button
+            class="logout-btn"
+            onclick="logoutStudent()">
+            Logout
+        </button>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================
+     HERO SECTION
+========================================== -->
+
+<main class="dashboard-container">
+
+    <section class="dashboard-hero">
+
+        <div class="hero-pattern hero-pattern-one"></div>
+        <div class="hero-pattern hero-pattern-two"></div>
+
+        <div class="hero-content">
+
+            <div class="hero-small-label">
+                🌿 SAKSHAM STUDENT PORTAL
+            </div>
+
+            <h1>
+                Empower Your Skills.
+                <span>Shape Your Future.</span>
+            </h1>
+
+            <p>
+                Build your professional profile, strengthen your
+                skills, discover meaningful opportunities and
+                connect with the world of AYUSH careers.
+            </p>
+
+            <div class="hero-actions">
+
+                <button
+                    class="hero-primary-btn"
+                    onclick="window.location.href='opportunities.html'">
+                    Explore Opportunities →
+                </button>
+
+                <button
+                    class="hero-secondary-btn"
+                    onclick="window.location.href='student-profile.html'">
+                    Complete My Profile
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="hero-visual">
+
+            <div class="hero-circle large-circle"></div>
+            <div class="hero-circle small-circle"></div>
+
+            <div class="hero-illustration">
+
+                <div class="illustration-leaf leaf-one">🌿</div>
+                <div class="illustration-leaf leaf-two">🍃</div>
+                <div class="illustration-icon">🎓</div>
+
+                <div class="illustration-text">
+                    <strong>Learn</strong>
+                    <span>Grow • Connect • Succeed</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         QUICK ACCESS
+    ========================================== -->
+
+    <section class="dashboard-section">
+
+        <div class="section-title-row">
+
+            <div>
+                <span class="section-label">
+                    QUICK ACCESS
+                </span>
+
+                <h2>
+                    Your Career Journey
+                </h2>
+            </div>
+
+            <p>
+                Everything you need in one place.
+            </p>
+
+        </div>
+
+
+
+        <div class="dashboard-cards">
+
+
+
+            <!-- PROFILE -->
+
+            <div class="dashboard-card profile-card">
+
+                <div class="card-top">
+
+                    <div class="dashboard-card-icon">
+                        👤
+                    </div>
+
+                    <span class="card-number">
+                        01
+                    </span>
+
+                </div>
+
+                <h2>
+                    My Profile
+                </h2>
+
+                <p>
+                    Manage your personal, academic and
+                    professional information.
+                </p>
+
+                <button
+                    class="dashboard-card-btn"
+                    onclick="window.location.href='student-profile.html'">
+                    View Profile →
+                </button>
+
+            </div>
+
+
+
+            <!-- SKILLS -->
+
+            <div class="dashboard-card skills-card">
+
+                <div class="card-top">
+
+                    <div class="dashboard-card-icon">
+                        🛠️
+                    </div>
+
+                    <span class="card-number">
+                        02
+                    </span>
+
+                </div>
+
+                <h2>
+                    My Skills
+                </h2>
+
+                <p>
+                    Add your skills and keep track of
+                    your current skill levels.
+                </p>
+
+                <button
+                    class="dashboard-card-btn"
+                    onclick="window.location.href='student-skills.html'">
+                    Manage Skills →
+                </button>
+
+                <a
+    href="skill-passport.html"
+    class="dashboard-card-btn"
+    style="display: inline-block; text-align: center; margin-top: 10px; text-decoration: none;">
+    🪪 AYUSH Skill Passport →
+</a>
+
+            </div>
+
+
+
+            <!-- SKILL MAPPING -->
+
+            <div class="dashboard-card mapping-card">
+
+                <div class="card-top">
+
+                    <div class="dashboard-card-icon">
+                        📊
+                    </div>
+
+                    <span class="card-number">
+                        03
+                    </span>
+
+                </div>
+
+                <h2>
+                    Skill Mapping
+                </h2>
+
+                <p>
+                    Identify skill gaps and understand
+                    what employers are looking for.
+                </p>
+
+                <button
+                    class="dashboard-card-btn"
+                    onclick="window.location.href='skill-mapping.html'">
+                    Explore Skills →
+                </button>
+
+            </div>
+
+
+
+            <!-- OPPORTUNITIES -->
+
+            <div class="dashboard-card opportunity-card">
+
+                <div class="card-top">
+
+                    <div class="dashboard-card-icon">
+                        💼
+                    </div>
+
+                    <span class="card-number">
+                        04
+                    </span>
+
+                </div>
+
+                <h2>
+                    Opportunities
+                </h2>
+
+                <p>
+                    Discover internships and career
+                    opportunities matching your profile.
+                </p>
+
+                <button
+                    class="dashboard-card-btn"
+                    onclick="window.location.href='opportunities.html'">
+                    Find Opportunities →
+                </button>
+
+            </div>
+
+
+
+            <!-- APPLICATIONS -->
+
+            <div class="dashboard-card application-card">
+
+                <div class="card-top">
+
+                    <div class="dashboard-card-icon">
+                        📋
+                    </div>
+
+                    <span class="card-number">
+                        05
+                    </span>
+
+                </div>
+
+                <h2>
+                    My Applications
+                </h2>
+
+                <p>
+                    Track your applications and monitor
+                    their progress.
+                </p>
+
+                <button
+                    class="dashboard-card-btn"
+                    onclick="window.location.href='my-applications.html'">
+                    Track Applications →
+                </button>
+
+            </div>
+
+
+
+            <!-- RECOMMENDATIONS -->
+
+            <div class="dashboard-card recommendation-card">
+
+                <div class="card-top">
+
+                    <div class="dashboard-card-icon">
+                        🎯
+                    </div>
+
+                    <span class="card-number">
+                        06
+                    </span>
+
+                </div>
+
+                <h2>
+                    Recommendations
+                </h2>
+
+                <p>
+                    Get personalized opportunities based
+                    on your skills and interests.
+                </p>
+
+                <button
+                    class="dashboard-card-btn"
+                    onclick="window.location.href='recommendations.html'">
+                    View Recommendations →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PROGRESS + STATS
+    ========================================== -->
+
+    <section class="progress-section">
+
+        <div class="progress-heading">
+
+            <span class="section-label">
+                YOUR PROGRESS
+            </span>
+
+            <h2>
+                Keep Moving Forward
+            </h2>
+
+            <p>
+                Build your profile and skills to unlock
+                better opportunities.
+            </p>
+
+        </div>
+
+
+
+        <div class="dashboard-stats">
+
+
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    🛠️
+                </div>
+
+                <div class="stat-content">
+                    <h3 id="skillsCount">0</h3>
+                    <p>Skills Added</p>
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    📋
+                </div>
+
+                <div class="stat-content">
+                    <h3 id="applicationsCount">0</h3>
+                    <p>Applications</p>
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    ⭐
+                </div>
+
+                <div class="stat-content">
+                    <h3 id="shortlistedCount">0</h3>
+                    <p>Shortlisted</p>
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    📈
+                </div>
+
+                <div class="stat-content">
+                    <h3 id="profileCompletion">0%</h3>
+                    <p>Profile Completion</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         AYUSH CAREER PATHWAYS
+    ========================================== -->
+
+    <section class="ayush-section">
+
+        <div class="section-title-row">
+
+            <div>
+                <span class="section-label">
+                    AYUSH CAREER PATHWAYS
+                </span>
+
+                <h2>
+                    Explore Your Discipline
+                </h2>
+            </div>
+
+            <p>
+                Discover opportunities across AYUSH domains.
+            </p>
+
+        </div>
+
+
+
+        <div class="ayush-grid">
+
+            <div class="ayush-item ayurveda">
+                <span>🌿</span>
+                <strong>Ayurveda</strong>
+                <small>BAMS</small>
+            </div>
+
+            <div class="ayush-item homeopathy">
+                <span>🌸</span>
+                <strong>Homeopathy</strong>
+                <small>BHMS</small>
+            </div>
+
+            <div class="ayush-item yoga">
+                <span>🧘</span>
+                <strong>Yoga & Naturopathy</strong>
+                <small>BNYS</small>
+            </div>
+
+            <div class="ayush-item unani">
+                <span>🌱</span>
+                <strong>Unani</strong>
+                <small>BUMS</small>
+            </div>
+
+            <div class="ayush-item siddha">
+                <span>🍃</span>
+                <strong>Siddha</strong>
+                <small>BSMS</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CAREER MESSAGE
+    ========================================== -->
+
+    <section class="career-banner">
+
+        <div class="career-banner-content">
+
+            <span>
+                🌿 YOUR FUTURE STARTS HERE
+            </span>
+
+            <h2>
+                Learn. Build. Connect. Succeed.
+            </h2>
+
+            <p>
+                SAKSHAM helps you turn your skills into
+                real career opportunities.
+            </p>
+
+        </div>
+
+        <button
+            onclick="window.location.href='opportunities.html'">
+            Explore Opportunities →
+        </button>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================== -->
+
+<footer class="dashboard-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+                🌿 SAKSHAM
+            </div>
+
+            <p>
+                Empowering Skills. Connecting Opportunities.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <a href="student-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="opportunities.html">
+                Opportunities
+            </a>
+
+            <a href="my-applications.html">
+                Applications
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 SAKSHAM. All Rights Reserved.
+        </p>
+
+        <p>
+            Student Skill Development & Opportunity Platform
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+<script>
+
+    // =========================================
+    // LOAD STUDENT DASHBOARD DATA
+    // =========================================
+
+    async function loadDashboardData() {
+
+        const studentId =
+            localStorage.getItem("studentId");
+
+        if (!studentId) {
+
+            window.location.href =
+                "login.html";
+
+            return;
+        }
+
+        try {
+
+            const token =
+                localStorage.getItem("token");
+
+            if (!token) {
+
+                window.location.href =
+                    "login.html";
+
+                return;
+            }
+
+
+            // =====================================
+            // LOAD STUDENT PROFILE
+            // =====================================
+
+            const response =
+                await fetch(
+                    "http://127.0.0.1:5000/api/students/" +
+                    studentId,
+                    {
+                        headers: {
+                            "Authorization":
+                                "Bearer " + token
+                        }
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            if (!response.ok) {
+
+                console.error(
+                    data.message
+                );
+
+                return;
+            }
+
+
+            const student =
+                data.student;
+
+
+            // =====================================
+            // PROFILE COMPLETION
+            // =====================================
+
+            let completedFields = 0;
+
+            const totalFields = 8;
+
+
+            // Basic information
+
+            if (student.name) {
+                completedFields++;
+            }
+
+            if (student.email) {
+                completedFields++;
+            }
+
+
+            // Academic information
+
+            if (student.college) {
+                completedFields++;
+            }
+
+            if (student.degree) {
+                completedFields++;
+            }
+
+            if (student.branch) {
+                completedFields++;
+            }
+
+            if (student.graduationYear) {
+                completedFields++;
+            }
+
+
+            // AYUSH information
+
+            if (student.discipline) {
+                completedFields++;
+            }
+
+            if (
+                student.skills &&
+                student.skills.length > 0
+            ) {
+                completedFields++;
+            }
+
+
+            // Calculate percentage
+
+            const completionPercentage =
+                Math.round(
+                    (completedFields / totalFields) * 100
+                );
+
+
+            // Display percentage
+
+            const profileCompletion =
+                document.getElementById(
+                    "profileCompletion"
+                );
+
+
+            if (profileCompletion) {
+
+                profileCompletion.textContent =
+                    completionPercentage + "%";
+            }
+
+
+
+            // =====================================
+            // SKILLS COUNT
+            // =====================================
+
+            const skillsCount =
+                document.getElementById(
+                    "skillsCount"
+                );
+
+
+            if (skillsCount) {
+
+                skillsCount.textContent =
+                    student.skills
+                        ? student.skills.length
+                        : 0;
+            }
+
+
+
+            // =====================================
+            // LOAD APPLICATIONS
+            // =====================================
+
+            const applicationsResponse =
+                await fetch(
+                    "http://127.0.0.1:5000/api/applications/student/" +
+                    studentId,
+                    {
+                        headers: {
+                            "Authorization":
+                                "Bearer " + token
+                        }
+                    }
+                );
+
+
+            const applicationsData =
+                await applicationsResponse.json();
+
+
+            // Check applications API response
+
+            if (!applicationsResponse.ok) {
+
+                console.error(
+                    applicationsData.message
+                );
+
+                return;
+            }
+
+
+            // =====================================
+            // GET APPLICATION LIST
+            // =====================================
+
+            const applications =
+                applicationsData.applications || [];
+
+
+
+            // =====================================
+            // APPLICATIONS COUNT
+            // =====================================
+
+            const applicationsCount =
+                document.getElementById(
+                    "applicationsCount"
+                );
+
+
+            if (applicationsCount) {
+
+                applicationsCount.textContent =
+                    applications.length;
+            }
+
+
+
+            // =====================================
+            // SHORTLISTED APPLICATIONS COUNT
+            // =====================================
+
+            const shortlistedCount =
+                document.getElementById(
+                    "shortlistedCount"
+                );
+
+
+            if (shortlistedCount) {
+
+                const shortlistedApplications =
+                    applications.filter(
+                        application =>
+                            application.status ===
+                            "Shortlisted"
+                    );
+
+
+                shortlistedCount.textContent =
+                    shortlistedApplications.length;
+            }
+
+
+        } catch (error) {
+
+            console.error(
+                "Dashboard data error:",
+                error
+            );
+
+        }
+
+    }
+
+
+    // =========================================
+    // START DASHBOARD
+    // =========================================
+
+    loadDashboardData();
+
+</script>
+
+</body>
+
+</html>

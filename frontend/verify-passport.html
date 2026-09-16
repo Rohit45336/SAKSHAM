@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Verify Skill Passport | SAKSHAM</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f5f7fa,
+                    #e4ecf5
+                );
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+
+        }
+
+        .verification-container {
+
+            width: 100%;
+
+            max-width: 650px;
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 35px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0, 0, 0, 0.12);
+
+        }
+
+        .logo {
+
+            text-align: center;
+
+            font-size: 30px;
+
+            font-weight: bold;
+
+            color: #1f4e79;
+
+            margin-bottom: 10px;
+
+        }
+
+        .subtitle {
+
+            text-align: center;
+
+            color: #666;
+
+            margin-bottom: 30px;
+
+        }
+
+        .status {
+
+            text-align: center;
+
+            padding: 18px;
+
+            border-radius: 12px;
+
+            margin-bottom: 25px;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+        }
+
+        .verified {
+
+            background: #e8f7ee;
+
+            color: #16803c;
+
+            border: 1px solid #b7e4c7;
+
+        }
+
+        .not-verified {
+
+            background: #fdecec;
+
+            color: #c62828;
+
+            border: 1px solid #f5b5b5;
+
+        }
+
+        .passport-details {
+
+            display: none;
+
+        }
+
+        .detail-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 14px 0;
+
+            border-bottom: 1px solid #eee;
+
+        }
+
+        .detail-label {
+
+            font-weight: bold;
+
+            color: #555;
+
+        }
+
+        .detail-value {
+
+            text-align: right;
+
+            color: #222;
+
+        }
+
+        .footer {
+
+            text-align: center;
+
+            margin-top: 30px;
+
+            color: #777;
+
+            font-size: 13px;
+
+        }
+
+        @media (max-width: 600px) {
+
+            .verification-container {
+
+                padding: 25px 20px;
+
+            }
+
+            .detail-row {
+
+                flex-direction: column;
+
+                gap: 5px;
+
+            }
+
+            .detail-value {
+
+                text-align: left;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="verification-container">
+
+
+        <div class="logo">
+            SAKSHAM
+        </div>
+
+
+        <p class="subtitle">
+            Digital Skill Passport Verification
+        </p>
+
+
+        <div
+            id="verificationStatus"
+            class="status">
+
+            Verifying Passport...
+
+        </div>
+
+
+        <div
+            id="passportDetails"
+            class="passport-details">
+
+
+            <div class="detail-row">
+
+                <span class="detail-label">
+                    Passport ID
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="passportId">
+                </span>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span class="detail-label">
+                    Student Name
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="studentName">
+                </span>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span class="detail-label">
+                    College
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="studentCollege">
+                </span>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span class="detail-label">
+                    Degree
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="studentDegree">
+                </span>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span class="detail-label">
+                    Branch
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="studentBranch">
+                </span>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span class="detail-label">
+                    AYUSH Discipline
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="studentDiscipline">
+                </span>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span class="detail-label">
+                    Skill Level
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="studentSkillLevel">
+                </span>
+
+            </div>
+
+
+            <div class="detail-row">
+
+                <span class="detail-label">
+                    Graduation Year
+                </span>
+
+                <span
+                    class="detail-value"
+                    id="studentGraduation">
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer">
+
+            SAKSHAM Digital Skill Passport
+            <br>
+            Skill Verification System
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+
+        async function verifyPassport() {
+
+
+            const params =
+                new URLSearchParams(
+                    window.location.search
+                );
+
+
+            const passportId =
+                params.get("passport");
+
+
+            const status =
+                document.getElementById(
+                    "verificationStatus"
+                );
+
+
+            if (!passportId) {
+
+                status.textContent =
+                    "❌ Invalid Passport Link";
+
+                status.classList.add(
+                    "not-verified"
+                );
+
+                return;
+
+            }
+
+
+            try {
+
+
+                const response =
+                    await fetch(
+                        `http://localhost:5000/api/student/passport/verify/${encodeURIComponent(passportId)}`
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                if (!response.ok ||
+                    !data.verified) {
+
+
+                    status.textContent =
+                        "❌ Passport Not Verified";
+
+                    status.classList.add(
+                        "not-verified"
+                    );
+
+                    return;
+
+                }
+
+
+                status.textContent =
+                    "✅ Digital Skill Passport Verified";
+
+                status.classList.add(
+                    "verified"
+                );
+
+
+                document.getElementById(
+                    "passportDetails"
+                ).style.display = "block";
+
+
+                document.getElementById(
+                    "passportId"
+                ).textContent =
+                    data.passport.passportId;
+
+
+                document.getElementById(
+                    "studentName"
+                ).textContent =
+                    data.passport.name || "Not available";
+
+
+                document.getElementById(
+                    "studentCollege"
+                ).textContent =
+                    data.passport.college || "Not available";
+
+
+                document.getElementById(
+                    "studentDegree"
+                ).textContent =
+                    data.passport.degree || "Not available";
+
+
+                document.getElementById(
+                    "studentBranch"
+                ).textContent =
+                    data.passport.branch || "Not available";
+
+
+                document.getElementById(
+                    "studentDiscipline"
+                ).textContent =
+                    data.passport.discipline || "Not available";
+
+
+                document.getElementById(
+                    "studentSkillLevel"
+                ).textContent =
+                    data.passport.skillLevel || "Not available";
+
+
+                document.getElementById(
+                    "studentGraduation"
+                ).textContent =
+                    data.passport.graduationYear || "Not available";
+
+
+            } catch (error) {
+
+
+                console.error(
+                    "Verification error:",
+                    error
+                );
+
+
+                status.textContent =
+                    "❌ Unable to verify Passport";
+
+
+                status.classList.add(
+                    "not-verified"
+                );
+
+            }
+
+        }
+
+
+        verifyPassport();
+
+
+    </script>
+
+
+</body>
+
+</html>

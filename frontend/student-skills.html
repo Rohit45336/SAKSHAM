@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AYUSH Skill Passport | SAKSHAM</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page skills-page">
+
+    <!-- Navigation -->
+    <nav class="dashboard-navbar">
+
+        <div class="dashboard-logo">
+            SAKSHAM
+        </div>
+
+        <div class="dashboard-nav-right">
+
+            <span class="welcome-text">
+                AYUSH Skill Passport
+            </span>
+
+            <button
+                class="logout-btn"
+                onclick="logoutStudent()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="dashboard-container skills-container">
+
+        <!-- Page Hero -->
+        <section class="skills-hero">
+
+            <div class="skills-hero-content">
+
+                <p class="dashboard-label">
+                    AYUSH SKILL PASSPORT
+                </p>
+
+                <h1>
+                    Build Your Professional Skill Profile 🪷
+                </h1>
+
+                <p>
+                    Select your AYUSH discipline, choose your professional
+                    skills and create your digital SAKSHAM Skill Passport.
+                </p>
+
+            </div>
+
+            <div class="skills-hero-icon">
+                🪷
+            </div>
+
+        </section>
+
+
+        <!-- Step 1 -->
+        <section class="skill-builder-card">
+
+            <div class="skill-step-header">
+
+                <div class="skill-step-number">
+                    01
+                </div>
+
+                <div>
+                    <span class="skill-step-label">
+                        STEP ONE
+                    </span>
+
+                    <h2>
+                        Select Your AYUSH Discipline 🎓
+                    </h2>
+
+                    <p>
+                        Choose the discipline you are currently studying.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="skill-form-area">
+
+                <label for="discipline">
+                    AYUSH Discipline
+                </label>
+
+                <select id="discipline">
+
+                    <option value="">
+                        Select your discipline
+                    </option>
+
+                    <option value="BAMS">
+                        BAMS (Ayurveda)
+                    </option>
+
+                    <option value="BHMS">
+                        BHMS (Homoeopathy)
+                    </option>
+
+                    <option value="BNYS">
+                        BNYS (Naturopathy & Yoga)
+                    </option>
+
+                    <option value="BUMS">
+                        BUMS (Unani)
+                    </option>
+
+                    <option value="BSMS">
+                        BSMS (Siddha)
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- Step 2 -->
+        <section class="skill-builder-card">
+
+            <div class="skill-step-header">
+
+                <div class="skill-step-number">
+                    02
+                </div>
+
+                <div>
+                    <span class="skill-step-label">
+                        STEP TWO
+                    </span>
+
+                    <h2>
+                        Select Your Professional Skills 🛠️
+                    </h2>
+
+                    <p>
+                        Select the skills you currently have.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Dynamic skills will appear here -->
+            <div
+                id="skillsContainer"
+                class="ayush-skills-container">
+
+                <div class="skill-placeholder">
+
+                    <div class="skill-placeholder-icon">
+                        🎓
+                    </div>
+
+                    <h3>
+                        Select Your Discipline
+                    </h3>
+
+                    <p>
+                        Choose an AYUSH discipline above to view
+                        relevant professional skills.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Step 3 -->
+        <section class="skill-builder-card">
+
+            <div class="skill-step-header">
+
+                <div class="skill-step-number">
+                    03
+                </div>
+
+                <div>
+                    <span class="skill-step-label">
+                        STEP THREE
+                    </span>
+
+                    <h2>
+                        Select Your Skill Level 📈
+                    </h2>
+
+                    <p>
+                        Tell us your overall professional skill level.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="skill-level-area">
+
+                <label for="skillLevel">
+                    Your Overall Skill Level
+                </label>
+
+                <select id="skillLevel">
+
+                    <option value="">
+                        Select skill level
+                    </option>
+
+                    <option value="Beginner">
+                        Beginner
+                    </option>
+
+                    <option value="Intermediate">
+                        Intermediate
+                    </option>
+
+                    <option value="Advanced">
+                        Advanced
+                    </option>
+
+                </select>
+
+
+                <div class="skill-level-info">
+
+                    <div class="level-info-item">
+                        <span>🌱</span>
+                        <div>
+                            <strong>Beginner</strong>
+                            <small>Learning the fundamentals</small>
+                        </div>
+                    </div>
+
+                    <div class="level-info-item">
+                        <span>📚</span>
+                        <div>
+                            <strong>Intermediate</strong>
+                            <small>Comfortable with practical work</small>
+                        </div>
+                    </div>
+
+                    <div class="level-info-item">
+                        <span>⭐</span>
+                        <div>
+                            <strong>Advanced</strong>
+                            <small>Strong practical expertise</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Generate Passport -->
+        <section class="passport-action-card">
+
+            <div class="passport-action-icon">
+                🪷
+            </div>
+
+            <div class="passport-action-content">
+
+                <span class="skill-step-label">
+                    FINAL STEP
+                </span>
+
+                <h2>
+                    Create Your SAKSHAM Skill Passport
+                </h2>
+
+                <p>
+                    Your selected discipline, skills and skill level
+                    will be securely saved to your SAKSHAM profile.
+                </p>
+
+                <button
+                    class="primary-btn passport-generate-btn"
+                    onclick="generateSkillPassport()">
+
+                    ✨ Generate My Skill Passport
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Passport Result -->
+        <section
+            class="passport-result-section"
+            id="passportResult"
+            style="display: none;">
+
+            <div class="passport-result-header">
+
+                <div>
+                    <span class="skill-step-label">
+                        DIGITAL PROFILE
+                    </span>
+
+                    <h2>
+                        Your AYUSH Skill Passport 🪷
+                    </h2>
+
+                    <p>
+                        Your professional skill profile has been created.
+                    </p>
+                </div>
+
+                <div class="passport-badge">
+                    VERIFIED PROFILE
+                </div>
+
+            </div>
+
+
+            <div class="passport-main-card">
+
+                <div class="passport-profile-icon">
+                    👤
+                </div>
+
+                <div class="passport-profile-info">
+
+                    <h3>
+                        SAKSHAM Student
+                    </h3>
+
+                    <p>
+                        AYUSH Skill Profile
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="passport-details-grid">
+
+                <div class="passport-detail-box">
+
+                    <span>
+                        DISCIPLINE
+                    </span>
+
+                    <strong id="resultDiscipline">
+                    </strong>
+
+                </div>
+
+
+                <div class="passport-detail-box">
+
+                    <span>
+                        SKILL LEVEL
+                    </span>
+
+                    <strong id="resultLevel">
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="passport-skills-box">
+
+                <div class="passport-skills-title">
+
+                    <h3>
+                        🛠️ Selected Skills
+                    </h3>
+
+                    <span>
+                        Professional Skills
+                    </span>
+
+                </div>
+
+                <div id="resultSkills">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Back -->
+        <div class="profile-back">
+
+            <button
+                class="dashboard-card-btn"
+                onclick="window.location.href='student-dashboard.html'">
+
+                ← Back to Dashboard
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+
+        <div class="footer-logo">
+            SAKSHAM
+        </div>
+
+        <p>
+            Empowering Skills. Connecting Opportunities.
+        </p>
+
+        <p class="copyright">
+            © 2026 SAKSHAM. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+    <!-- AYUSH Skill Logic -->
+    <script>
+
+        const ayushSkills = {
+
+            BAMS: [
+                "Panchakarma",
+                "Herbal Formulation",
+                "Patient Counselling",
+                "Clinical Case-taking",
+                "Research & Publication",
+                "Pharmacovigilance"
+            ],
+
+            BHMS: [
+                "Clinical Case-taking",
+                "Patient Counselling",
+                "Homeopathic Pharmacy",
+                "Materia Medica",
+                "Research & Publication",
+                "Pharmacovigilance"
+            ],
+
+            BNYS: [
+                "Yoga Therapy",
+                "Naturopathy Diet Planning",
+                "Patient Counselling",
+                "Clinical Case-taking",
+                "Research & Publication",
+                "Lifestyle Management"
+            ],
+
+            BUMS: [
+                "Unani Clinical Practice",
+                "Herbal Formulation",
+                "Patient Counselling",
+                "Clinical Case-taking",
+                "Research & Publication",
+                "Pharmacovigilance"
+            ],
+
+            BSMS: [
+                "Siddha Clinical Practice",
+                "Herbal Formulation",
+                "Patient Counselling",
+                "Clinical Case-taking",
+                "Research & Publication",
+                "Pharmacovigilance"
+            ]
+
+        };
+
+
+        const disciplineSelect =
+            document.getElementById("discipline");
+
+        const skillsContainer =
+            document.getElementById("skillsContainer");
+
+
+        disciplineSelect.addEventListener(
+            "change",
+            function () {
+
+                const discipline = this.value;
+
+                skillsContainer.innerHTML = "";
+
+
+                if (!discipline) {
+
+                    skillsContainer.innerHTML = `
+                        <div class="skill-placeholder">
+
+                            <div class="skill-placeholder-icon">
+                                🎓
+                            </div>
+
+                            <h3>
+                                Select Your Discipline
+                            </h3>
+
+                            <p>
+                                Choose an AYUSH discipline above to view
+                                relevant professional skills.
+                            </p>
+
+                        </div>
+                    `;
+
+                    return;
+                }
+
+
+                const skills = ayushSkills[discipline];
+
+
+                skills.forEach(function (skill, index) {
+
+                    const skillItem =
+                        document.createElement("label");
+
+                    skillItem.className =
+                        "ayush-skill-item";
+
+
+                    skillItem.innerHTML = `
+
+                        <input
+                            type="checkbox"
+                            value="${skill}"
+                            class="skill-checkbox"
+                        >
+
+                        <span class="skill-check-box">
+                            ✓
+                        </span>
+
+                        <span class="skill-item-text">
+                            ${skill}
+                        </span>
+
+                    `;
+
+
+                    skillsContainer.appendChild(
+                        skillItem
+                    );
+
+                });
+
+            }
+        );
+
+
+        async function generateSkillPassport() {
+
+            const studentId =
+                localStorage.getItem("studentId");
+
+            const token =
+                localStorage.getItem("token");
+
+
+            if (!studentId) {
+
+                alert("Please login first.");
+
+                window.location.href =
+                    "login.html";
+
+                return;
+
+            }
+
+
+            const discipline =
+                document.getElementById(
+                    "discipline"
+                ).value;
+
+
+            const level =
+                document.getElementById(
+                    "skillLevel"
+                ).value;
+
+
+            const selectedSkills =
+                document.querySelectorAll(
+                    ".skill-checkbox:checked"
+                );
+
+
+            if (!discipline) {
+
+                alert(
+                    "Please select your AYUSH discipline."
+                );
+
+                return;
+
+            }
+
+
+            if (selectedSkills.length === 0) {
+
+                alert(
+                    "Please select at least one skill."
+                );
+
+                return;
+
+            }
+
+
+            if (!level) {
+
+                alert(
+                    "Please select your skill level."
+                );
+
+                return;
+
+            }
+
+
+            const skills =
+                Array.from(
+                    selectedSkills
+                ).map(
+                    function (checkbox) {
+                        return checkbox.value;
+                    }
+                );
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        "http://127.0.0.1:5000/api/students/" +
+                        studentId +
+                        "/skills",
+                        {
+                            method: "PUT",
+
+                            headers: {
+                                "Content-Type":
+                                    "application/json",
+
+                                "Authorization":
+                                    "Bearer " + token
+                            },
+
+                            body: JSON.stringify({
+                                discipline: discipline,
+                                skills: skills,
+                                skillLevel: level
+                            })
+                        }
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                if (!response.ok) {
+
+                    alert(data.message);
+
+                    return;
+
+                }
+
+
+                /* Passport Preview */
+
+                document.getElementById(
+                    "resultDiscipline"
+                ).textContent = discipline;
+
+
+                document.getElementById(
+                    "resultLevel"
+                ).textContent = level;
+
+
+                const resultSkills =
+                    document.getElementById(
+                        "resultSkills"
+                    );
+
+
+                resultSkills.innerHTML = "";
+
+
+                skills.forEach(
+                    function (skill) {
+
+                        const skillTag =
+                            document.createElement(
+                                "span"
+                            );
+
+
+                        skillTag.className =
+                            "passport-skill";
+
+
+                        skillTag.textContent =
+                            skill;
+
+
+                        resultSkills.appendChild(
+                            skillTag
+                        );
+
+                    }
+                );
+
+
+                document.getElementById(
+                    "passportResult"
+                ).style.display = "block";
+
+
+                document.getElementById(
+                    "passportResult"
+                ).scrollIntoView({
+                    behavior: "smooth"
+                });
+
+
+                alert(
+                    "AYUSH Skill Passport saved successfully! 🎉"
+                );
+
+
+            } catch (error) {
+
+                console.error(
+                    "Skill saving error:",
+                    error
+                );
+
+
+                alert(
+                    "Unable to save skills. " +
+                    "Please make sure the backend is running."
+                );
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

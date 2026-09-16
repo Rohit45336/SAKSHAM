@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skill Mapping | SAKSHAM</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page saksham-mapping-page">
+
+    <!-- Navigation -->
+    <nav class="dashboard-navbar">
+
+        <div class="dashboard-logo">
+            SAKSHAM
+        </div>
+
+        <div class="dashboard-nav-right">
+
+            <span class="welcome-text">
+                Skill Mapping
+            </span>
+
+            <button
+                class="logout-btn"
+                onclick="logoutStudent()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="mapping-container">
+
+        <!-- Hero -->
+        <section class="mapping-page-hero">
+
+            <div class="mapping-hero-icon">
+                📊
+            </div>
+
+            <div>
+                <p class="mapping-label">
+                    SAKSHAM • AYUSH CAREER INTELLIGENCE
+                </p>
+
+                <h1>
+                    Skill Mapping
+                </h1>
+
+                <p>
+                    Understand your current strengths, discover recommended
+                    skills, and identify areas that can strengthen your career profile.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Current Profile -->
+        <section class="mapping-modern-card">
+
+            <div class="mapping-section-heading">
+
+                <div class="mapping-heading-icon">
+                    👤
+                </div>
+
+                <div>
+                    <h2>Your Current Skill Profile</h2>
+
+                    <p>
+                        Your current AYUSH discipline and overall skill level.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="mapping-profile-grid">
+
+                <div class="mapping-info-box">
+
+                    <div class="mapping-info-icon">
+                        🌿
+                    </div>
+
+                    <div>
+                        <span>AYUSH Discipline</span>
+
+                        <strong id="mappingDiscipline">
+                            Loading...
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="mapping-info-box">
+
+                    <div class="mapping-info-icon">
+                        ⭐
+                    </div>
+
+                    <div>
+                        <span>Overall Skill Level</span>
+
+                        <strong id="mappingLevel">
+                            Loading...
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Current Skills -->
+        <section class="mapping-modern-card">
+
+            <div class="mapping-section-heading">
+
+                <div class="mapping-heading-icon">
+                    🛠️
+                </div>
+
+                <div>
+                    <h2>Your Current Skills</h2>
+
+                    <p>
+                        Skills currently included in your SAKSHAM profile.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div
+                id="currentSkills"
+                class="mapping-skills-area">
+
+                <p class="mapping-loading">
+                    Loading skills...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Recommended Skills -->
+        <section class="mapping-modern-card recommended-card">
+
+            <div class="mapping-section-heading">
+
+                <div class="mapping-heading-icon target-icon">
+                    🎯
+                </div>
+
+                <div>
+                    <h2>Recommended Skills</h2>
+
+                    <p>
+                        These skills can help strengthen your AYUSH career profile.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div
+                id="recommendedSkills"
+                class="mapping-skills-area">
+
+                <p class="mapping-loading">
+                    Recommendations will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Skill Gap -->
+        <section class="mapping-modern-card">
+
+            <div class="mapping-section-heading">
+
+                <div class="mapping-heading-icon">
+                    📈
+                </div>
+
+                <div>
+                    <h2>Skill Gap Overview</h2>
+
+                    <p>
+                        A quick overview of your current skill development journey.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="skill-gap-grid">
+
+                <div class="gap-stat">
+
+                    <div class="gap-stat-icon">
+                        🛠️
+                    </div>
+
+                    <span>
+                        Skills You Have
+                    </span>
+
+                    <strong id="skillsHave">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="gap-stat">
+
+                    <div class="gap-stat-icon">
+                        🎯
+                    </div>
+
+                    <span>
+                        Skills Recommended
+                    </span>
+
+                    <strong id="skillsRecommended">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="gap-stat">
+
+                    <div class="gap-stat-icon">
+                        📚
+                    </div>
+
+                    <span>
+                        Skills to Improve
+                    </span>
+
+                    <strong id="skillsGap">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Career Insight -->
+        <section class="mapping-insight-card">
+
+            <div class="mapping-insight-icon">
+                💡
+            </div>
+
+            <div>
+
+                <span class="mapping-insight-label">
+                    SAKSHAM CAREER INSIGHT
+                </span>
+
+                <h2>
+                    Build the skills that open more opportunities.
+                </h2>
+
+                <p>
+                    Keep improving your skill profile and use Skill Match
+                    to understand how well your skills align with available
+                    AYUSH opportunities.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Buttons -->
+        <div class="mapping-actions">
+
+            <button
+                class="mapping-action-btn secondary"
+                onclick="window.location.href='student-dashboard.html'">
+
+                ← Back to Dashboard
+
+            </button>
+
+
+            <button
+                class="mapping-action-btn primary"
+                onclick="window.location.href='student-skills.html'">
+
+                🛠️ Manage Skills
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+
+        <div class="footer-logo">
+            SAKSHAM
+        </div>
+
+        <p>
+            Empowering Skills. Connecting Opportunities.
+        </p>
+
+        <p class="copyright">
+            © 2026 SAKSHAM. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- Existing Skill Mapping Logic -->
+    <script>
+
+        async function loadSkillMapping() {
+
+            const studentId = localStorage.getItem("studentId");
+            const token = localStorage.getItem("token");
+
+            // Login check
+            if (!studentId) {
+
+                alert("Please login first.");
+
+                window.location.href = "login.html";
+
+                return;
+            }
+
+
+            try {
+
+                // Backend se student data lena
+                const response = await fetch(
+                    "http://127.0.0.1:5000/api/students/" + studentId,
+                    {
+                        headers: {
+                            "Authorization": "Bearer " + token
+                        }
+                    }
+                );
+
+
+                const data = await response.json();
+
+
+                if (!response.ok) {
+
+                    alert(data.message);
+
+                    return;
+                }
+
+
+                const student = data.student;
+
+
+                console.log("Student data:", student);
+                console.log("Discipline:", student.discipline);
+
+
+                // =====================================
+                // DISCIPLINE
+                // =====================================
+
+                document.getElementById("mappingDiscipline").textContent =
+                    student.discipline || "Not Added";
+
+
+                // =====================================
+                // SKILL LEVEL
+                // =====================================
+
+                document.getElementById("mappingLevel").textContent =
+                    student.skillLevel || "Not Added";
+
+
+                // =====================================
+                // CURRENT SKILLS
+                // =====================================
+
+                const currentSkills =
+                    document.getElementById("currentSkills");
+
+
+                if (student.skills && student.skills.length > 0) {
+
+                    currentSkills.innerHTML = "";
+
+
+                    student.skills.forEach(function(skill) {
+
+                        const skillItem =
+                            document.createElement("div");
+
+                        skillItem.className = "mapping-skill-pill";
+
+                        skillItem.textContent = "✓ " + skill;
+
+                        currentSkills.appendChild(skillItem);
+
+                    });
+
+
+                } else {
+
+                    currentSkills.innerHTML = `
+                        <p class="mapping-empty-message">
+                            No skills added yet.
+                        </p>
+                    `;
+
+                }
+
+
+                // =====================================
+                // SKILL COUNT
+                // =====================================
+
+                const currentSkillCount =
+                    student.skills ? student.skills.length : 0;
+
+
+                document.getElementById("skillsHave").textContent =
+                    currentSkillCount;
+
+
+                // =====================================
+                // RECOMMENDED SKILLS
+                // =====================================
+
+                let recommendedSkills = [];
+
+
+                // Ayurveda recommendations
+                if (student.discipline === "BAMS") {
+
+                    recommendedSkills = [
+                        "Clinical Documentation",
+                        "Patient Counselling",
+                        "Research Methodology",
+                        "Healthcare Communication"
+                    ];
+
+                }
+
+
+                // Yoga recommendations
+                else if (student.discipline === "Yoga") {
+
+                    recommendedSkills = [
+                        "Yoga Therapy",
+                        "Anatomy & Physiology",
+                        "Patient Counselling",
+                        "Wellness Management"
+                    ];
+
+                }
+
+
+                // Unani recommendations
+                else if (student.discipline === "Unani") {
+
+                    recommendedSkills = [
+                        "Unani Clinical Practice",
+                        "Regimental Therapy",
+                        "Patient Counselling",
+                        "Research Methodology"
+                    ];
+
+                }
+
+
+                // Siddha recommendations
+                else if (student.discipline === "Siddha") {
+
+                    recommendedSkills = [
+                        "Siddha Clinical Practice",
+                        "Herbal Medicine",
+                        "Clinical Documentation",
+                        "Healthcare Communication"
+                    ];
+
+                }
+
+
+                // Homoeopathy recommendations
+                else if (student.discipline === "Homoeopathy") {
+
+                    recommendedSkills = [
+                        "Clinical Practice",
+                        "Patient Counselling",
+                        "Case Taking",
+                        "Research Methodology"
+                    ];
+
+                }
+
+
+                // =====================================
+                // REMOVE SKILLS STUDENT ALREADY HAS
+                // =====================================
+
+                const studentSkills =
+                    student.skills || [];
+
+
+                recommendedSkills = recommendedSkills.filter(
+                    function(skill) {
+
+                        return !studentSkills.includes(skill);
+
+                    }
+                );
+
+
+                // =====================================
+                // DISPLAY RECOMMENDED SKILLS
+                // =====================================
+
+                const recommendedContainer =
+                    document.getElementById("recommendedSkills");
+
+
+                recommendedContainer.innerHTML = "";
+
+
+                if (recommendedSkills.length > 0) {
+
+                    recommendedSkills.forEach(function(skill) {
+
+                        const skillItem =
+                            document.createElement("div");
+
+                        skillItem.className = "mapping-recommended-pill";
+
+                        skillItem.textContent =
+                            "🎯 " + skill;
+
+                        recommendedContainer.appendChild(skillItem);
+
+                    });
+
+                } else {
+
+                    recommendedContainer.innerHTML = `
+                        <p class="mapping-empty-message">
+                            No additional skills recommended at the moment.
+                        </p>
+                    `;
+
+                }
+
+
+                // =====================================
+                // SKILL GAP
+                // =====================================
+
+                document.getElementById("skillsRecommended").textContent =
+                    recommendedSkills.length;
+
+                document.getElementById("skillsGap").textContent =
+                    recommendedSkills.length;
+
+            }
+
+
+            catch (error) {
+
+                console.error(
+                    "Skill mapping error:",
+                    error
+                );
+
+
+                alert(
+                    "Unable to load skill mapping. " +
+                    "Please make sure the backend is running."
+                );
+
+            }
+
+        }
+
+
+        // Load mapping when page opens
+        loadSkillMapping();
+
+    </script>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

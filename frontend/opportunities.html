@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AYUSH Opportunities | SAKSHAM</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="dashboard-page saksham-opportunities-page">
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="dashboard-navbar">
+
+        <div class="dashboard-logo">
+            SAKSHAM
+        </div>
+
+        <div class="dashboard-nav-right">
+
+            <span class="welcome-text">
+                AYUSH Opportunities
+            </span>
+
+            <button
+                class="logout-btn"
+                onclick="logoutStudent()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="opportunities-container">
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="opportunities-hero">
+
+            <div class="opportunities-hero-icon">
+                🌿
+            </div>
+
+            <div>
+
+                <p class="opportunities-label">
+                    SAKSHAM • CAREER OPPORTUNITIES
+                </p>
+
+                <h1>
+                    Explore AYUSH Opportunities
+                </h1>
+
+                <p>
+                    Discover internships, research opportunities and
+                    professional experiences aligned with your AYUSH
+                    discipline and skills.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SEARCH / FILTER CARD
+        ========================== -->
+
+        <section class="opportunities-filter-card">
+
+            <div class="opportunities-section-heading">
+
+                <div class="opportunities-heading-icon">
+                    🔎
+                </div>
+
+                <div>
+
+                    <h2>
+                        Find Your Opportunity
+                    </h2>
+
+                    <p>
+                        Filter opportunities according to your AYUSH discipline.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="opportunity-filter-wrapper">
+
+                <label for="opportunityFilter">
+                    Filter by Discipline
+                </label>
+
+                <select id="opportunityFilter">
+
+                    <option value="ALL">
+                        All AYUSH Opportunities
+                    </option>
+
+                    <option value="BAMS">
+                        BAMS (Ayurveda)
+                    </option>
+
+                    <option value="BHMS">
+                        BHMS (Homoeopathy)
+                    </option>
+
+                    <option value="BNYS">
+                        BNYS (Naturopathy & Yoga)
+                    </option>
+
+                    <option value="BUMS">
+                        BUMS (Unani)
+                    </option>
+
+                    <option value="BSMS">
+                        BSMS (Siddha)
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             OPPORTUNITY LIST
+        ========================== -->
+
+        <section>
+
+            <div class="opportunities-list-header">
+
+                <div>
+
+                    <p class="opportunities-mini-label">
+                        AVAILABLE NOW
+                    </p>
+
+                    <h2>
+                        Latest Opportunities
+                    </h2>
+
+                </div>
+
+                <div class="opportunities-header-badge">
+                    🎓 AYUSH Careers
+                </div>
+
+            </div>
+
+
+            <section
+                class="opportunities-grid"
+                id="opportunitiesContainer">
+
+                <p
+                    id="opportunitiesLoading"
+                    class="opportunities-loading">
+                    ⏳ Loading opportunities...
+                </p>
+
+            </section>
+
+        </section>
+
+
+        <!-- =========================
+             INFORMATION CARD
+        ========================== -->
+
+        <section class="opportunities-info-card">
+
+            <div class="opportunities-info-icon">
+                💡
+            </div>
+
+            <div>
+
+                <span class="opportunities-info-label">
+                    ABOUT SAKSHAM OPPORTUNITIES
+                </span>
+
+                <h2>
+                    Find opportunities that match your journey.
+                </h2>
+
+                <p>
+                    SAKSHAM helps AYUSH students discover internships,
+                    research opportunities and professional experiences
+                    aligned with their academic discipline and skill profile.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BACK BUTTON
+        ========================== -->
+
+        <div class="opportunities-back">
+
+            <button
+                class="opportunities-action-btn secondary"
+                onclick="window.location.href='student-dashboard.html'">
+
+                ← Back to Dashboard
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="dashboard-footer">
+
+        <div class="footer-logo">
+            SAKSHAM
+        </div>
+
+        <p>
+            Empowering Skills. Connecting Opportunities.
+        </p>
+
+        <p class="copyright">
+            © 2026 SAKSHAM. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         MAIN SCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+
+    <!-- =========================
+         OPPORTUNITY LOGIC
+    ========================== -->
+
+    <script>
+
+        // =====================================
+        // LOAD OPPORTUNITIES FROM MONGODB
+        // =====================================
+
+        async function loadOpportunities() {
+
+            const container =
+                document.getElementById(
+                    "opportunitiesContainer"
+                );
+
+            const token =
+                localStorage.getItem("token");
+
+
+            // Login check
+            if (!token) {
+
+                container.innerHTML = `
+                    <p class="opportunities-error">
+                        Please login to view opportunities.
+                    </p>
+                `;
+
+                return;
+            }
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        "http://127.0.0.1:5000/api/opportunities",
+                        {
+                            method: "GET",
+
+                            headers: {
+                                "Authorization":
+                                    "Bearer " + token
+                            }
+                        }
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                // API error
+                if (!response.ok) {
+
+                    container.innerHTML = `
+                        <p class="opportunities-error">
+                            ❌ ${
+                                data.message ||
+                                "Unable to load opportunities."
+                            }
+                        </p>
+                    `;
+
+                    return;
+                }
+
+
+                // Backend response:
+                // { opportunities: [...] }
+
+                const opportunities =
+                    data.opportunities;
+
+
+                // No opportunities
+                if (
+                    !opportunities ||
+                    opportunities.length === 0
+                ) {
+
+                    container.innerHTML = `
+                        <div class="no-opportunities-card">
+                            <div class="no-opportunities-icon">
+                                🌱
+                            </div>
+
+                            <h3>
+                                No opportunities available right now.
+                            </h3>
+
+                            <p>
+                                Please check again later for new AYUSH opportunities.
+                            </p>
+                        </div>
+                    `;
+
+                    return;
+                }
+
+
+                // Remove loading message
+                container.innerHTML = "";
+
+
+                // =====================================
+                // CREATE OPPORTUNITY CARDS
+                // =====================================
+
+                opportunities.forEach(
+                    function (opportunity) {
+
+
+                        const card =
+                            document.createElement(
+                                "article"
+                            );
+
+
+                        card.className =
+                            "opportunity-card";
+
+
+                        card.dataset.discipline =
+                            opportunity.discipline;
+
+
+                        card.dataset.opportunityId =
+                            opportunity._id;
+
+
+                        // Required skills
+                        const requiredSkills =
+                            opportunity.requiredSkills || [];
+
+
+                        const skillsText =
+                            requiredSkills.length > 0
+                                ? requiredSkills.join(", ")
+                                : "Skills not specified";
+
+
+                        // Determine opportunity type
+                        const titleText =
+                            (opportunity.title || "")
+                                .toLowerCase();
+
+
+                        const descriptionText =
+                            (opportunity.description || "")
+                                .toLowerCase();
+
+
+                        let opportunityType =
+                            "INTERNSHIP";
+
+
+                        if (
+                            titleText.includes("research") ||
+                            descriptionText.includes("research")
+                        ) {
+
+                            opportunityType =
+                                "RESEARCH";
+
+                        }
+
+
+                        // =====================================
+                        // CARD HTML
+                        // =====================================
+
+                        card.innerHTML = `
+
+                            <div class="opportunity-card-top">
+
+                                <div class="opportunity-icon">
+                                    🌿
+                                </div>
+
+                                <span class="opportunity-type">
+                                    ${opportunityType}
+                                </span>
+
+                            </div>
+
+
+                            <h2>
+                                ${escapeHTML(
+                                    opportunity.title
+                                )}
+                            </h2>
+
+
+                            <p class="opportunity-description">
+                                ${escapeHTML(
+                                    opportunity.description
+                                )}
+                            </p>
+
+
+                            <div class="opportunity-details">
+
+                                <div class="opportunity-detail-item">
+
+                                    <span class="detail-icon">
+                                        🎓
+                                    </span>
+
+                                    <div>
+                                        <small>
+                                            DISCIPLINE
+                                        </small>
+
+                                        <strong>
+                                            ${escapeHTML(
+                                                opportunity.discipline
+                                            )}
+                                        </strong>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="opportunity-detail-item">
+
+                                    <span class="detail-icon">
+                                        🏢
+                                    </span>
+
+                                    <div>
+                                        <small>
+                                            ORGANIZATION
+                                        </small>
+
+                                        <strong>
+                                            ${escapeHTML(
+                                                opportunity.organization
+                                            )}
+                                        </strong>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="required-skills-box">
+
+                                <div class="required-skills-title">
+                                    🧠 Required Skills
+                                </div>
+
+                                <p>
+                                    ${escapeHTML(
+                                        skillsText
+                                    )}
+                                </p>
+
+                            </div>
+
+
+                            <div class="opportunity-actions">
+
+                                <button
+                                    class="primary-btn apply-btn"
+                                    type="button">
+
+                                    Apply Now
+
+                                </button>
+
+
+                                <button
+                                    class="skill-match-btn skill-match-button"
+                                    type="button">
+
+                                    🔍 Check Skill Match
+
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="skill-gap-result"
+                                id="skill-gap-result-${opportunity._id}">
+
+                            </div>
+
+                        `;
+
+
+                        // =====================================
+                        // APPLY BUTTON
+                        // =====================================
+
+                        const applyButton =
+                            card.querySelector(
+                                ".apply-btn"
+                            );
+
+
+                        applyButton.addEventListener(
+                            "click",
+                            function () {
+
+                                applyOpportunity(
+                                    opportunity.title,
+                                    opportunity.discipline
+                                );
+
+                            }
+                        );
+
+
+                        // =====================================
+                        // SKILL MATCH BUTTON
+                        // =====================================
+
+                        const skillMatchButton =
+                            card.querySelector(
+                                ".skill-match-button"
+                            );
+
+
+                        skillMatchButton.addEventListener(
+                            "click",
+                            function () {
+
+                                checkSkillGap(
+                                    opportunity.title,
+                                    opportunity.discipline,
+                                    opportunity._id
+                                );
+
+                            }
+                        );
+
+
+                        container.appendChild(card);
+
+                    }
+                );
+
+
+                console.log(
+                    "✅ Opportunities loaded from MongoDB:",
+                    opportunities.length
+                );
+
+
+                // Check previously applied opportunities
+                checkApplicationStatus();
+
+
+            } catch (error) {
+
+                console.error(
+                    "Opportunity loading error:",
+                    error
+                );
+
+
+                container.innerHTML = `
+                    <p class="opportunities-error">
+                        ❌ Unable to connect to SAKSHAM server.
+                        Please make sure the backend is running.
+                    </p>
+                `;
+
+            }
+
+        }
+
+
+        // =====================================
+        // HTML SAFETY FUNCTION
+        // =====================================
+
+        function escapeHTML(value) {
+
+            if (
+                value === null ||
+                value === undefined
+            ) {
+
+                return "";
+
+            }
+
+
+            return String(value)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+
+        }
+
+
+        // =====================================
+        // FILTER OPPORTUNITIES
+        // =====================================
+
+        const opportunityFilter =
+            document.getElementById(
+                "opportunityFilter"
+            );
+
+
+        opportunityFilter.addEventListener(
+            "change",
+            function () {
+
+                const selected =
+                    this.value;
+
+
+                const opportunityCards =
+                    document.querySelectorAll(
+                        ".opportunity-card"
+                    );
+
+
+                opportunityCards.forEach(
+                    function (card) {
+
+                        const discipline =
+                            card.dataset.discipline;
+
+
+                        if (
+                            selected === "ALL" ||
+                            discipline === selected ||
+                            discipline === "ALL"
+                        ) {
+
+                            card.style.display =
+                                "block";
+
+                        } else {
+
+                            card.style.display =
+                                "none";
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+        // =====================================
+        // APPLY FOR OPPORTUNITY
+        // =====================================
+
+        async function applyOpportunity(
+            opportunityName,
+            discipline
+        ) {
+
+            const studentId =
+                localStorage.getItem(
+                    "studentId"
+                );
+
+
+            const token =
+                localStorage.getItem(
+                    "token"
+                );
+
+
+            // Login check
+            if (
+                !studentId ||
+                !token
+            ) {
+
+                alert(
+                    "Please login first."
+                );
+
+
+                window.location.href =
+                    "login.html";
+
+
+                return;
+            }
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        "http://127.0.0.1:5000/api/applications",
+                        {
+                            method: "POST",
+
+                            headers: {
+                                "Content-Type":
+                                    "application/json",
+
+                                "Authorization":
+                                    "Bearer " + token
+                            },
+
+                            body: JSON.stringify({
+
+                                studentId:
+                                    studentId,
+
+                                opportunityName:
+                                    opportunityName,
+
+                                discipline:
+                                    discipline
+
+                            })
+                        }
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                // Application failed
+                if (!response.ok) {
+
+                    alert(
+                        data.message ||
+                        "Unable to submit application."
+                    );
+
+
+                    return;
+                }
+
+
+                // Success
+                alert(
+                    "Application submitted successfully! 🎉\n\n" +
+                    opportunityName
+                );
+
+
+                // Change button
+                updateAppliedButton(
+                    opportunityName
+                );
+
+
+            } catch (error) {
+
+                console.error(
+                    "Application error:",
+                    error
+                );
+
+
+                alert(
+                    "Unable to submit application. " +
+                    "Please make sure the backend is running."
+                );
+
+            }
+
+        }
+
+
+        // =====================================
+        // CHECK APPLICATION STATUS
+        // =====================================
+
+        async function checkApplicationStatus() {
+
+            const studentId =
+                localStorage.getItem(
+                    "studentId"
+                );
+
+
+            const token =
+                localStorage.getItem(
+                    "token"
+                );
+
+
+            if (
+                !studentId ||
+                !token
+            ) {
+
+                return;
+
+            }
+
+
+            const buttons =
+                document.querySelectorAll(
+                    ".opportunity-card .primary-btn"
+                );
+
+
+            for (
+                const button of buttons
+            ) {
+
+                const card =
+                    button.closest(
+                        ".opportunity-card"
+                    );
+
+
+                if (!card) {
+                    continue;
+                }
+
+
+                const opportunityName =
+                    card
+                        .querySelector("h2")
+                        .textContent
+                        .trim();
+
+
+                try {
+
+                    const response =
+                        await fetch(
+                            "http://127.0.0.1:5000/api/applications/check/" +
+                            studentId +
+                            "/" +
+                            encodeURIComponent(
+                                opportunityName
+                            ),
+                            {
+                                headers: {
+                                    "Authorization":
+                                        "Bearer " + token
+                                }
+                            }
+                        );
+
+
+                    const data =
+                        await response.json();
+
+
+                    if (data.applied) {
+
+                        button.textContent =
+                            "✓ Applied";
+
+
+                        button.disabled =
+                            true;
+
+
+                        button.style.opacity =
+                            "0.7";
+
+
+                        button.style.cursor =
+                            "not-allowed";
+
+                    }
+
+
+                } catch (error) {
+
+                    console.error(
+                        "Status check error:",
+                        error
+                    );
+
+                }
+
+            }
+
+        }
+
+
+        // =====================================
+        // UPDATE BUTTON AFTER APPLY
+        // =====================================
+
+        function updateAppliedButton(
+            opportunityName
+        ) {
+
+            const buttons =
+                document.querySelectorAll(
+                    ".opportunity-card .primary-btn"
+                );
+
+
+            buttons.forEach(
+                function (button) {
+
+                    const card =
+                        button.closest(
+                            ".opportunity-card"
+                        );
+
+
+                    if (!card) {
+                        return;
+                    }
+
+
+                    const cardName =
+                        card
+                            .querySelector("h2")
+                            .textContent
+                            .trim();
+
+
+                    if (
+                        cardName ===
+                        opportunityName
+                    ) {
+
+                        button.textContent =
+                            "✓ Applied";
+
+
+                        button.disabled =
+                            true;
+
+
+                        button.style.opacity =
+                            "0.7";
+
+
+                        button.style.cursor =
+                            "not-allowed";
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        // =====================================
+        // CHECK SKILL GAP
+        // =====================================
+
+        async function checkSkillGap(
+            opportunityName,
+            discipline,
+            opportunityId
+        ) {
+
+            const studentId =
+                localStorage.getItem(
+                    "studentId"
+                );
+
+
+            const token =
+                localStorage.getItem(
+                    "token"
+                );
+
+
+            const resultBox =
+                document.getElementById(
+                    "skill-gap-result-" +
+                    opportunityId
+                );
+
+
+            // Login check
+            if (
+                !studentId ||
+                !token
+            ) {
+
+                alert(
+                    "Please login first."
+                );
+
+
+                window.location.href =
+                    "login.html";
+
+
+                return;
+            }
+
+
+            // Loading message
+            resultBox.innerHTML =
+                "<p>⏳ Analyzing your skills...</p>";
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        "http://127.0.0.1:5000/api/skill-gap/" +
+                        studentId +
+                        "/" +
+                        opportunityId,
+                        {
+                            headers: {
+                                "Authorization":
+                                    "Bearer " + token
+                            }
+                        }
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                if (!response.ok) {
+
+                    resultBox.innerHTML =
+                        "<p>❌ " +
+                        (
+                            data.message ||
+                            "Unable to analyze skills."
+                        ) +
+                        "</p>";
+
+
+                    return;
+                }
+
+
+                const analysis =
+                    data.skillAnalysis;
+
+
+                resultBox.innerHTML = `
+
+                    <div class="skill-gap-box">
+
+                        <div class="skill-match-score">
+
+                            <span>
+                                YOUR SKILL MATCH
+                            </span>
+
+                            <strong>
+                                ${analysis.matchPercentage}%
+                            </strong>
+
+                        </div>
+
+
+                        <h3>
+                            Skill Match Analysis
+                        </h3>
+
+
+                        <p>
+                            <strong>
+                                Required Skills:
+                            </strong>
+
+                            ${analysis.requiredSkills.join(", ")}
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                ✅ Matching Skills:
+                            </strong>
+
+                            ${
+                                analysis.matchingSkills.length > 0
+                                ? analysis.matchingSkills.join(", ")
+                                : "None"
+                            }
+                        </p>
+
+
+                        <p>
+                            <strong>
+                                ❌ Missing Skills:
+                            </strong>
+
+                            ${
+                                analysis.missingSkills.length > 0
+                                ? analysis.missingSkills.join(", ")
+                                : "None"
+                            }
+                        </p>
+
+                    </div>
+
+                `;
+
+
+            } catch (error) {
+
+                console.error(
+                    "Skill gap error:",
+                    error
+                );
+
+
+                resultBox.innerHTML =
+                    "<p>❌ Server error while analyzing your skills.</p>";
+
+            }
+
+        }
+
+
+        // =====================================
+        // LOAD DATA WHEN PAGE OPENS
+        // =====================================
+
+        loadOpportunities();
+
+    </script>
+
+
+</body>
+
+</html>

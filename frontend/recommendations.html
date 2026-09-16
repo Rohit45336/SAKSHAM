@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Recommendations | SAKSHAM</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body class="saksham-recommendations-page">
+
+```
+<!-- Navigation -->
+<nav class="recommendations-navbar">
+
+    <div class="recommendations-logo">
+        <span>SAKSHAM</span>
+        <small>SKILL • OPPORTUNITY • GROWTH</small>
+    </div>
+
+    <div class="recommendations-nav-right">
+
+        <span class="recommendations-nav-title">
+            Recommendations
+        </span>
+
+        <button
+            class="recommendations-logout-btn"
+            onclick="logoutStudent()">
+            Logout
+        </button>
+
+    </div>
+
+</nav>
+
+
+<!-- Main -->
+<main class="recommendations-container">
+
+    <!-- Hero -->
+    <section class="recommendations-hero">
+
+        <div class="recommendations-hero-content">
+
+            <p class="recommendations-label">
+                PERSONALIZED CAREER GUIDANCE
+            </p>
+
+            <h1>
+                Recommendations
+                <span>Made For You</span>
+            </h1>
+
+            <p class="recommendations-hero-text">
+                Discover skills and AYUSH opportunities
+                selected according to your profile,
+                discipline and current skill level.
+            </p>
+
+        </div>
+
+        <div class="recommendations-hero-icon">
+            🎯
+        </div>
+
+    </section>
+
+
+    <!-- Profile Summary -->
+    <section class="recommendation-profile-card">
+
+        <div class="recommendation-card-heading">
+
+            <div>
+
+                <p class="recommendation-section-label">
+                    YOUR PROFILE
+                </p>
+
+                <h2>
+                    Personalization Snapshot
+                </h2>
+
+                <p>
+                    Your recommendations are based on the
+                    information in your SAKSHAM profile.
+                </p>
+
+            </div>
+
+            <div class="recommendation-heading-icon">
+                👤
+            </div>
+
+        </div>
+
+
+        <div class="recommendation-profile-grid">
+
+            <div class="recommendation-profile-item">
+
+                <div class="recommendation-item-icon">
+                    🩺
+                </div>
+
+                <div>
+                    <span>
+                        AYUSH DISCIPLINE
+                    </span>
+
+                    <strong id="recommendationDiscipline">
+                        Loading...
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="recommendation-profile-item">
+
+                <div class="recommendation-item-icon">
+                    📊
+                </div>
+
+                <div>
+                    <span>
+                        SKILL LEVEL
+                    </span>
+
+                    <strong id="recommendationLevel">
+                        Loading...
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Recommendations Grid -->
+    <section class="recommendations-main-grid">
+
+        <!-- Skills -->
+        <div class="recommendation-content-card">
+
+            <div class="recommendation-content-header">
+
+                <div>
+
+                    <p class="recommendation-section-label">
+                        SKILL DEVELOPMENT
+                    </p>
+
+                    <h2>
+                        Recommended Skills 🛠️
+                    </h2>
+
+                </div>
+
+                <div class="recommendation-small-icon">
+                    🧠
+                </div>
+
+            </div>
+
+            <p class="recommendation-description">
+                These skills may help strengthen your
+                career readiness based on your current
+                AYUSH profile.
+            </p>
+
+
+            <div
+                id="recommendedSkills"
+                class="recommendation-skills-list">
+
+                <div class="recommendation-loading">
+                    Loading recommendations...
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Opportunities -->
+        <div class="recommendation-content-card">
+
+            <div class="recommendation-content-header">
+
+                <div>
+
+                    <p class="recommendation-section-label">
+                        CAREER OPPORTUNITIES
+                    </p>
+
+                    <h2>
+                        Recommended Opportunities 💼
+                    </h2>
+
+                </div>
+
+                <div class="recommendation-small-icon">
+                    🚀
+                </div>
+
+            </div>
+
+            <p class="recommendation-description">
+                Explore opportunities that may match
+                your discipline and skill profile.
+            </p>
+
+
+            <div
+                id="recommendedOpportunities"
+                class="recommendation-opportunities-list">
+
+                <div class="recommendation-loading">
+                    Loading opportunities...
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Career Insight -->
+    <section class="recommendation-insight">
+
+        <div class="recommendation-insight-icon">
+            💡
+        </div>
+
+        <div>
+
+            <span>
+                SAKSHAM CAREER INSIGHT
+            </span>
+
+            <h3>
+                Build the skills that move you closer to your goals.
+            </h3>
+
+            <p>
+                Keep updating your skill profile and exploring
+                relevant opportunities to improve your career readiness.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Actions -->
+    <section class="recommendations-actions">
+
+        <button
+            class="recommendation-primary-btn"
+            onclick="window.location.href='student-skills.html'">
+
+            🛠️ Manage My Skills
+
+        </button>
+
+
+        <button
+            class="recommendation-secondary-btn"
+            onclick="window.location.href='opportunities.html'">
+
+            💼 Explore Opportunities
+
+        </button>
+
+
+        <button
+            class="recommendation-back-btn"
+            onclick="window.location.href='student-dashboard.html'">
+
+            ← Back to Dashboard
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- Footer -->
+<footer class="recommendations-footer">
+
+    <div class="recommendations-footer-logo">
+        SAKSHAM
+    </div>
+
+    <p>
+        Empowering Skills. Connecting Opportunities.
+    </p>
+
+    <p class="recommendations-copyright">
+        © 2026 SAKSHAM. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+<!-- Recommendations JavaScript -->
+<script>
+
+    async function loadRecommendations() {
+
+        const studentId =
+            localStorage.getItem("studentId");
+
+        const token =
+            localStorage.getItem("token");
+
+
+        // =====================================
+        // LOGIN CHECK
+        // =====================================
+
+        if (!studentId) {
+
+            alert("Please login first.");
+
+            window.location.href = "login.html";
+
+            return;
+        }
+
+
+        try {
+
+            // =====================================
+            // GET STUDENT PROFILE
+            // =====================================
+
+            const response = await fetch(
+                "http://127.0.0.1:5000/api/students/" + studentId,
+                {
+                    headers: {
+                        "Authorization":
+                            "Bearer " + token
+                    }
+                }
+            );
+
+
+            const data =
+                await response.json();
+
+
+            if (!response.ok) {
+
+                alert(data.message);
+
+                return;
+            }
+
+
+            const student =
+                data.student;
+
+
+            console.log(
+                "Recommendation student:",
+                student
+            );
+
+
+            // =====================================
+            // PROFILE INFORMATION
+            // =====================================
+
+            const discipline =
+                student.discipline || "Not Added";
+
+            const skillLevel =
+                student.skillLevel || "Not Added";
+
+            const studentSkills =
+                student.skills || [];
+
+
+            document.getElementById(
+                "recommendationDiscipline"
+            ).textContent =
+                discipline;
+
+
+            document.getElementById(
+                "recommendationLevel"
+            ).textContent =
+                skillLevel;
+
+
+            // =====================================
+            // RECOMMENDED SKILLS
+            // =====================================
+
+            let recommendedSkills = [];
+
+
+            // BAMS / AYURVEDA
+            if (
+                discipline === "BAMS" ||
+                discipline === "Ayurveda"
+            ) {
+
+                if (
+                    skillLevel === "Beginner"
+                ) {
+
+                    recommendedSkills = [
+
+                        "Healthcare Communication",
+                        "Patient Counselling",
+                        "Clinical Documentation"
+
+                    ];
+
+                }
+
+                else if (
+                    skillLevel === "Intermediate"
+                ) {
+
+                    recommendedSkills = [
+
+                        "Clinical Documentation",
+                        "Research Methodology",
+                        "Patient Counselling",
+                        "Healthcare Communication"
+
+                    ];
+
+                }
+
+                else {
+
+                    recommendedSkills = [
+
+                        "Research Methodology",
+                        "Advanced Clinical Practice",
+                        "Healthcare Communication",
+                        "Clinical Documentation"
+
+                    ];
+
+                }
+
+            }
+
+
+            // BHMS / HOMOEOPATHY
+            else if (
+                discipline === "BHMS" ||
+                discipline === "Homoeopathy"
+            ) {
+
+                recommendedSkills = [
+
+                    "Case Taking",
+                    "Patient Counselling",
+                    "Clinical Practice",
+                    "Research Methodology"
+
+                ];
+
+            }
+
+
+            // BNYS / YOGA
+            else if (
+                discipline === "BNYS" ||
+                discipline === "Yoga"
+            ) {
+
+                recommendedSkills = [
+
+                    "Yoga Therapy",
+                    "Anatomy & Physiology",
+                    "Wellness Management",
+                    "Patient Counselling"
+
+                ];
+
+            }
+
+
+            // BUMS / UNANI
+            else if (
+                discipline === "BUMS" ||
+                discipline === "Unani"
+            ) {
+
+                recommendedSkills = [
+
+                    "Unani Clinical Practice",
+                    "Regimental Therapy",
+                    "Patient Counselling",
+                    "Research Methodology"
+
+                ];
+
+            }
+
+
+            // BSMS / SIDDHA
+            else if (
+                discipline === "BSMS" ||
+                discipline === "Siddha"
+            ) {
+
+                recommendedSkills = [
+
+                    "Siddha Clinical Practice",
+                    "Herbal Medicine",
+                    "Clinical Documentation",
+                    "Healthcare Communication"
+
+                ];
+
+            }
+
+
+            // =====================================
+            // REMOVE ALREADY ADDED SKILLS
+            // =====================================
+
+            recommendedSkills =
+                recommendedSkills.filter(
+                    function(skill) {
+
+                        return !studentSkills.includes(skill);
+
+                    }
+                );
+
+
+            // =====================================
+            // DISPLAY RECOMMENDED SKILLS
+            // =====================================
+
+            const skillsContainer =
+                document.getElementById(
+                    "recommendedSkills"
+                );
+
+
+            skillsContainer.innerHTML = "";
+
+
+            if (
+                recommendedSkills.length > 0
+            ) {
+
+                recommendedSkills.forEach(
+                    function(skill) {
+
+                        const skillItem =
+                            document.createElement("div");
+
+
+                        skillItem.className =
+                            "recommendation-skill-item";
+
+
+                        skillItem.innerHTML = `
+                            <span class="recommendation-check">
+                                ✓
+                            </span>
+
+                            <span>
+                                ${skill}
+                            </span>
+                        `;
+
+
+                        skillsContainer.appendChild(
+                            skillItem
+                        );
+
+                    }
+                );
+
+            }
+
+            else {
+
+                skillsContainer.innerHTML = `
+                    <div class="recommendation-success-state">
+
+                        <span>
+                            ✓
+                        </span>
+
+                        <p>
+                            Your current skill profile is well covered.
+                            Keep developing your existing skills!
+                        </p>
+
+                    </div>
+                `;
+
+            }
+
+
+            // =====================================
+            // RECOMMENDED OPPORTUNITIES
+            // =====================================
+
+            let opportunities = [];
+
+
+            if (
+                discipline === "BAMS" ||
+                discipline === "Ayurveda"
+            ) {
+
+                opportunities = [
+
+                    "Ayurveda Clinical Internship",
+                    "Ayurveda Research Internship",
+                    "AYUSH Healthcare Internship"
+
+                ];
+
+            }
+
+
+            else if (
+                discipline === "BHMS" ||
+                discipline === "Homoeopathy"
+            ) {
+
+                opportunities = [
+
+                    "Homoeopathy Research Internship",
+                    "Homoeopathy Clinical Internship",
+                    "AYUSH Research & Publication"
+
+                ];
+
+            }
+
+
+            else if (
+                discipline === "BNYS" ||
+                discipline === "Yoga"
+            ) {
+
+                opportunities = [
+
+                    "Yoga & Naturopathy Internship",
+                    "Yoga Therapy Internship",
+                    "Wellness Centre Internship"
+
+                ];
+
+            }
+
+
+            else if (
+                discipline === "BUMS" ||
+                discipline === "Unani"
+            ) {
+
+                opportunities = [
+
+                    "Unani Clinical Internship",
+                    "Unani Research Internship",
+                    "AYUSH Healthcare Internship"
+
+                ];
+
+            }
+
+
+            else if (
+                discipline === "BSMS" ||
+                discipline === "Siddha"
+            ) {
+
+                opportunities = [
+
+                    "Siddha Research Opportunity",
+                    "Siddha Clinical Internship",
+                    "AYUSH Healthcare Internship"
+
+                ];
+
+            }
+
+
+            // =====================================
+            // DISPLAY OPPORTUNITIES
+            // =====================================
+
+            const opportunitiesContainer =
+                document.getElementById(
+                    "recommendedOpportunities"
+                );
+
+
+            opportunitiesContainer.innerHTML = "";
+
+
+            if (
+                opportunities.length > 0
+            ) {
+
+                opportunities.forEach(
+                    function(opportunity) {
+
+                        const opportunityItem =
+                            document.createElement("div");
+
+
+                        opportunityItem.className =
+                            "recommendation-opportunity-item";
+
+
+                        opportunityItem.innerHTML = `
+                            <span class="recommendation-opportunity-icon">
+                                💼
+                            </span>
+
+                            <span>
+                                ${opportunity}
+                            </span>
+
+                            <span class="recommendation-opportunity-arrow">
+                                →
+                            </span>
+                        `;
+
+
+                        opportunitiesContainer.appendChild(
+                            opportunityItem
+                        );
+
+                    }
+                );
+
+            }
+
+            else {
+
+                opportunitiesContainer.innerHTML = `
+                    <div class="recommendation-empty-state">
+
+                        <span>
+                            📌
+                        </span>
+
+                        <p>
+                            Add your AYUSH discipline to receive
+                            personalized recommendations.
+                        </p>
+
+                    </div>
+                `;
+
+            }
+
+        }
+
+
+        catch (error) {
+
+            console.error(
+                "Recommendations error:",
+                error
+            );
+
+
+            alert(
+                "Unable to load recommendations. " +
+                "Please make sure the backend is running."
+            );
+
+        }
+
+    }
+
+
+    // =====================================
+    // LOAD PAGE
+    // =====================================
+
+    loadRecommendations();
+
+</script>
+```
+
+</body>
+
+</html>

@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | SAKSHAM</title>
+
+    <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body class="dashboard-page saksham-profile-page">
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="dashboard-navbar">
+
+        <div class="dashboard-logo">
+            SAKSHAM
+        </div>
+
+
+        <div class="dashboard-nav-right">
+
+            <span class="welcome-text">
+                Student Profile
+            </span>
+
+            <button
+                class="logout-btn"
+                onclick="logoutStudent()">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="dashboard-container profile-container">
+
+
+        <!-- =========================
+             PROFILE HERO
+        ========================== -->
+
+        <section class="profile-page-hero">
+
+            <div>
+
+                <p class="dashboard-label">
+                    STUDENT PROFILE
+                </p>
+
+                <h1>
+                    My Profile 👤
+                </h1>
+
+                <p>
+                    Manage your personal information, academic
+                    details and professional skills on SAKSHAM.
+                </p>
+
+            </div>
+
+
+            <div class="profile-hero-icon">
+                👤
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             IDENTITY CARD
+        ========================== -->
+
+        <section class="student-identity-card">
+
+            <div class="student-avatar-large">
+                👤
+            </div>
+
+
+            <div class="student-identity-info">
+
+                <span class="identity-label">
+                    SAKSHAM STUDENT
+                </span>
+
+                <h2 id="profileName">
+                    Student Name
+                </h2>
+
+                <p id="profileEmail">
+                    student@email.com
+                </p>
+
+            </div>
+
+
+            <div class="profile-role-badge">
+                STUDENT
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PERSONAL INFORMATION
+        ========================== -->
+
+        <section class="profile-modern-card">
+
+            <div class="profile-section-heading">
+
+                <div class="profile-heading-icon">
+                    👤
+                </div>
+
+                <div>
+
+                    <span>
+                        BASIC DETAILS
+                    </span>
+
+                    <h2>
+                        Personal Information
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-modern-grid">
+
+
+                <div class="profile-modern-field">
+
+                    <span class="field-icon">
+                        👤
+                    </span>
+
+                    <div>
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <p id="infoName">
+                            Student Name
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="profile-modern-field">
+
+                    <span class="field-icon">
+                        ✉️
+                    </span>
+
+                    <div>
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <p id="infoEmail">
+                            student@email.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="profile-modern-field">
+
+                    <span class="field-icon">
+                        🎓
+                    </span>
+
+                    <div>
+
+                        <label>
+                            Role
+                        </label>
+
+                        <p>
+                            Student
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="profile-modern-field">
+
+                    <span class="field-icon">
+                        🪷
+                    </span>
+
+                    <div>
+
+                        <label>
+                            Platform
+                        </label>
+
+                        <p>
+                            SAKSHAM
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ACADEMIC INFORMATION
+        ========================== -->
+
+        <section class="profile-modern-card">
+
+            <div class="profile-section-heading">
+
+                <div class="profile-heading-icon">
+                    🎓
+                </div>
+
+                <div>
+
+                    <span>
+                        EDUCATION
+                    </span>
+
+                    <h2>
+                        Academic Information
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="academic-profile-grid">
+
+
+                <div class="academic-info-box">
+
+                    <span>
+                        COLLEGE / INSTITUTION
+                    </span>
+
+                    <strong id="infoCollege">
+                        Not Added
+                    </strong>
+
+                </div>
+
+
+
+                <div class="academic-info-box">
+
+                    <span>
+                        DEGREE
+                    </span>
+
+                    <strong id="infoDegree">
+                        Not Added
+                    </strong>
+
+                </div>
+
+
+
+                <div class="academic-info-box">
+
+                    <span>
+                        BRANCH
+                    </span>
+
+                    <strong id="infoBranch">
+                        Not Added
+                    </strong>
+
+                </div>
+
+
+
+                <div class="academic-info-box">
+
+                    <span>
+                        GRADUATION YEAR
+                    </span>
+
+                    <strong id="infoGraduationYear">
+                        Not Added
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="profile-edit-btn"
+                onclick="showAcademicForm()">
+
+                ✏️ Edit Academic Information
+
+            </button>
+
+
+
+            <!-- Academic Form -->
+
+            <div
+                id="academicForm"
+                class="academic-edit-form"
+                style="display: none;">
+
+
+                <div class="edit-form-title">
+
+                    <h3>
+                        Update Academic Information
+                    </h3>
+
+                    <p>
+                        Keep your educational details up to date.
+                    </p>
+
+                </div>
+
+
+                <div class="academic-input-grid">
+
+
+                    <div>
+
+                        <label for="collegeInput">
+                            College / Institution
+                        </label>
+
+                        <input
+                            type="text"
+                            id="collegeInput"
+                            placeholder="College / Institution">
+
+                    </div>
+
+
+
+                    <div>
+
+                        <label for="degreeInput">
+                            Degree
+                        </label>
+
+                        <input
+                            type="text"
+                            id="degreeInput"
+                            placeholder="Degree">
+
+                    </div>
+
+
+
+                    <div>
+
+                        <label for="branchInput">
+                            Branch
+                        </label>
+
+                        <input
+                            type="text"
+                            id="branchInput"
+                            placeholder="Branch">
+
+                    </div>
+
+
+
+                    <div>
+
+                        <label for="graduationYearInput">
+                            Graduation Year
+                        </label>
+
+                        <input
+                            type="text"
+                            id="graduationYearInput"
+                            placeholder="Graduation Year">
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="profile-save-btn"
+                    onclick="saveAcademicInfo()">
+
+                    💾 Save Academic Information
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+
+        <section class="profile-modern-card">
+
+            <div class="profile-section-heading">
+
+                <div class="profile-heading-icon">
+                    🛠️
+                </div>
+
+                <div>
+
+                    <span>
+                        PROFESSIONAL PROFILE
+                    </span>
+
+                    <h2>
+                        My Skills
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <p class="profile-section-description">
+                Your selected AYUSH skills are displayed
+                here as part of your professional profile.
+            </p>
+
+
+            <div
+                id="skillsContainer"
+                class="profile-skills-display">
+
+                <div class="skills-loading">
+                    Loading skills...
+                </div>
+
+            </div>
+
+
+            <button
+                class="profile-manage-skills-btn"
+                onclick="window.location.href='student-skills.html'">
+
+                🛠️ Add / Manage Skills
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             PROFILE COMPLETION
+        ========================== -->
+
+        <section class="profile-completion-card">
+
+            <div class="completion-icon">
+                🚀
+            </div>
+
+
+            <div>
+
+                <span>
+                    BUILD YOUR PROFILE
+                </span>
+
+                <h2>
+                    Keep your SAKSHAM profile updated
+                </h2>
+
+                <p>
+                    A complete profile helps you discover
+                    more relevant skills, internships and
+                    career opportunities.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             BACK
+        ========================== -->
+
+        <div class="profile-back">
+
+            <button
+                class="dashboard-card-btn"
+                onclick="window.location.href='student-dashboard.html'">
+
+                ← Back to Dashboard
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="dashboard-footer">
+
+        <div class="footer-logo">
+            SAKSHAM
+        </div>
+
+        <p>
+            Empowering Skills. Connecting Opportunities.
+        </p>
+
+        <p class="copyright">
+            © 2026 SAKSHAM. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         PROFILE JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        async function loadStudentProfile() {
+
+            const studentId =
+                localStorage.getItem("studentId");
+
+
+            if (!studentId) {
+
+                alert("Please login first.");
+
+                window.location.href =
+                    "login.html";
+
+                return;
+
+            }
+
+
+            try {
+
+                const token =
+                    localStorage.getItem("token");
+
+
+                const response =
+                    await fetch(
+                        "http://127.0.0.1:5000/api/students/" +
+                        studentId,
+                        {
+                            headers: {
+                                "Authorization":
+                                    "Bearer " + token
+                            }
+                        }
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                if (!response.ok) {
+
+                    alert(data.message);
+
+                    return;
+
+                }
+
+
+                const student =
+                    data.student;
+
+
+                /* Basic Profile */
+
+                document.getElementById(
+                    "profileName"
+                ).textContent =
+                    student.name;
+
+
+                document.getElementById(
+                    "profileEmail"
+                ).textContent =
+                    student.email;
+
+
+                document.getElementById(
+                    "infoName"
+                ).textContent =
+                    student.name;
+
+
+                document.getElementById(
+                    "infoEmail"
+                ).textContent =
+                    student.email;
+
+
+
+                /* Academic Information */
+
+                document.getElementById(
+                    "infoCollege"
+                ).textContent =
+                    student.college ||
+                    "Not Added";
+
+
+                document.getElementById(
+                    "infoDegree"
+                ).textContent =
+                    student.degree ||
+                    "Not Added";
+
+
+                document.getElementById(
+                    "infoBranch"
+                ).textContent =
+                    student.branch ||
+                    "Not Added";
+
+
+                document.getElementById(
+                    "infoGraduationYear"
+                ).textContent =
+                    student.graduationYear ||
+                    "Not Added";
+
+
+
+                /* Skills */
+
+                const skillsContainer =
+                    document.getElementById(
+                        "skillsContainer"
+                    );
+
+
+                if (
+                    student.skills &&
+                    student.skills.length > 0
+                ) {
+
+                    skillsContainer.innerHTML = "";
+
+
+                    student.skills.forEach(
+                        function (skill) {
+
+                            const skillItem =
+                                document.createElement(
+                                    "span"
+                                );
+
+
+                            skillItem.className =
+                                "profile-skill-pill";
+
+
+                            skillItem.textContent =
+                                skill;
+
+
+                            skillsContainer.appendChild(
+                                skillItem
+                            );
+
+                        }
+                    );
+
+                } else {
+
+                    skillsContainer.innerHTML = `
+
+                        <div class="no-skills-message">
+
+                            <span>
+                                🛠️
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    No skills added yet
+                                </strong>
+
+                                <p>
+                                    Add your AYUSH skills to
+                                    strengthen your profile.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    `;
+
+                }
+
+            } catch (error) {
+
+                console.error(
+                    "Profile loading error:",
+                    error
+                );
+
+
+                alert(
+                    "Unable to load profile. " +
+                    "Please make sure the backend is running."
+                );
+
+            }
+
+        }
+
+
+        loadStudentProfile();
+
+
+
+        /* =========================
+           SHOW ACADEMIC FORM
+        ========================== */
+
+        function showAcademicForm() {
+
+            const form =
+                document.getElementById(
+                    "academicForm"
+                );
+
+
+            form.style.display = "block";
+
+
+            form.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        }
+
+
+
+        /* =========================
+           SAVE ACADEMIC INFO
+        ========================== */
+
+        async function saveAcademicInfo() {
+
+            const studentId =
+                localStorage.getItem("studentId");
+
+
+            const college =
+                document.getElementById(
+                    "collegeInput"
+                ).value.trim();
+
+
+            const degree =
+                document.getElementById(
+                    "degreeInput"
+                ).value.trim();
+
+
+            const branch =
+                document.getElementById(
+                    "branchInput"
+                ).value.trim();
+
+
+            const graduationYear =
+                document.getElementById(
+                    "graduationYearInput"
+                ).value.trim();
+
+
+            if (
+                !college ||
+                !degree ||
+                !branch ||
+                !graduationYear
+            ) {
+
+                alert(
+                    "Please fill all academic information."
+                );
+
+                return;
+
+            }
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        "http://127.0.0.1:5000/api/students/" +
+                        studentId +
+                        "/academic",
+                        {
+                            method: "PUT",
+
+                            headers: {
+
+                                "Content-Type":
+                                    "application/json",
+
+                                "Authorization":
+                                    "Bearer " +
+                                    localStorage.getItem(
+                                        "token"
+                                    )
+
+                            },
+
+                            body: JSON.stringify({
+
+                                college: college,
+
+                                degree: degree,
+
+                                branch: branch,
+
+                                graduationYear:
+                                    graduationYear
+
+                            })
+
+                        }
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                if (response.ok) {
+
+                    alert(
+                        "Academic information saved successfully! 🎓"
+                    );
+
+
+                    loadStudentProfile();
+
+
+                    document.getElementById(
+                        "academicForm"
+                    ).style.display =
+                        "none";
+
+                } else {
+
+                    alert(
+                        data.message
+                    );
+
+                }
+
+            } catch (error) {
+
+                console.error(
+                    "Academic information error:",
+                    error
+                );
+
+
+                alert(
+                    "Unable to save academic information. " +
+                    "Please make sure the backend server is running."
+                );
+
+            }
+
+        }
+
+    </script>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

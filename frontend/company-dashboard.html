@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Company Dashboard | SAKSHAM</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f8f2;
+        color: #243b2a;
+    }
+
+    .dashboard-container {
+        width: 90%;
+        max-width: 850px;
+        margin: 40px auto;
+        background: #ffffff;
+        padding: 35px;
+        border-radius: 18px;
+        box-shadow: 0 8px 25px rgba(0, 80, 40, 0.12);
+        border-top: 6px solid #2e7d32;
+    }
+
+    h1 {
+        color: #1b5e20;
+        margin-bottom: 8px;
+    }
+
+    h2 {
+        color: #2e7d32;
+        margin-top: 30px;
+    }
+
+    #welcomeMessage {
+        color: #607d63;
+        font-size: 16px;
+    }
+
+    hr {
+        border: none;
+        height: 1px;
+        background: #dce8dc;
+        margin: 25px 0;
+    }
+
+    label {
+        display: block;
+        margin-top: 18px;
+        margin-bottom: 7px;
+        font-weight: bold;
+        color: #315a38;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 14px;
+        border: 1px solid #c8d8ca;
+        border-radius: 9px;
+        font-size: 15px;
+        background: #fbfdfb;
+        outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #43a047;
+        box-shadow: 0 0 0 3px rgba(67, 160, 71, 0.12);
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button {
+        margin-top: 24px;
+        padding: 12px 22px;
+        border: none;
+        border-radius: 9px;
+        background: #2e7d32;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #1b5e20;
+    }
+
+    /* =========================
+       MY OPPORTUNITIES
+    ========================= */
+
+    .my-opportunities {
+        margin-top: 40px;
+    }
+
+    .opportunity-card {
+        background: #fbfdfb;
+        border: 1px solid #dce8dc;
+        border-left: 5px solid #2e7d32;
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 18px;
+    }
+
+    .opportunity-card h3 {
+        margin-top: 0;
+        color: #1b5e20;
+    }
+
+    .opportunity-card p {
+        color: #607d63;
+        line-height: 1.6;
+    }
+
+    .opportunity-meta {
+        margin-top: 12px;
+        font-size: 14px;
+        color: #315a38;
+    }
+
+    .delete-btn {
+        background: #c62828;
+        margin-top: 15px;
+    }
+
+    .delete-btn:hover {
+        background: #8e0000;
+    }
+
+    .applicants-btn {
+        background: #1565c0;
+        margin-top: 15px;
+    }
+
+    .applicants-btn:hover {
+        background: #0d47a1;
+    }
+
+    .loading-message {
+        color: #607d63;
+        margin-top: 15px;
+    }
+
+    .empty-message {
+        background: #f4f8f2;
+        padding: 18px;
+        border-radius: 10px;
+        color: #607d63;
+        margin-top: 15px;
+    }
+
+    /* =========================
+       APPLICANTS
+    ========================= */
+
+    .applicants-container {
+        margin-top: 25px;
+    }
+
+    .applicants-title {
+        color: #1b5e20;
+        margin-bottom: 15px;
+    }
+
+    .applicant-card {
+        background: #ffffff;
+        border: 1px solid #dce8dc;
+        border-left: 5px solid #1565c0;
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .applicant-card h3 {
+        margin-top: 0;
+        color: #1b5e20;
+    }
+
+    .applicant-card p {
+        margin: 8px 0;
+        color: #4f6352;
+        line-height: 1.5;
+    }
+
+    .applicant-status {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 6px 12px;
+        border-radius: 20px;
+        background: #e8f5e9;
+        color: #2e7d32;
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    .no-applicants {
+        background: #f4f8f2;
+        padding: 18px;
+        border-radius: 10px;
+        color: #607d63;
+        margin-top: 15px;
+    }
+
+    /* =========================
+       APPLICATION STATUS
+    ========================= */
+
+    .status-control {
+        margin-top: 15px;
+    }
+
+    .status-control label {
+        display: block;
+        margin-bottom: 8px;
+        color: #1b5e20;
+    }
+
+    .status-select {
+        width: auto;
+        min-width: 180px;
+        padding: 9px 12px;
+        border: 1px solid #c8d8c8;
+        border-radius: 8px;
+        background: #ffffff;
+        color: #333333;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .status-select:focus {
+        outline: none;
+        border-color: #2e7d32;
+    }
+
+    /* =========================
+       SKILL MATCH
+    ========================= */
+
+    .skill-match-box {
+        margin-top: 18px;
+        padding: 16px;
+        border-radius: 12px;
+        background: #f4f8f2;
+        border: 1px solid #dce8dc;
+    }
+
+    .skill-match-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 12px;
+    }
+
+    .skill-match-label {
+        color: #1b5e20;
+        font-weight: bold;
+    }
+
+    .skill-match-percentage {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1565c0;
+}
+
+.skill-match-level {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    background: #ffffff;
+    border: 1px solid #c8d8ca;
+}
+
+.match-excellent {
+    color: #2e7d32;
+    background: #e8f5e9;
+    border-color: #a5d6a7;
+}
+
+.match-good {
+    color: #1565c0;
+    background: #e3f2fd;
+    border-color: #90caf9;
+}
+
+.match-moderate {
+    color: #ef8f00;
+    background: #fff8e1;
+    border-color: #ffcc80;
+}
+
+.match-low {
+    color: #c62828;
+    background: #ffebee;
+    border-color: #ef9a9a;
+}
+
+    .skill-match-bar {
+        width: 100%;
+        height: 10px;
+        background: #dce8dc;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+
+    .skill-match-fill {
+        height: 100%;
+        background: #2e7d32;
+        border-radius: 10px;
+        transition: width 0.4s ease;
+    }
+
+    .matching-skills,
+    .missing-skills {
+        margin-top: 12px;
+    }
+
+    .matching-skills strong {
+        color: #2e7d32;
+    }
+
+    .missing-skills strong {
+        color: #c62828;
+    }
+
+    .skill-tag {
+        display: inline-block;
+        padding: 6px 10px;
+        margin: 5px 5px 0 0;
+        border-radius: 20px;
+        font-size: 13px;
+        background: #ffffff;
+        border: 1px solid #c8d8ca;
+    }
+
+    .matching-tag {
+        color: #2e7d32;
+        border-color: #a5d6a7;
+    }
+
+    .missing-tag {
+        color: #c62828;
+        border-color: #ef9a9a;
+    }
+
+    .skill-match-loading {
+        margin-top: 15px;
+        padding: 12px;
+        border-radius: 8px;
+        background: #f4f8f2;
+        color: #607d63;
+        font-size: 14px;
+    }
+
+    .skill-match-error {
+        margin-top: 15px;
+        padding: 12px;
+        border-radius: 8px;
+        background: #ffebee;
+        color: #c62828;
+        font-size: 14px;
+    }
+
+    .skill-improvement-box {
+    margin-top: 16px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: #fff8e1;
+    border: 1px solid #ffcc80;
+}
+
+.skill-improvement-title {
+    font-weight: bold;
+    color: #ef8f00;
+    margin-bottom: 6px;
+}
+
+.skill-improvement-text {
+    margin: 0;
+    color: #6d5a25;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+    @media (max-width: 600px) {
+
+        .dashboard-container {
+            width: 88%;
+            padding: 25px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .skill-match-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+    }
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<div class="dashboard-container">
+
+    <h1>
+        🏢 SAKSHAM Company Dashboard
+    </h1>
+
+    <p id="welcomeMessage">
+        Welcome, Company!
+    </p>
+
+    <hr>
+
+
+
+    <!-- =========================
+         ADD OPPORTUNITY
+    ========================= -->
+
+    <h2>
+        Add New Opportunity
+    </h2>
+
+
+
+    <form id="opportunityForm">
+
+        <label for="title">
+            Opportunity Title
+        </label>
+
+        <input
+            type="text"
+            id="title"
+            placeholder="e.g. Ayurvedic Research Intern"
+            required
+        >
+
+
+
+        <label for="organization">
+            Organization
+        </label>
+
+        <input
+            type="text"
+            id="organization"
+            placeholder="e.g. AYUSH Research Institute"
+            required
+        >
+
+
+
+        <label for="discipline">
+            AYUSH Discipline
+        </label>
+
+        <select id="discipline" required>
+
+            <option value="">
+                Select Discipline
+            </option>
+
+            <option value="BAMS">
+                BAMS
+            </option>
+
+            <option value="BHMS">
+                BHMS
+            </option>
+
+            <option value="BNYS">
+                BNYS
+            </option>
+
+            <option value="BUMS">
+                BUMS
+            </option>
+
+            <option value="BSMS">
+                BSMS
+            </option>
+
+        </select>
+
+
+
+        <label for="requiredSkills">
+            Required Skills
+        </label>
+
+        <input
+            type="text"
+            id="requiredSkills"
+            placeholder="e.g. Research & Publication, Patient Counselling"
+            required
+        >
+
+
+
+        <label for="description">
+            Opportunity Description
+        </label>
+
+        <textarea
+            id="description"
+            placeholder="Describe the internship or opportunity..."
+            rows="5"
+            required
+        ></textarea>
+
+
+
+        <button type="submit">
+            ➕ Add Opportunity
+        </button>
+
+    </form>
+
+
+
+    <p id="message"></p>
+
+
+
+    <!-- =========================
+         MY OPPORTUNITIES
+    ========================= -->
+
+    <section class="my-opportunities">
+
+        <h2>
+            📋 My Opportunities
+        </h2>
+
+        <p id="opportunitiesLoading" class="loading-message">
+            ⏳ Loading your opportunities...
+        </p>
+
+        <div id="myOpportunitiesContainer"></div>
+
+        <div id="applicantsContainer"></div>
+
+    </section>
+
+
+
+    <br>
+
+
+
+    <!-- Logout -->
+
+    <button onclick="logout()">
+        Logout
+    </button>
+
+</div>
+
+
+
+<script>
+
+    // =====================================
+    // COMPANY NAME
+    // =====================================
+
+    const companyName =
+        localStorage.getItem("studentName");
+
+
+    if (companyName) {
+
+        document.getElementById(
+            "welcomeMessage"
+        ).textContent =
+            "Welcome, " + companyName + "!";
+
+    }
+
+
+
+    // =====================================
+    // ADD OPPORTUNITY
+    // =====================================
+
+    const opportunityForm =
+        document.getElementById(
+            "opportunityForm"
+        );
+
+
+    opportunityForm.addEventListener(
+        "submit",
+        async function (event) {
+
+            event.preventDefault();
+
+
+            const title =
+                document.getElementById(
+                    "title"
+                ).value.trim();
+
+
+            const organization =
+                document.getElementById(
+                    "organization"
+                ).value.trim();
+
+
+            const discipline =
+                document.getElementById(
+                    "discipline"
+                ).value;
+
+
+            const requiredSkillsText =
+                document.getElementById(
+                    "requiredSkills"
+                ).value.trim();
+
+
+            const description =
+                document.getElementById(
+                    "description"
+                ).value.trim();
+
+
+            const requiredSkills =
+                requiredSkillsText
+                    .split(",")
+                    .map(
+                        skill => skill.trim()
+                    )
+                    .filter(
+                        skill => skill !== ""
+                    );
+
+
+            const token =
+                localStorage.getItem(
+                    "token"
+                );
+
+
+            if (!token) {
+
+                alert(
+                    "Please login first."
+                );
+
+                window.location.href =
+                    "login.html";
+
+                return;
+
+            }
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        "http://127.0.0.1:5000/api/opportunities",
+                        {
+                            method: "POST",
+
+                            headers: {
+
+                                "Content-Type":
+                                    "application/json",
+
+                                "Authorization":
+                                    "Bearer " + token
+
+                            },
+
+                            body: JSON.stringify({
+
+                                title:
+                                    title,
+
+                                organization:
+                                    organization,
+
+                                discipline:
+                                    discipline,
+
+                                requiredSkills:
+                                    requiredSkills,
+
+                                description:
+                                    description
+
+                            })
+
+                        }
+                    );
+
+
+                const data =
+                    await response.json();
+
+
+                if (response.ok) {
+
+                    alert(
+                        "Opportunity added successfully! 🎉"
+                    );
+
+
+                    opportunityForm.reset();
+
+
+                    loadMyOpportunities();
+
+
+                } else {
+
+                    alert(
+                        data.message ||
+                        "Failed to add opportunity."
+                    );
+
+                }
+
+
+            } catch (error) {
+
+                console.error(
+                    "Opportunity error:",
+                    error
+                );
+
+
+                alert(
+                    "Unable to connect to SAKSHAM server."
+                );
+
+            }
+
+        }
+    );
+
+
+
+    // =====================================
+    // LOAD MY OPPORTUNITIES
+    // =====================================
+
+    async function loadMyOpportunities() {
+
+        const container =
+            document.getElementById(
+                "myOpportunitiesContainer"
+            );
+
+
+        const loading =
+            document.getElementById(
+                "opportunitiesLoading"
+            );
+
+
+        const token =
+            localStorage.getItem(
+                "token"
+            );
+
+
+        if (!token) {
+
+            loading.textContent =
+                "Please login first.";
+
+            return;
+
+        }
+
+
+        try {
+
+            const response =
+                await fetch(
+                    "http://127.0.0.1:5000/api/opportunities/my",
+                    {
+                        method: "GET",
+
+                        headers: {
+
+                            "Authorization":
+                                "Bearer " + token
+
+                        }
+
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            if (!response.ok) {
+
+                loading.textContent =
+                    data.message ||
+                    "Unable to load opportunities.";
+
+                return;
+
+            }
+
+
+            const opportunities =
+                data.opportunities || [];
+
+
+            loading.style.display =
+                "none";
+
+
+            container.innerHTML = "";
+
+
+            if (opportunities.length === 0) {
+
+                container.innerHTML = `
+                    <div class="empty-message">
+                        No opportunities found.
+                    </div>
+                `;
+
+                return;
+
+            }
+
+
+
+            // =====================================
+            // DISPLAY OPPORTUNITIES
+            // =====================================
+
+            opportunities.forEach(
+                function (opportunity) {
+
+                    const card =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    card.className =
+                        "opportunity-card";
+
+
+                    card.innerHTML = `
+
+                        <h3>
+                            ${escapeHTML(
+                                opportunity.title
+                            )}
+                        </h3>
+
+                        <p>
+                            ${escapeHTML(
+                                opportunity.description
+                            )}
+                        </p>
+
+                        <div class="opportunity-meta">
+
+                            🎓 Discipline:
+                            ${escapeHTML(
+                                opportunity.discipline
+                            )}
+
+                            <br><br>
+
+                            🏢 Organization:
+                            ${escapeHTML(
+                                opportunity.organization
+                            )}
+
+                            <br><br>
+
+                            🧠 Required Skills:
+                            ${escapeHTML(
+                                (
+                                    opportunity.requiredSkills ||
+                                    []
+                                ).join(", ")
+                            )}
+
+                        </div>
+
+                        <button
+                            class="applicants-btn"
+                            type="button"
+                            data-title="${escapeHTML(
+                                opportunity.title
+                            )}"
+                        >
+                            👥 View Applicants
+                        </button>
+
+                        <button
+                            class="delete-btn"
+                            type="button"
+                            data-id="${opportunity._id}"
+                        >
+                            🗑️ Delete Opportunity
+                        </button>
+
+                    `;
+
+
+                    container.appendChild(
+                        card
+                    );
+
+
+
+                    // =====================================
+                    // DELETE OPPORTUNITY
+                    // =====================================
+
+                    const deleteButton =
+                        card.querySelector(
+                            ".delete-btn"
+                        );
+
+
+                    deleteButton.addEventListener(
+                        "click",
+                        async function () {
+
+                            const opportunityId =
+                                this.dataset.id;
+
+
+                            const confirmed =
+                                confirm(
+                                    "Are you sure you want to delete this opportunity?"
+                                );
+
+
+                            if (!confirmed) {
+                                return;
+                            }
+
+
+                            const token =
+                                localStorage.getItem(
+                                    "token"
+                                );
+
+
+                            try {
+
+                                const response =
+                                    await fetch(
+                                        "http://127.0.0.1:5000/api/opportunities/" +
+                                        opportunityId,
+                                        {
+                                            method: "DELETE",
+
+                                            headers: {
+                                                "Authorization":
+                                                    "Bearer " + token
+                                            }
+                                        }
+                                    );
+
+
+                                const data =
+                                    await response.json();
+
+
+                                if (response.ok) {
+
+                                    alert(
+                                        "Opportunity deleted successfully! 🗑️"
+                                    );
+
+
+                                    loadMyOpportunities();
+
+                                } else {
+
+                                    alert(
+                                        data.message ||
+                                        "Failed to delete opportunity."
+                                    );
+
+                                }
+
+
+                            } catch (error) {
+
+                                console.error(
+                                    "Delete opportunity error:",
+                                    error
+                                );
+
+
+                                alert(
+                                    "Unable to connect to SAKSHAM server."
+                                );
+
+                            }
+
+                        }
+                    );
+
+
+
+                    // =====================================
+                    // VIEW APPLICANTS
+                    // =====================================
+
+                    const applicantsButton =
+                        card.querySelector(
+                            ".applicants-btn"
+                        );
+
+
+                    applicantsButton.addEventListener(
+                        "click",
+                        async function () {
+
+                            const opportunityName =
+                                this.dataset.title;
+
+
+                            const token =
+                                localStorage.getItem(
+                                    "token"
+                                );
+
+
+                            if (!token) {
+
+                                alert(
+                                    "Please login first."
+                                );
+
+                                window.location.href =
+                                    "login.html";
+
+                                return;
+
+                            }
+
+
+                            try {
+
+                                const response =
+                                    await fetch(
+                                        "http://127.0.0.1:5000/api/applications/opportunity/" +
+                                        encodeURIComponent(
+                                            opportunityName
+                                        ),
+                                        {
+                                            method: "GET",
+
+                                            headers: {
+                                                "Authorization":
+                                                    "Bearer " + token
+                                            }
+                                        }
+                                    );
+
+
+                                const data =
+                                    await response.json();
+
+
+                                if (!response.ok) {
+
+                                    alert(
+                                        data.message ||
+                                        "Unable to load applicants."
+                                    );
+
+                                    return;
+
+                                }
+
+
+                                const applicantsContainer =
+                                    document.getElementById(
+                                        "applicantsContainer"
+                                    );
+
+
+                                applicantsContainer.innerHTML =
+                                    "";
+
+
+                                const applicants =
+                                    data.applicants || [];
+
+
+                                if (
+                                    applicants.length ===
+                                    0
+                                ) {
+
+                                    applicantsContainer.innerHTML = `
+                                        <div class="no-applicants">
+                                            👥 No students have applied for this opportunity yet.
+                                        </div>
+                                    `;
+
+                                    return;
+
+                                }
+
+
+                                applicantsContainer.innerHTML = `
+                                    <h2 class="applicants-title">
+                                        👥 Applicants (${applicants.length})
+                                    </h2>
+                                `;
+
+
+
+                                // =====================================
+                                // DISPLAY EACH APPLICANT
+                                // =====================================
+
+                                applicants.forEach(
+                                    function (application) {
+
+                                        const student =
+                                            application.studentId;
+
+
+                                        const studentName =
+                                            student?.name ||
+                                            "Unknown Student";
+
+
+                                        const studentEmail =
+                                            student?.email ||
+                                            "Email not available";
+
+
+                                        const studentDiscipline =
+                                            student?.discipline ||
+                                            application.discipline ||
+                                            "Not specified";
+
+
+                                        const studentSkills =
+                                            student?.skills ||
+                                            [];
+
+
+                                        const skillsText =
+                                            studentSkills.length >
+                                            0
+                                                ? studentSkills.join(
+                                                    ", "
+                                                )
+                                                : "No skills added";
+
+
+                                        const status =
+                                            application.status ||
+                                            "Applied";
+
+
+                                        // =====================================
+                                        // STATUS OPTIONS
+                                        // =====================================
+
+                                        const statusOptions = `
+
+                                            <option
+                                                value="Applied"
+                                                ${
+                                                    status ===
+                                                    "Applied"
+                                                        ? "selected"
+                                                        : ""
+                                                }
+                                            >
+                                                Applied
+                                            </option>
+
+                                            <option
+                                                value="Shortlisted"
+                                                ${
+                                                    status ===
+                                                    "Shortlisted"
+                                                        ? "selected"
+                                                        : ""
+                                                }
+                                            >
+                                                Shortlisted
+                                            </option>
+
+                                            <option
+                                                value="Rejected"
+                                                ${
+                                                    status ===
+                                                    "Rejected"
+                                                        ? "selected"
+                                                        : ""
+                                                }
+                                            >
+                                                Rejected
+                                            </option>
+
+                                        `;
+
+
+                                        // =====================================
+                                        // CREATE APPLICANT CARD
+                                        // =====================================
+
+                                        const applicantCard =
+                                            document.createElement(
+                                                "div"
+                                            );
+
+
+                                        applicantCard.className =
+                                            "applicant-card";
+
+
+                                        applicantCard.innerHTML = `
+
+                                            <h3>
+                                                👤 ${escapeHTML(
+                                                    studentName
+                                                )}
+                                            </h3>
+
+                                            <p>
+                                                📧 <strong>Email:</strong>
+                                                ${escapeHTML(
+                                                    studentEmail
+                                                )}
+                                            </p>
+
+                                            <p>
+                                                🎓 <strong>AYUSH Discipline:</strong>
+                                                ${escapeHTML(
+                                                    studentDiscipline
+                                                )}
+                                            </p>
+
+                                            <p>
+                                                🧠 <strong>Skills:</strong>
+                                                ${escapeHTML(
+                                                    skillsText
+                                                )}
+                                            </p>
+
+                                            <p>
+                                                📌 <strong>Opportunity:</strong>
+                                                ${escapeHTML(
+                                                    application.opportunityName
+                                                )}
+                                            </p>
+
+
+                                            <!-- =========================
+                                                 SKILL MATCH
+                                            ========================== -->
+
+                                            <div
+                                                class="skill-match-box"
+                                                data-application-id="${application._id}"
+                                            >
+
+                                                <div class="skill-match-loading">
+                                                    🎯 Calculating skill match...
+                                                </div>
+
+                                            </div>
+
+
+                                            <!-- =========================
+                                                 APPLICATION STATUS
+                                            ========================== -->
+
+                                            <div class="status-control">
+
+                                                <label>
+                                                    📊 <strong>Application Status:</strong>
+                                                </label>
+
+                                                <select
+                                                    class="status-select"
+                                                    data-application-id="${application._id}"
+                                                >
+                                                    ${statusOptions}
+                                                </select>
+
+                                            </div>
+
+                                        `;
+
+
+                                        applicantsContainer.appendChild(
+                                            applicantCard
+                                        );
+
+
+
+                                        // =====================================
+                                        // UPDATE APPLICATION STATUS
+                                        // =====================================
+
+                                        const statusSelect =
+                                            applicantCard.querySelector(
+                                                ".status-select"
+                                            );
+
+
+                                        statusSelect.addEventListener(
+                                            "change",
+                                            async function () {
+
+                                                const applicationId =
+                                                    this.dataset.applicationId;
+
+
+                                                const newStatus =
+                                                    this.value;
+
+
+                                                const token =
+                                                    localStorage.getItem(
+                                                        "token"
+                                                    );
+
+
+                                                if (!token) {
+
+                                                    alert(
+                                                        "Please login first."
+                                                    );
+
+                                                    window.location.href =
+                                                        "login.html";
+
+                                                    return;
+
+                                                }
+
+
+                                                try {
+
+                                                    const response =
+                                                        await fetch(
+                                                            "http://127.0.0.1:5000/api/applications/" +
+                                                            applicationId +
+                                                            "/status",
+                                                            {
+                                                                method: "PUT",
+
+                                                                headers: {
+                                                                    "Content-Type":
+                                                                        "application/json",
+
+                                                                    "Authorization":
+                                                                        "Bearer " +
+                                                                        token
+                                                                },
+
+                                                                body:
+                                                                    JSON.stringify(
+                                                                        {
+                                                                            status:
+                                                                                newStatus
+                                                                        }
+                                                                    )
+                                                            }
+                                                        );
+
+
+                                                    const data =
+                                                        await response.json();
+
+
+                                                    if (!response.ok) {
+
+                                                        alert(
+                                                            data.message ||
+                                                            "Unable to update application status."
+                                                        );
+
+                                                        return;
+
+                                                    }
+
+
+                                                    alert(
+                                                        "Application status updated to " +
+                                                        newStatus +
+                                                        " ✅"
+                                                    );
+
+
+                                                } catch (error) {
+
+                                                    console.error(
+                                                        "Status update error:",
+                                                        error
+                                                    );
+
+
+                                                    alert(
+                                                        "Unable to connect to SAKSHAM server."
+                                                    );
+
+                                                }
+
+                                            }
+                                        );
+
+
+
+                                        // =====================================
+                                        // LOAD SKILL MATCH
+                                        // =====================================
+
+                                        loadApplicantSkillMatch(
+                                            application._id,
+                                            applicantCard
+                                        );
+
+                                    }
+                                );
+
+
+
+                            } catch (error) {
+
+                                console.error(
+                                    "Applicants loading error:",
+                                    error
+                                );
+
+
+                                alert(
+                                    "Unable to connect to SAKSHAM server."
+                                );
+
+                            }
+
+                        }
+                    );
+
+                }
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                "Load opportunities error:",
+                error
+            );
+
+
+            loading.textContent =
+                "❌ Unable to connect to SAKSHAM server.";
+
+        }
+
+    }
+
+
+
+    // =====================================
+    // LOAD APPLICANT SKILL MATCH
+    // =====================================
+
+    async function loadApplicantSkillMatch(
+        applicationId,
+        applicantCard
+    ) {
+
+        const skillMatchBox =
+            applicantCard.querySelector(
+                ".skill-match-box"
+            );
+
+
+        const token =
+            localStorage.getItem(
+                "token"
+            );
+
+
+        if (!token) {
+
+            skillMatchBox.innerHTML = `
+                <div class="skill-match-error">
+                    🔐 Please login first.
+                </div>
+            `;
+
+            return;
+
+        }
+
+
+        try {
+
+            const response =
+                await fetch(
+                    "http://127.0.0.1:5000/api/applications/" +
+                    applicationId +
+                    "/skill-match",
+                    {
+                        method: "GET",
+
+                        headers: {
+                            "Authorization":
+                                "Bearer " + token
+                        }
+                    }
+                );
+
+
+            const data =
+                await response.json();
+
+
+            if (!response.ok) {
+
+                skillMatchBox.innerHTML = `
+                    <div class="skill-match-error">
+                        ❌ ${
+                            escapeHTML(
+                                data.message ||
+                                "Unable to calculate skill match."
+                            )
+                        }
+                    </div>
+                `;
+
+                return;
+
+            }
+
+
+            const matchPercentage =
+                Number(
+                    data.matchPercentage || 0
+                );
+
+                let matchLevel = "";
+let matchClass = "";
+
+if (matchPercentage >= 80) {
+    matchLevel = "Excellent Match";
+    matchClass = "match-excellent";
+} else if (matchPercentage >= 60) {
+    matchLevel = "Good Match";
+    matchClass = "match-good";
+} else if (matchPercentage >= 40) {
+    matchLevel = "Moderate Match";
+    matchClass = "match-moderate";
+} else {
+    matchLevel = "Low Match";
+    matchClass = "match-low";
+}
+
+
+            const matchingSkills =
+                data.matchingSkills || [];
+
+
+            const missingSkills =
+                data.missingSkills || [];
+
+                let improvementHTML = "";
+
+if (missingSkills.length > 0) {
+
+    improvementHTML = `
+        <div class="skill-improvement-box">
+
+            <div class="skill-improvement-title">
+                💡 Skill Improvement Suggestion
+            </div>
+
+            <p class="skill-improvement-text">
+                This applicant can improve their suitability
+                by developing:
+                <strong>
+                    ${missingSkills
+                        .map(skill => escapeHTML(skill))
+                        .join(", ")}
+                </strong>.
+            </p>
+
+        </div>
+    `;
+
+} else {
+
+    improvementHTML = `
+        <div class="skill-improvement-box">
+
+            <div class="skill-improvement-title">
+                🏆 Excellent Skill Coverage
+            </div>
+
+            <p class="skill-improvement-text">
+                This applicant currently has all the
+                required skills for this opportunity.
+            </p>
+
+        </div>
+    `;
+}
+
+            // =====================================
+            // MATCHING SKILLS HTML
+            // =====================================
+
+            let matchingSkillsHTML =
+                "";
+
+
+            if (
+                matchingSkills.length >
+                0
+            ) {
+
+                matchingSkillsHTML =
+                    matchingSkills
+                        .map(
+                            skill => `
+                                <span class="skill-tag matching-tag">
+                                    ✓ ${escapeHTML(skill)}
+                                </span>
+                            `
+                        )
+                        .join("");
+
+            } else {
+
+                matchingSkillsHTML =
+                    `<span class="skill-tag">
+                        No matching skills
+                    </span>`;
+
+            }
+
+
+
+            // =====================================
+            // MISSING SKILLS HTML
+            // =====================================
+
+            let missingSkillsHTML =
+                "";
+
+
+            if (
+                missingSkills.length >
+                0
+            ) {
+
+                missingSkillsHTML =
+                    missingSkills
+                        .map(
+                            skill => `
+                                <span class="skill-tag missing-tag">
+                                    ✗ ${escapeHTML(skill)}
+                                </span>
+                            `
+                        )
+                        .join("");
+
+            } else {
+
+                missingSkillsHTML =
+                    `<span class="skill-tag matching-tag">
+                        ✓ No missing skills
+                    </span>`;
+
+            }
+
+
+
+            // =====================================
+            // DISPLAY SKILL MATCH
+            // =====================================
+
+            skillMatchBox.innerHTML = `
+
+                <div class="skill-match-header">
+
+                    <span class="skill-match-label">
+                        🎯 Skill Match
+                    </span>
+
+                    <span class="skill-match-percentage">
+    ${matchPercentage}%
+
+    <span class="skill-match-level ${matchClass}">
+        ${matchLevel}
+    </span>
+</span>
+
+                </div>
+
+
+                <div class="skill-match-bar">
+
+                    <div
+                        class="skill-match-fill"
+                        style="width: ${matchPercentage}%"
+                    ></div>
+
+                </div>
+
+
+                <div class="matching-skills">
+
+                    <strong>
+                        ✅ Matching Skills
+                    </strong>
+
+                    <div>
+                        ${matchingSkillsHTML}
+                    </div>
+
+                </div>
+
+
+                <div class="missing-skills">
+
+                    <strong>
+                        ❌ Missing Skills
+                    </strong>
+
+                    <div>
+                        ${missingSkillsHTML}
+                    </div>
+
+                </div>
+
+                ${improvementHTML}
+
+            `;
+
+
+        } catch (error) {
+
+            console.error(
+                "Skill match error:",
+                error
+            );
+
+
+            skillMatchBox.innerHTML = `
+                <div class="skill-match-error">
+                    ❌ Unable to calculate skill match.
+                </div>
+            `;
+
+        }
+
+    }
+
+
+
+    // =====================================
+    // HTML SAFETY
+    // =====================================
+
+    function escapeHTML(value) {
+
+        if (
+            value === null ||
+            value === undefined
+        ) {
+
+            return "";
+
+        }
+
+
+        return String(value)
+
+            .replace(
+                /&/g,
+                "&amp;"
+            )
+
+            .replace(
+                /</g,
+                "&lt;"
+            )
+
+            .replace(
+                />/g,
+                "&gt;"
+            )
+
+            .replace(
+                /"/g,
+                "&quot;"
+            )
+
+            .replace(
+                /'/g,
+                "&#039;"
+            );
+
+    }
+
+
+
+    // =====================================
+    // INITIAL LOAD
+    // =====================================
+
+    loadMyOpportunities();
+
+
+
+    // =====================================
+    // LOGOUT
+    // =====================================
+
+    function logout() {
+
+        localStorage.removeItem(
+            "studentId"
+        );
+
+        localStorage.removeItem(
+            "token"
+        );
+
+        localStorage.removeItem(
+            "studentName"
+        );
+
+        localStorage.removeItem(
+            "studentEmail"
+        );
+
+        localStorage.removeItem(
+            "userRole"
+        );
+
+
+        window.location.href =
+            "login.html";
+
+    }
+
+</script>
+
+</body>
+
+</html>

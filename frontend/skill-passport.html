@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Skill Passport | SAKSHAM</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+
+        .passport-page {
+            min-height: 100vh;
+            padding: 50px 20px;
+        }
+
+        .passport-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .passport-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.10);
+            border: 1px solid #eeeeee;
+        }
+
+        .passport-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .passport-header h1 {
+            margin: 0 0 8px;
+            font-size: 32px;
+        }
+
+        .passport-header p {
+            margin: 0;
+            color: #666;
+        }
+
+        .passport-badge {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: #f1f1f1;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .passport-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .passport-detail {
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 10px;
+            border: 1px solid #eeeeee;
+        }
+
+        .passport-detail strong {
+            display: block;
+            color: #777;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .passport-skills {
+            margin-top: 25px;
+        }
+
+        .passport-skills h2 {
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            padding: 8px 14px;
+            background: #f1f1f1;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .passport-id-box {
+            margin-top: 30px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            background: #fafafa;
+            border: 1px dashed #cccccc;
+        }
+
+        .passport-id-box strong {
+            display: block;
+            color: #777;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        #passportId {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .passport-loading {
+            text-align: center;
+            color: #666;
+        }
+
+        /* QR CODE */
+
+        .passport-qr-box {
+            margin-top: 30px;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            background: #fafafa;
+            border: 1px solid #eeeeee;
+        }
+
+        .passport-qr-box h2 {
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .passport-qr-box p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        #qrCode {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 12px;
+            color: #777;
+        }
+
+        #qrCode img {
+            width: 160px;
+            height: 160px;
+        }
+
+        .passport-qr-box small {
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+
+            .passport-page {
+                padding: 30px 15px;
+            }
+
+            .passport-card {
+                padding: 25px 20px;
+            }
+
+            .passport-details {
+                grid-template-columns: 1fr;
+            }
+
+            .passport-header h1 {
+                font-size: 27px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+    <!-- Navigation -->
+
+    <nav class="dashboard-navbar">
+
+        <div class="logo">
+            SAKSHAM
+        </div>
+
+        <div class="nav-links">
+
+            <a href="student-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- Passport -->
+
+    <main class="passport-page">
+
+        <div class="passport-container">
+
+            <div class="passport-card">
+
+
+                <!-- Header -->
+
+                <div class="passport-header">
+
+                    <div class="passport-badge">
+                        DIGITAL SKILL PASSPORT
+                    </div>
+
+                    <h1>
+                        SAKSHAM Skill Passport
+                    </h1>
+
+                    <p>
+                        Verified student skill and academic profile
+                    </p>
+
+                </div>
+
+
+
+                <!-- Loading -->
+
+                <div
+                    id="passportLoading"
+                    class="passport-loading">
+
+                    Loading Skill Passport...
+
+                </div>
+
+
+
+                <!-- Passport Content -->
+
+                <div
+                    id="passportContent"
+                    style="display: none;">
+
+
+                    <!-- Student Details -->
+
+                    <div class="passport-details">
+
+
+                        <div class="passport-detail">
+
+                            <strong>
+                                Student Name
+                            </strong>
+
+                            <span id="studentName">
+                                -
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="passport-detail">
+
+                            <strong>
+                                Email
+                            </strong>
+
+                            <span id="studentEmail">
+                                -
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="passport-detail">
+
+                            <strong>
+                                College
+                            </strong>
+
+                            <span id="studentCollege">
+                                -
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="passport-detail">
+
+                            <strong>
+                                Degree
+                            </strong>
+
+                            <span id="studentDegree">
+                                -
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="passport-detail">
+
+                            <strong>
+                                Branch
+                            </strong>
+
+                            <span id="studentBranch">
+                                -
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="passport-detail">
+
+                            <strong>
+                                AYUSH Discipline
+                            </strong>
+
+                            <span id="studentDiscipline">
+                                -
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="passport-detail">
+
+                            <strong>
+                                Skill Level
+                            </strong>
+
+                            <span id="studentSkillLevel">
+                                -
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="passport-detail">
+
+                            <strong>
+                                Graduation Year
+                            </strong>
+
+                            <span id="studentGraduation">
+                                -
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Skills -->
+
+                    <div class="passport-skills">
+
+                        <h2>
+                            🛠️ Skills
+                        </h2>
+
+                        <div
+                            id="skillsList"
+                            class="skills-list">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Passport ID -->
+
+                    <div class="passport-id-box">
+
+                        <strong>
+                            UNIQUE PASSPORT ID
+                        </strong>
+
+                        <div id="passportId">
+                            -
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QR CODE -->
+
+                    <div class="passport-qr-box">
+
+                        <h2>
+                            📱 Verify Skill Passport
+                        </h2>
+
+                        <p>
+                            Scan this QR code to verify this student's
+                            Digital Skill Passport.
+                        </p>
+
+                        <div id="qrCode">
+                            QR Code will appear here
+                        </div>
+
+                        <small>
+                            SAKSHAM Digital Verification
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <script>
+
+
+        // =====================================
+        // CHECK LOGIN
+        // =====================================
+
+        const token =
+            localStorage.getItem("token");
+
+
+        if (!token) {
+
+            alert("Please login first.");
+
+            window.location.href =
+                "index.html";
+
+        }
+
+
+
+        // =====================================
+        // LOAD DIGITAL SKILL PASSPORT
+        // =====================================
+
+        async function loadPassport() {
+
+            try {
+
+
+                // Get student ID from JWT
+
+                const payload =
+                    JSON.parse(
+                        atob(token.split(".")[1])
+                    );
+
+
+                const studentId =
+                    payload.id;
+
+
+
+                // =====================================
+                // GET STUDENT PROFILE
+                // =====================================
+
+                const profileResponse =
+                    await fetch(
+                        `http://localhost:5000/api/students/${studentId}`,
+                        {
+                            method: "GET",
+
+                            headers: {
+                                "Authorization":
+                                    `Bearer ${token}`
+                            }
+                        }
+                    );
+
+
+                const profileData =
+                    await profileResponse.json();
+
+
+                if (!profileResponse.ok) {
+
+                    throw new Error(
+                        profileData.message ||
+                        "Unable to load profile."
+                    );
+
+                }
+
+
+                const student =
+                    profileData.student;
+
+
+
+                // =====================================
+                // DISPLAY STUDENT INFORMATION
+                // =====================================
+
+                document.getElementById(
+                    "studentName"
+                ).textContent =
+                    student.name ||
+                    "Not available";
+
+
+                document.getElementById(
+                    "studentEmail"
+                ).textContent =
+                    student.email ||
+                    "Not available";
+
+
+                document.getElementById(
+                    "studentCollege"
+                ).textContent =
+                    student.college ||
+                    "Not available";
+
+
+                document.getElementById(
+                    "studentDegree"
+                ).textContent =
+                    student.degree ||
+                    "Not available";
+
+
+                document.getElementById(
+                    "studentBranch"
+                ).textContent =
+                    student.branch ||
+                    "Not available";
+
+
+                document.getElementById(
+                    "studentDiscipline"
+                ).textContent =
+                    student.discipline ||
+                    "Not available";
+
+
+                document.getElementById(
+                    "studentSkillLevel"
+                ).textContent =
+                    student.skillLevel ||
+                    "Not available";
+
+
+                document.getElementById(
+                    "studentGraduation"
+                ).textContent =
+                    student.graduationYear ||
+                    "Not available";
+
+
+
+                // =====================================
+                // DISPLAY SKILLS
+                // =====================================
+
+                const skillsList =
+                    document.getElementById(
+                        "skillsList"
+                    );
+
+
+                skillsList.innerHTML = "";
+
+
+                if (
+                    student.skills &&
+                    student.skills.length > 0
+                ) {
+
+
+                    student.skills.forEach(
+                        skill => {
+
+                            const li =
+                                document.createElement(
+                                    "li"
+                                );
+
+
+                            li.textContent =
+                                skill;
+
+
+                            li.className =
+                                "skill-tag";
+
+
+                            skillsList.appendChild(
+                                li
+                            );
+
+                        }
+                    );
+
+
+                } else {
+
+
+                    const li =
+                        document.createElement(
+                            "li"
+                        );
+
+
+                    li.textContent =
+                        "No skills added yet.";
+
+
+                    li.className =
+                        "skill-tag";
+
+
+                    skillsList.appendChild(
+                        li
+                    );
+
+                }
+
+
+
+                // =====================================
+                // GENERATE / GET PASSPORT ID
+                // =====================================
+
+                const passportResponse =
+                    await fetch(
+                        "http://localhost:5000/api/student/passport/generate",
+                        {
+                            method: "POST",
+
+                            headers: {
+                                "Authorization":
+                                    `Bearer ${token}`
+                            }
+                        }
+                    );
+
+
+                const passportData =
+                    await passportResponse.json();
+
+
+                if (!passportResponse.ok) {
+
+                    throw new Error(
+                        passportData.message ||
+                        "Unable to generate Passport ID."
+                    );
+
+                }
+
+
+                // Display Passport ID
+
+                document.getElementById(
+                    "passportId"
+                ).textContent =
+                    passportData.passportId;
+
+
+
+                // =====================================
+                // GENERATE QR CODE
+                // =====================================
+
+                const qrCodeContainer =
+                    document.getElementById(
+                        "qrCode"
+                    );
+
+
+                qrCodeContainer.innerHTML =
+                    "";
+
+
+                new QRCode(
+                    qrCodeContainer,
+                    {
+                       text:
+    `http://10.51.18.14:5500/frontend/verify-passport.html?passport=${encodeURIComponent(passportData.passportId)}`,
+
+                        width: 160,
+
+                        height: 160
+                    }
+                );
+
+
+
+                // =====================================
+                // SHOW PASSPORT
+                // =====================================
+
+                document.getElementById(
+                    "passportLoading"
+                ).style.display =
+                    "none";
+
+
+                document.getElementById(
+                    "passportContent"
+                ).style.display =
+                    "block";
+
+
+            } catch (error) {
+
+
+                console.error(
+                    "Passport loading error:",
+                    error
+                );
+
+
+                document.getElementById(
+                    "passportLoading"
+                ).textContent =
+                    "Unable to load Digital Skill Passport.";
+
+
+            }
+
+        }
+
+
+
+        // =====================================
+        // START
+        // =====================================
+
+        loadPassport();
+
+
+    </script>
+
+
+</body>
+
+</html>

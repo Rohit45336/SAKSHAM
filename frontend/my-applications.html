@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Applications | SAKSHAM</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body class="saksham-applications-page">
+
+
+<!-- Navigation -->
+<nav class="applications-navbar">
+
+    <div class="applications-logo">
+        <span>SAKSHAM</span>
+        <small>SKILL • OPPORTUNITY • GROWTH</small>
+    </div>
+
+    <div class="applications-nav-right">
+
+        <span class="applications-nav-title">
+            My Applications
+        </span>
+
+        <button
+            class="applications-logout-btn"
+            onclick="logoutStudent()">
+            Logout
+        </button>
+
+    </div>
+
+</nav>
+
+
+<!-- Main -->
+<main class="applications-container">
+
+    <!-- Hero -->
+    <section class="applications-hero">
+
+        <div class="applications-hero-content">
+
+            <p class="applications-label">
+                APPLICATION TRACKER
+            </p>
+
+            <h1>
+                Track Your <span>Career Journey</span>
+            </h1>
+
+            <p class="applications-hero-text">
+                Keep track of your AYUSH internship and
+                career opportunity applications in one place.
+            </p>
+
+        </div>
+
+        <div class="applications-hero-icon">
+            📋
+        </div>
+
+    </section>
+
+
+    <!-- Quick Stats -->
+    <section class="applications-stats">
+
+        <div class="application-stat-card">
+
+            <div class="application-stat-icon">
+                📄
+            </div>
+
+            <div>
+                <span class="application-stat-label">
+                    TOTAL APPLICATIONS
+                </span>
+
+                <strong id="totalApplications">
+                    —
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="application-stat-card">
+
+            <div class="application-stat-icon">
+                🟢
+            </div>
+
+            <div>
+                <span class="application-stat-label">
+                    CURRENT STATUS
+                </span>
+
+                <strong id="currentStatus">
+                    —
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="application-stat-card">
+
+            <div class="application-stat-icon">
+                🎯
+            </div>
+
+            <div>
+                <span class="application-stat-label">
+                    CAREER PROGRESS
+                </span>
+
+                <strong>
+                    Active
+                </strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Application History -->
+    <section class="applications-section">
+
+        <div class="applications-section-header">
+
+            <div>
+
+                <p class="applications-section-label">
+                    YOUR JOURNEY
+                </p>
+
+                <h2>
+                    Application History
+                </h2>
+
+                <p>
+                    Review the opportunities you have applied for
+                    and monitor their current status.
+                </p>
+
+            </div>
+
+            <div class="applications-section-icon">
+                📑
+            </div>
+
+        </div>
+
+
+        <!-- Application List -->
+        <div id="applicationsContainer"
+             class="applications-list">
+
+            <div id="loadingMessage"
+                 class="applications-loading">
+
+                <div class="applications-loading-icon">
+                    ⏳
+                </div>
+
+                <h3>
+                    Loading Applications
+                </h3>
+
+                <p>
+                    Please wait while we fetch your application history.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Empty State -->
+    <section
+        id="emptyState"
+        class="applications-empty"
+        style="display: none;">
+
+        <div class="applications-empty-icon">
+            📭
+        </div>
+
+        <p class="applications-section-label">
+            START YOUR JOURNEY
+        </p>
+
+        <h2>
+            No Applications Yet
+        </h2>
+
+        <p>
+            You have not applied for any opportunity yet.
+            Explore AYUSH opportunities and submit your first application.
+        </p>
+
+        <button
+            class="applications-primary-btn"
+            onclick="window.location.href='opportunities.html'">
+
+            Explore Opportunities →
+            
+        </button>
+
+    </section>
+
+
+    <!-- Career Tip -->
+    <section class="applications-tip">
+
+        <div class="applications-tip-icon">
+            💡
+        </div>
+
+        <div>
+
+            <span>
+                SAKSHAM CAREER TIP
+            </span>
+
+            <h3>
+                Keep building your skills while you wait.
+            </h3>
+
+            <p>
+                Strengthening your skills can improve your
+                readiness for future AYUSH opportunities.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Back -->
+    <div class="applications-back">
+
+        <button
+            class="applications-back-btn"
+            onclick="window.location.href='student-dashboard.html'">
+
+            ← Back to Dashboard
+
+        </button>
+
+    </div>
+
+</main>
+
+
+<!-- Footer -->
+<footer class="applications-footer">
+
+    <div class="applications-footer-logo">
+        SAKSHAM
+    </div>
+
+    <p>
+        Empowering Skills. Connecting Opportunities.
+    </p>
+
+    <p class="applications-copyright">
+        © 2026 SAKSHAM. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+<!-- Applications Logic -->
+<script>
+
+    async function loadApplications() {
+
+        const studentId =
+            localStorage.getItem("studentId");
+
+        const token =
+            localStorage.getItem("token");
+
+
+        // Login check
+        if (!studentId) {
+
+            window.location.href = "login.html";
+
+            return;
+
+        }
+
+
+        const container =
+            document.getElementById(
+                "applicationsContainer"
+            );
+
+        const loadingMessage =
+            document.getElementById(
+                "loadingMessage"
+            );
+
+        const emptyState =
+            document.getElementById(
+                "emptyState"
+            );
+
+
+        try {
+
+            const response = await fetch(
+                "http://127.0.0.1:5000/api/applications/student/" +
+                studentId,
+                {
+                    headers: {
+                        "Authorization":
+                            "Bearer " + token
+                    }
+                }
+            );
+
+
+            const data =
+                await response.json();
+
+
+            if (!response.ok) {
+
+                loadingMessage.innerHTML = `
+                    <div class="applications-error-icon">
+                        ⚠️
+                    </div>
+
+                    <h3>
+                        Unable to Load Applications
+                    </h3>
+
+                    <p>
+                        ${data.message ||
+                        "Something went wrong while loading your applications."}
+                    </p>
+                `;
+
+                return;
+
+            }
+
+
+            // Remove loading message
+            loadingMessage.remove();
+
+
+            const applications =
+                data.applications;
+
+
+            // Update total applications
+            const totalApplications =
+                document.getElementById(
+                    "totalApplications"
+                );
+
+            totalApplications.textContent =
+                applications
+                    ? applications.length
+                    : 0;
+
+
+            // No applications
+            if (
+                !applications ||
+                applications.length === 0
+            ) {
+
+                emptyState.style.display =
+                    "block";
+
+                return;
+
+            }
+
+
+            // Update current status
+            const currentStatus =
+                document.getElementById(
+                    "currentStatus"
+                );
+
+            currentStatus.textContent =
+                applications[0].status ||
+                "Applied";
+
+
+            // Display applications
+            applications.forEach(
+                function (application) {
+
+                    const card =
+                        document.createElement(
+                            "div"
+                        );
+
+                    card.className =
+                        "application-modern-card";
+
+
+                    card.innerHTML = `
+
+                        <div class="application-card-top">
+
+                            <span class="application-status-badge">
+                                ${application.status || "Applied"}
+                            </span>
+
+                            <span class="application-number">
+                                APPLICATION
+                            </span>
+
+                        </div>
+
+
+                        <div class="application-card-main">
+
+                            <div class="application-card-icon">
+                                🎓
+                            </div>
+
+                            <div class="application-card-content">
+
+                                <h3>
+                                    ${application.opportunityName}
+                                </h3>
+
+                                <div class="application-meta">
+
+                                    <div class="application-meta-item">
+
+                                        <span class="application-meta-icon">
+                                            🩺
+                                        </span>
+
+                                        <div>
+                                            <small>
+                                                DISCIPLINE
+                                            </small>
+
+                                            <strong>
+                                                ${application.discipline}
+                                            </strong>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="application-meta-item">
+
+                                        <span class="application-meta-icon">
+                                            📅
+                                        </span>
+
+                                        <div>
+                                            <small>
+                                                APPLIED ON
+                                            </small>
+
+                                            <strong>
+                                                ${new Date(
+                                                    application.createdAt
+                                                ).toLocaleDateString()}
+                                            </strong>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="application-card-footer">
+
+                            <span>
+                                Your application is being tracked by SAKSHAM.
+                            </span>
+
+                            <span class="application-arrow">
+                                →
+                            </span>
+
+                        </div>
+
+                    `;
+
+
+                    container.appendChild(card);
+
+                }
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                "Applications error:",
+                error
+            );
+
+
+            loadingMessage.innerHTML = `
+
+                <div class="applications-error-icon">
+                    🔌
+                </div>
+
+                <h3>
+                    Server Connection Error
+                </h3>
+
+                <p>
+                    Unable to connect to SAKSHAM server.
+                </p>
+
+            `;
+
+        }
+
+    }
+
+
+    loadApplications();
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | SAKSHAM</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="saksham-register-page">
+
+
+    <!-- ================= REGISTER NAVBAR ================= -->
+
+    <nav class="register-navbar">
+
+        <a href="index.html" class="register-brand">
+
+            <span class="register-brand-icon">
+                🌿
+            </span>
+
+            <div>
+
+                <strong>
+                    SAKSHAM
+                </strong>
+
+                <small>
+                    Skills • Opportunities • Growth
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <a href="index.html" class="register-home-link">
+            ← Back to Home
+        </a>
+
+    </nav>
+
+
+
+    <!-- ================= REGISTER MAIN ================= -->
+
+    <main class="register-main">
+
+
+        <!-- ================= LEFT INFORMATION PANEL ================= -->
+
+        <section class="register-info-panel">
+
+            <div class="register-info-pattern register-pattern-one"></div>
+            <div class="register-info-pattern register-pattern-two"></div>
+
+
+            <div class="register-info-content">
+
+                <span class="register-info-label">
+                    🌿 JOIN SAKSHAM
+                </span>
+
+
+                <h1>
+                    Start Your Journey.
+                    <span>Build Your Future.</span>
+                </h1>
+
+
+                <p>
+                    Create your SAKSHAM account and take the first
+                    step towards building your skills, discovering
+                    opportunities and connecting with the AYUSH
+                    career ecosystem.
+                </p>
+
+
+                <div class="register-feature-list">
+
+
+                    <div class="register-feature-item">
+
+                        <span>
+                            🎓
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Create Your Profile
+                            </strong>
+
+                            <small>
+                                Build your professional digital identity.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="register-feature-item">
+
+                        <span>
+                            🛠️
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Showcase Your Skills
+                            </strong>
+
+                            <small>
+                                Add skills and track your development.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="register-feature-item">
+
+                        <span>
+                            🎯
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Unlock Opportunities
+                            </strong>
+
+                            <small>
+                                Discover internships that match your skills.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Decorative AYUSH Elements -->
+
+            <div class="register-ayush-orbit">
+
+                <span>🌿</span>
+                <span>🌸</span>
+                <span>🧘</span>
+                <span>🌱</span>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= REGISTER FORM ================= -->
+
+        <section class="register-form-section">
+
+
+            <div class="register-container">
+
+
+                <div class="register-header">
+
+
+                    <div class="register-mobile-logo">
+                        🌿 SAKSHAM
+                    </div>
+
+
+                    <span class="register-form-label">
+                        CREATE YOUR ACCOUNT
+                    </span>
+
+
+                    <h2>
+                        Join SAKSHAM
+                    </h2>
+
+
+                    <p>
+                        Create your account and begin your career journey.
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- IMPORTANT:
+                     Keep ALL existing IDs unchanged.
+                     Existing JavaScript depends on them. -->
+
+                <form id="registerForm">
+
+
+                    <!-- Full Name -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="registerEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label for="registerPassword">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Role -->
+
+                    <div class="form-group">
+
+                        <label for="registerRole">
+                            Register As
+                        </label>
+
+                        <select id="registerRole" required>
+
+                            <option value="">
+                                Select your role
+                            </option>
+
+                            <option value="student">
+                                Student
+                            </option>
+
+                            <option value="company">
+                                Company
+                            </option>
+
+                            <option value="college">
+                                College / Admin
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Submit -->
+
+                    <button
+                        type="submit"
+                        class="primary-btn register-submit"
+                    >
+                        Create Account →
+                    </button>
+
+
+                </form>
+
+
+
+                <div class="register-divider">
+
+                    <span>
+                        SAKSHAM
+                    </span>
+
+                </div>
+
+
+
+                <div class="register-footer">
+
+                    <p>
+                        Already have an account?
+
+                        <a href="login.html">
+                            Login
+                        </a>
+                    </p>
+
+
+                    <a href="index.html">
+                        ← Back to Home
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="register-bottom-bar">
+
+        <span>
+            🌿 SAKSHAM
+        </span>
+
+        <span>
+            Empowering Skills • Connecting Opportunities
+        </span>
+
+        <span>
+            © 2026
+        </span>
+
+    </footer>
+
+
+
+    <!-- Existing JavaScript -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
