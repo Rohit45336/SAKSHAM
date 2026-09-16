@@ -13,6 +13,8 @@
     <link rel="stylesheet"
         href="style.css">
 
+    <script src="translations.js"></script>
+
 </head>
 
 
@@ -25,20 +27,30 @@
 
     <nav class="dashboard-navbar">
 
-        <div class="dashboard-logo">
+
+        <div class="dashboard-logo"
+            data-translate="siteName">
+
             SAKSHAM
+
         </div>
 
 
         <div class="dashboard-nav-right">
 
-            <span class="welcome-text">
+            <span
+                class="welcome-text"
+                data-translate="studentProfile">
+
                 Student Profile
+
             </span>
+
 
             <button
                 class="logout-btn"
-                onclick="logoutStudent()">
+                onclick="logoutStudent()"
+                data-translate="logout">
 
                 Logout
 
@@ -46,8 +58,34 @@
 
         </div>
 
-    </nav>
 
+        <div class="language-selector">
+
+            <span>🌐</span>
+
+            <select id="languageSelect">
+
+                <option value="en">
+                    English
+                </option>
+
+                <option value="hi">
+                    हिन्दी
+                </option>
+
+                <option value="ne">
+                    नेपाली
+                </option>
+
+                <option value="kn">
+                    ಕನ್ನಡ
+                </option>
+
+            </select>
+
+        </div>
+
+    </nav>
 
 
     <!-- =========================
@@ -65,17 +103,36 @@
 
             <div>
 
-                <p class="dashboard-label">
+                <p
+                    class="dashboard-label"
+                    data-translate="profileLabel">
+
                     STUDENT PROFILE
+
                 </p>
 
+
                 <h1>
-                    My Profile 👤
+
+                    <span
+                        data-translate="myProfile">
+
+                        My Profile
+
+                    </span>
+
+                    👤
+
                 </h1>
 
-                <p>
-                    Manage your personal information, academic
-                    details and professional skills on SAKSHAM.
+
+                <p
+                    data-translate="profileDescription">
+
+                    Manage your personal information,
+                    academic details and professional
+                    skills on SAKSHAM.
+
                 </p>
 
             </div>
@@ -88,12 +145,12 @@
         </section>
 
 
-
         <!-- =========================
              IDENTITY CARD
         ========================== -->
 
         <section class="student-identity-card">
+
 
             <div class="student-avatar-large">
                 👤
@@ -102,13 +159,19 @@
 
             <div class="student-identity-info">
 
-                <span class="identity-label">
+                <span
+                    class="identity-label"
+                    data-translate="sakshamStudent">
+
                     SAKSHAM STUDENT
+
                 </span>
+
 
                 <h2 id="profileName">
                     Student Name
                 </h2>
+
 
                 <p id="profileEmail">
                     student@email.com
@@ -117,12 +180,15 @@
             </div>
 
 
-            <div class="profile-role-badge">
+            <div
+                class="profile-role-badge"
+                data-translate="student">
+
                 STUDENT
+
             </div>
 
         </section>
-
 
 
         <!-- =========================
@@ -131,20 +197,30 @@
 
         <section class="profile-modern-card">
 
+
             <div class="profile-section-heading">
+
 
                 <div class="profile-heading-icon">
                     👤
                 </div>
 
+
                 <div>
 
-                    <span>
+                    <span
+                        data-translate="basicDetails">
+
                         BASIC DETAILS
+
                     </span>
 
-                    <h2>
+
+                    <h2
+                        data-translate="personalInformation">
+
                         Personal Information
+
                     </h2>
 
                 </div>
@@ -161,11 +237,16 @@
                         👤
                     </span>
 
+
                     <div>
 
-                        <label>
+                        <label
+                            data-translate="fullName">
+
                             Full Name
+
                         </label>
+
 
                         <p id="infoName">
                             Student Name
@@ -176,18 +257,22 @@
                 </div>
 
 
-
                 <div class="profile-modern-field">
 
                     <span class="field-icon">
                         ✉️
                     </span>
 
+
                     <div>
 
-                        <label>
+                        <label
+                            data-translate="emailAddress">
+
                             Email Address
+
                         </label>
+
 
                         <p id="infoEmail">
                             student@email.com
@@ -198,20 +283,24 @@
                 </div>
 
 
-
                 <div class="profile-modern-field">
 
                     <span class="field-icon">
                         🎓
                     </span>
 
+
                     <div>
 
-                        <label>
+                        <label
+                            data-translate="role">
+
                             Role
+
                         </label>
 
-                        <p>
+
+                        <p data-translate="student">
                             Student
                         </p>
 
@@ -220,18 +309,22 @@
                 </div>
 
 
-
                 <div class="profile-modern-field">
 
                     <span class="field-icon">
                         🪷
                     </span>
 
+
                     <div>
 
-                        <label>
+                        <label
+                            data-translate="platform">
+
                             Platform
+
                         </label>
+
 
                         <p>
                             SAKSHAM
@@ -246,27 +339,36 @@
         </section>
 
 
-
         <!-- =========================
              ACADEMIC INFORMATION
         ========================== -->
 
         <section class="profile-modern-card">
 
+
             <div class="profile-section-heading">
+
 
                 <div class="profile-heading-icon">
                     🎓
                 </div>
 
+
                 <div>
 
-                    <span>
+                    <span
+                        data-translate="education">
+
                         EDUCATION
+
                     </span>
 
-                    <h2>
+
+                    <h2
+                        data-translate="academicInformation">
+
                         Academic Information
+
                     </h2>
 
                 </div>
@@ -279,54 +381,83 @@
 
                 <div class="academic-info-box">
 
-                    <span>
+                    <span
+                        data-translate="collegeInstitution">
+
                         COLLEGE / INSTITUTION
+
                     </span>
 
-                    <strong id="infoCollege">
+
+                    <strong
+                        id="infoCollege"
+                        data-translate="notAdded">
+
                         Not Added
+
                     </strong>
 
                 </div>
 
 
-
                 <div class="academic-info-box">
 
-                    <span>
+                    <span
+                        data-translate="degree">
+
                         DEGREE
+
                     </span>
 
-                    <strong id="infoDegree">
+
+                    <strong
+                        id="infoDegree"
+                        data-translate="notAdded">
+
                         Not Added
+
                     </strong>
 
                 </div>
 
 
-
                 <div class="academic-info-box">
 
-                    <span>
+                    <span
+                        data-translate="branch">
+
                         BRANCH
+
                     </span>
 
-                    <strong id="infoBranch">
+
+                    <strong
+                        id="infoBranch"
+                        data-translate="notAdded">
+
                         Not Added
+
                     </strong>
 
                 </div>
 
 
-
                 <div class="academic-info-box">
 
-                    <span>
+                    <span
+                        data-translate="graduationYear">
+
                         GRADUATION YEAR
+
                     </span>
 
-                    <strong id="infoGraduationYear">
+
+                    <strong
+                        id="infoGraduationYear"
+                        data-translate="notAdded">
+
                         Not Added
+
                     </strong>
 
                 </div>
@@ -338,10 +469,13 @@
                 class="profile-edit-btn"
                 onclick="showAcademicForm()">
 
-                ✏️ Edit Academic Information
+                ✏️
+
+                <span data-translate="editAcademic">
+                    Edit Academic Information
+                </span>
 
             </button>
-
 
 
             <!-- Academic Form -->
@@ -354,12 +488,20 @@
 
                 <div class="edit-form-title">
 
-                    <h3>
+                    <h3
+                        data-translate="updateAcademic">
+
                         Update Academic Information
+
                     </h3>
 
-                    <p>
-                        Keep your educational details up to date.
+
+                    <p
+                        data-translate="academicDescription">
+
+                        Keep your educational details
+                        up to date.
+
                     </p>
 
                 </div>
@@ -370,58 +512,79 @@
 
                     <div>
 
-                        <label for="collegeInput">
+                        <label
+                            for="collegeInput"
+                            data-translate="collegeInstitution">
+
                             College / Institution
+
                         </label>
+
 
                         <input
                             type="text"
                             id="collegeInput"
+                            data-translate-placeholder="collegePlaceholder"
                             placeholder="College / Institution">
 
                     </div>
 
 
-
                     <div>
 
-                        <label for="degreeInput">
+                        <label
+                            for="degreeInput"
+                            data-translate="degree">
+
                             Degree
+
                         </label>
+
 
                         <input
                             type="text"
                             id="degreeInput"
+                            data-translate-placeholder="degreePlaceholder"
                             placeholder="Degree">
 
                     </div>
 
 
-
                     <div>
 
-                        <label for="branchInput">
+                        <label
+                            for="branchInput"
+                            data-translate="branch">
+
                             Branch
+
                         </label>
+
 
                         <input
                             type="text"
                             id="branchInput"
+                            data-translate-placeholder="branchPlaceholder"
                             placeholder="Branch">
 
                     </div>
 
 
-
                     <div>
 
-                        <label for="graduationYearInput">
+                        <label
+                            for="graduationYearInput"
+                            data-translate="graduationYear">
+
                             Graduation Year
+
                         </label>
+
 
                         <input
                             type="text"
                             id="graduationYearInput"
+                            data-translate-placeholder="graduationYearPlaceholder"
                             placeholder="Graduation Year">
 
                     </div>
@@ -433,7 +596,11 @@
                     class="profile-save-btn"
                     onclick="saveAcademicInfo()">
 
-                    💾 Save Academic Information
+                    💾
+
+                    <span data-translate="saveAcademic">
+                        Save Academic Information
+                    </span>
 
                 </button>
 
@@ -442,27 +609,36 @@
         </section>
 
 
-
         <!-- =========================
              SKILLS
         ========================== -->
 
         <section class="profile-modern-card">
 
+
             <div class="profile-section-heading">
+
 
                 <div class="profile-heading-icon">
                     🛠️
                 </div>
 
+
                 <div>
 
-                    <span>
+                    <span
+                        data-translate="professionalProfile">
+
                         PROFESSIONAL PROFILE
+
                     </span>
 
-                    <h2>
+
+                    <h2
+                        data-translate="mySkills">
+
                         My Skills
+
                     </h2>
 
                 </div>
@@ -470,9 +646,13 @@
             </div>
 
 
-            <p class="profile-section-description">
+            <p
+                class="profile-section-description"
+                data-translate="skillsDescription">
+
                 Your selected AYUSH skills are displayed
                 here as part of your professional profile.
+
             </p>
 
 
@@ -480,8 +660,12 @@
                 id="skillsContainer"
                 class="profile-skills-display">
 
-                <div class="skills-loading">
+                <div
+                    class="skills-loading"
+                    data-translate="loadingSkills">
+
                     Loading skills...
+
                 </div>
 
             </div>
@@ -491,12 +675,15 @@
                 class="profile-manage-skills-btn"
                 onclick="window.location.href='student-skills.html'">
 
-                🛠️ Add / Manage Skills
+                🛠️
+
+                <span data-translate="addManageSkills">
+                    Add / Manage Skills
+                </span>
 
             </button>
 
         </section>
-
 
 
         <!-- =========================
@@ -505,6 +692,7 @@
 
         <section class="profile-completion-card">
 
+
             <div class="completion-icon">
                 🚀
             </div>
@@ -512,24 +700,33 @@
 
             <div>
 
-                <span>
+                <span data-translate="buildProfile">
+
                     BUILD YOUR PROFILE
+
                 </span>
 
-                <h2>
+
+                <h2
+                    data-translate="keepProfileUpdated">
+
                     Keep your SAKSHAM profile updated
+
                 </h2>
 
-                <p>
+
+                <p
+                    data-translate="completeProfileDescription">
+
                     A complete profile helps you discover
                     more relevant skills, internships and
                     career opportunities.
+
                 </p>
 
             </div>
 
         </section>
-
 
 
         <!-- =========================
@@ -538,11 +735,16 @@
 
         <div class="profile-back">
 
+
             <button
                 class="dashboard-card-btn"
                 onclick="window.location.href='student-dashboard.html'">
 
-                ← Back to Dashboard
+                ←
+
+                <span data-translate="backToDashboard">
+                    Back to Dashboard
+                </span>
 
             </button>
 
@@ -551,27 +753,28 @@
     </main>
 
 
-
     <!-- =========================
          FOOTER
     ========================== -->
 
     <footer class="dashboard-footer">
 
+
         <div class="footer-logo">
             SAKSHAM
         </div>
 
+
         <p>
             Empowering Skills. Connecting Opportunities.
         </p>
+
 
         <p class="copyright">
             © 2026 SAKSHAM. All Rights Reserved.
         </p>
 
     </footer>
-
 
 
     <!-- =========================
@@ -588,7 +791,13 @@
 
             if (!studentId) {
 
-                alert("Please login first.");
+                alert(
+                    translations[
+                        localStorage.getItem(
+                            "sakshamLanguage"
+                        ) || "en"
+                    ].loginFirst
+                );
 
                 window.location.href =
                     "login.html";
@@ -623,7 +832,9 @@
 
                 if (!response.ok) {
 
-                    alert(data.message);
+                    alert(
+                        data.message
+                    );
 
                     return;
 
@@ -634,7 +845,7 @@
                     data.student;
 
 
-                /* Basic Profile */
+                // Basic Profile
 
                 document.getElementById(
                     "profileName"
@@ -660,39 +871,37 @@
                     student.email;
 
 
-
-                /* Academic Information */
+                // Academic Information
 
                 document.getElementById(
                     "infoCollege"
                 ).textContent =
                     student.college ||
-                    "Not Added";
+                    getTranslation("notAdded");
 
 
                 document.getElementById(
                     "infoDegree"
                 ).textContent =
                     student.degree ||
-                    "Not Added";
+                    getTranslation("notAdded");
 
 
                 document.getElementById(
                     "infoBranch"
                 ).textContent =
                     student.branch ||
-                    "Not Added";
+                    getTranslation("notAdded");
 
 
                 document.getElementById(
                     "infoGraduationYear"
                 ).textContent =
                     student.graduationYear ||
-                    "Not Added";
+                    getTranslation("notAdded");
 
 
-
-                /* Skills */
+                // Skills
 
                 const skillsContainer =
                     document.getElementById(
@@ -705,7 +914,8 @@
                     student.skills.length > 0
                 ) {
 
-                    skillsContainer.innerHTML = "";
+                    skillsContainer.innerHTML =
+                        "";
 
 
                     student.skills.forEach(
@@ -745,12 +955,11 @@
                             <div>
 
                                 <strong>
-                                    No skills added yet
+                                    ${getTranslation("noSkills")}
                                 </strong>
 
                                 <p>
-                                    Add your AYUSH skills to
-                                    strengthen your profile.
+                                    ${getTranslation("addSkillsMessage")}
                                 </p>
 
                             </div>
@@ -770,8 +979,9 @@
 
 
                 alert(
-                    "Unable to load profile. " +
-                    "Please make sure the backend is running."
+                    getTranslation(
+                        "profileLoadError"
+                    )
                 );
 
             }
@@ -779,13 +989,36 @@
         }
 
 
-        loadStudentProfile();
+        // =====================================
+        // GET CURRENT TRANSLATION
+        // =====================================
+
+        function getTranslation(key) {
+
+            const language =
+                localStorage.getItem(
+                    "sakshamLanguage"
+                ) || "en";
 
 
+            if (
+                translations[language] &&
+                translations[language][key]
+            ) {
 
-        /* =========================
-           SHOW ACADEMIC FORM
-        ========================== */
+                return translations[language][key];
+
+            }
+
+
+            return translations.en[key] || key;
+
+        }
+
+
+        // =====================================
+        // SHOW ACADEMIC FORM
+        // =====================================
 
         function showAcademicForm() {
 
@@ -795,7 +1028,8 @@
                 );
 
 
-            form.style.display = "block";
+            form.style.display =
+                "block";
 
 
             form.scrollIntoView({
@@ -806,15 +1040,16 @@
         }
 
 
-
-        /* =========================
-           SAVE ACADEMIC INFO
-        ========================== */
+        // =====================================
+        // SAVE ACADEMIC INFO
+        // =====================================
 
         async function saveAcademicInfo() {
 
             const studentId =
-                localStorage.getItem("studentId");
+                localStorage.getItem(
+                    "studentId"
+                );
 
 
             const college =
@@ -849,7 +1084,9 @@
             ) {
 
                 alert(
-                    "Please fill all academic information."
+                    getTranslation(
+                        "fillAcademic"
+                    )
                 );
 
                 return;
@@ -882,11 +1119,14 @@
 
                             body: JSON.stringify({
 
-                                college: college,
+                                college:
+                                    college,
 
-                                degree: degree,
+                                degree:
+                                    degree,
 
-                                branch: branch,
+                                branch:
+                                    branch,
 
                                 graduationYear:
                                     graduationYear
@@ -904,7 +1144,9 @@
                 if (response.ok) {
 
                     alert(
-                        "Academic information saved successfully! 🎓"
+                        getTranslation(
+                            "academicSaved"
+                        )
                     );
 
 
@@ -933,13 +1175,41 @@
 
 
                 alert(
-                    "Unable to save academic information. " +
-                    "Please make sure the backend server is running."
+                    getTranslation(
+                        "academicSaveError"
+                    )
                 );
 
             }
 
         }
+
+
+        // =====================================
+        // RELOAD DYNAMIC TEXT WHEN LANGUAGE CHANGES
+        // =====================================
+
+        const originalChangeLanguage =
+            window.changeLanguage;
+
+
+        window.changeLanguage =
+            function (language) {
+
+                originalChangeLanguage(
+                    language
+                );
+
+                loadStudentProfile();
+
+            };
+
+
+        // =====================================
+        // LOAD PROFILE
+        // =====================================
+
+        loadStudentProfile();
 
     </script>
 
