@@ -234,14 +234,15 @@ const token = jwt.sign(
             }
         });
 
-    } catch (error) {
+        } catch (error) {
 
-        console.log("Login error:", error.message);
+            console.log("Login error:", error);
 
-        res.status(500).json({
-            message: "Server error during login."
-        });
-    }
+            res.status(500).json({
+                message: "Server error during login.",
+                error: error.message
+            });
+        }
 });
 
 // =====================================
