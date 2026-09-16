@@ -186,21 +186,18 @@ app.post("/api/students/login", async (req, res) => {
         // Find student by email
         const student = await Student.findOne({ email });
 
-        // Student not found
         if (!student) {
             return res.status(401).json({
                 message: "Invalid email or password."
             });
         }
 
-        // Compare entered password
-        // with hashed password in MongoDB
+        // Compare entered password with hashed password
         const passwordMatch = await bcrypt.compare(
             password,
             student.password
         );
 
-        // Password incorrect
         if (!passwordMatch) {
             return res.status(401).json({
                 message: "Invalid email or password."
@@ -208,16 +205,16 @@ app.post("/api/students/login", async (req, res) => {
         }
 
         // Generate JWT token
-const token = jwt.sign(
-    {
-        id: student._id,
-        role: student.role
-    },
-    process.env.JWT_SECRET,
-    {
-        expiresIn: "7d"
-    }
-);
+        const token = jwt.sign(
+            {
+                id: student._id,
+                role: student.role
+            },
+            process.env.JWT_SECRET,
+            {
+                expiresIn: "7d"
+            }
+        );
 
         // Login successful
         res.status(200).json({
@@ -234,15 +231,20 @@ const token = jwt.sign(
             }
         });
 
-        } catch (error) {
+    } catch (error) {
 
-            console.log("Login error:", error);
+        console.log(
+            "Login error:",
+            error.message
+        );
 
-            res.status(500).json({
-                message: "Server error during login.",
-                error: error.message
-            });
-        }
+        res.status(500).json({
+            message:
+                "Server error during login."
+        });
+
+    }
+
 });
 
 // =====================================
