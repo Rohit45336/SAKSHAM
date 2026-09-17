@@ -200,6 +200,204 @@ const translations = {
         platformDescription:
             "A student skill-development and opportunity platform.",
 
+        
+        /* =================================================
+           HOME PAGE
+           ================================================= */
+
+        contact: "Contact",
+
+        heroLabel:
+            "🌿 STUDENT SKILL DEVELOPMENT & OPPORTUNITY PLATFORM",
+
+        heroTitle:
+            "Empower Your Skills.",
+
+        heroTitleHighlight:
+            "Shape Your Future.",
+
+        getStarted:
+            "Get Started",
+
+        exploreSaksham:
+            "Explore SAKSHAM",
+
+        ayushDisciplines:
+            "AYUSH Disciplines",
+
+        stakeholdersConnected:
+            "Stakeholders Connected",
+
+        unifiedPlatform:
+            "Unified Platform",
+
+        studentSkillPassport:
+            "Student Skill Passport",
+
+        learnBuildConnect:
+            "Learn • Build • Connect",
+
+        skills:
+            "Skills",
+
+        profile:
+            "Profile",
+
+        about:
+            "About",
+
+        ayush:
+            "AYUSH",
+
+        features:
+            "Features",
+
+        academiaIndustry:
+            "Academia ↔ Industry",
+
+        connectedEcosystem:
+            "One connected ecosystem for students, colleges and companies.",
+
+        aboutSaksham:
+            "ABOUT SAKSHAM",
+
+        connectingEducation:
+            "Connecting Education With Real Opportunities",
+
+        aboutDescriptionOne:
+            "SAKSHAM is a digital platform designed to bridge the gap between academic learning, industry requirements and career opportunities.",
+
+        aboutDescriptionTwo:
+            "Students can build their digital skill profile, identify skill gaps, discover relevant internships and connect with organizations looking for emerging talent.",
+
+        buildSkills:
+            "Build Skills",
+
+        findOpportunities:
+            "Find Opportunities",
+
+        growCareer:
+            "Grow Your Career",
+
+        exploreAyushOpportunities:
+            "Explore Opportunities Across AYUSH",
+
+        ayushDescription:
+            "SAKSHAM helps students discover skill and career opportunities across different AYUSH disciplines.",
+
+        howSakshamWorks:
+            "HOW SAKSHAM WORKS",
+
+        fromSkillsOpportunities:
+            "From Skills To Opportunities",
+
+        simpleJourney:
+            "A simple journey designed around student growth.",
+
+        buildYourProfile:
+            "Build Your Profile",
+
+        buildProfileDescription:
+            "Create your digital professional profile and add your academic information.",
+
+        mapYourSkills:
+            "Map Your Skills",
+
+        mapSkillsDescription:
+            "Add your skills and identify gaps between your profile and industry requirements.",
+
+        findYourMatch:
+            "Find Your Match",
+
+        findMatchDescription:
+            "Discover opportunities based on your discipline and skills.",
+
+        growYourCareer:
+            "Grow Your Career",
+
+        growCareerDescription:
+            "Apply for opportunities and track your career journey through SAKSHAM.",
+
+        whatSakshamOffers:
+            "WHAT SAKSHAM OFFERS",
+
+        everythingYouNeed:
+            "Everything You Need To Grow",
+
+        skillMappingDescription:
+            "Understand your current skills, identify gaps and prepare for industry needs.",
+
+        internships:
+            "Internships",
+
+        internshipsDescription:
+            "Discover relevant internship and career opportunities from organizations.",
+
+        skillMatch:
+            "Skill Match",
+
+        skillMatchDescription:
+            "Compare your skills with opportunity requirements and understand your match.",
+
+        applicationTracking:
+            "Application Tracking",
+
+        applicationTrackingDescription:
+            "Apply for opportunities and track your application status in one place.",
+
+        industryConnect:
+            "Industry Connect",
+
+        industryConnectDescription:
+            "Connect students with organizations and create meaningful industry interactions.",
+
+        digitalSkillPassport:
+            "Digital Skill Passport",
+
+        digitalSkillPassportDescription:
+            "Keep your academic and skill information organized in a professional digital profile.",
+
+        onePlatform:
+            "ONE PLATFORM",
+
+        builtForEveryStakeholder:
+            "Built For Every Stakeholder",
+
+        students:
+            "Students",
+
+        studentsDescription:
+            "Build skills, discover opportunities, apply and grow.",
+
+        industry:
+            "Industry",
+
+        industryDescription:
+            "Post opportunities and discover skilled candidates.",
+
+        institutions:
+            "Institutions",
+
+        institutionsDescription:
+            "Monitor skills, opportunities and student career development.",
+
+        careerJourneyStarts:
+            "🌿 YOUR CAREER JOURNEY STARTS HERE",
+
+        turnSkillsIntoOpportunities:
+            "Turn your skills into meaningful opportunities with SAKSHAM.",
+
+        joinSaksham:
+            "Join SAKSHAM",
+
+        explore:
+            "Explore",
+
+        ayushPathways:
+            "AYUSH Pathways",
+
+        companyPortal:
+            "Company Portal",
 
         /* =================================================
            STUDENT SKILLS
@@ -377,6 +575,190 @@ const translations = {
        ===================================================== */
 
     hi: {
+
+                 /* =================================================
+           HOME PAGE
+           ================================================= */
+
+        contact:
+            "संपर्क",
+
+        heroLabel:
+            "🌿 छात्र स्किल डेवलपमेंट और अवसर प्लेटफ़ॉर्म",
+
+        getStarted:
+            "शुरू करें",
+
+        exploreSaksham:
+            "SAKSHAM देखें",
+
+        ayushDisciplines:
+            "AYUSH Discipline",
+
+        stakeholdersConnected:
+            "हितधारक जुड़े हुए",
+
+        unifiedPlatform:
+            "एकीकृत प्लेटफ़ॉर्म",
+
+        studentSkillPassport:
+            "छात्र स्किल पासपोर्ट",
+
+        learnBuildConnect:
+            "सीखें • बनाएं • जुड़ें",
+
+        skills:
+            "स्किल्स",
+
+        profile:
+            "प्रोफ़ाइल",
+
+        academiaIndustry:
+            "शिक्षा ↔ उद्योग",
+
+        connectedEcosystem:
+            "छात्रों, कॉलेजों और कंपनियों के लिए एक जुड़ा हुआ ecosystem।",
+
+        aboutSaksham:
+            "SAKSHAM के बारे में",
+
+        connectingEducation:
+            "शिक्षा को वास्तविक अवसरों से जोड़ना",
+
+        aboutDescriptionOne:
+            "SAKSHAM एक डिजिटल प्लेटफ़ॉर्म है जो शैक्षणिक शिक्षा, उद्योग की आवश्यकताओं और करियर अवसरों के बीच की दूरी को कम करने के लिए बनाया गया है।",
+
+        aboutDescriptionTwo:
+            "छात्र अपनी डिजिटल स्किल प्रोफ़ाइल बना सकते हैं, स्किल गैप पहचान सकते हैं, संबंधित इंटर्नशिप खोज सकते हैं और उभरती प्रतिभाओं की तलाश कर रहे संगठनों से जुड़ सकते हैं।",
+
+        buildSkills:
+            "स्किल्स बनाएं",
+
+        findOpportunities:
+            "अवसर खोजें",
+
+        growCareer:
+            "करियर बढ़ाएं",
+
+        exploreAyushOpportunities:
+            "AYUSH में अवसरों को खोजें",
+
+        ayushDescription:
+            "SAKSHAM छात्रों को विभिन्न AYUSH disciplines में स्किल और करियर अवसर खोजने में मदद करता है।",
+
+        howSakshamWorks:
+            "SAKSHAM कैसे काम करता है",
+
+        fromSkillsOpportunities:
+            "स्किल्स से अवसरों तक",
+
+        simpleJourney:
+            "छात्रों की प्रगति को ध्यान में रखकर बनाई गई एक सरल यात्रा।",
+
+        buildYourProfile:
+            "अपनी प्रोफ़ाइल बनाएं",
+
+        buildProfileDescription:
+            "अपनी डिजिटल प्रोफेशनल प्रोफ़ाइल बनाएं और अपनी शैक्षणिक जानकारी जोड़ें।",
+
+        mapYourSkills:
+            "अपनी स्किल्स मैप करें",
+
+        mapSkillsDescription:
+            "अपनी स्किल्स जोड़ें और अपनी प्रोफ़ाइल तथा उद्योग की आवश्यकताओं के बीच के गैप को पहचानें।",
+
+        findYourMatch:
+            "अपना मैच खोजें",
+
+        findMatchDescription:
+            "अपने discipline और skills के आधार पर अवसर खोजें।",
+
+        growYourCareer:
+            "अपना करियर बढ़ाएं",
+
+        growCareerDescription:
+            "अवसरों के लिए आवेदन करें और SAKSHAM के माध्यम से अपनी करियर यात्रा को ट्रैक करें।",
+
+        whatSakshamOffers:
+            "SAKSHAM क्या प्रदान करता है",
+
+        everythingYouNeed:
+            "आगे बढ़ने के लिए आवश्यक सब कुछ",
+
+        skillMappingDescription:
+            "अपनी वर्तमान स्किल्स समझें, गैप पहचानें और उद्योग की आवश्यकताओं के लिए तैयारी करें।",
+
+        internships:
+            "इंटर्नशिप",
+
+        internshipsDescription:
+            "संगठनों से संबंधित इंटर्नशिप और करियर अवसर खोजें।",
+
+        skillMatch:
+            "स्किल मैच",
+
+        skillMatchDescription:
+            "अपनी स्किल्स की तुलना अवसर की आवश्यकताओं से करें और अपना मैच समझें।",
+
+        applicationTracking:
+            "आवेदन ट्रैकिंग",
+
+        applicationTrackingDescription:
+            "अवसरों के लिए आवेदन करें और अपने आवेदन की स्थिति एक ही जगह पर ट्रैक करें।",
+
+        industryConnect:
+            "उद्योग कनेक्ट",
+
+        industryConnectDescription:
+            "छात्रों को संगठनों से जोड़ें और सार्थक उद्योग संपर्क बनाएं।",
+
+        digitalSkillPassport:
+            "डिजिटल स्किल पासपोर्ट",
+
+        digitalSkillPassportDescription:
+            "अपनी शैक्षणिक और स्किल जानकारी को एक प्रोफेशनल डिजिटल प्रोफ़ाइल में व्यवस्थित रखें।",
+
+        onePlatform:
+            "एक प्लेटफ़ॉर्म",
+
+        builtForEveryStakeholder:
+            "हर हितधारक के लिए बनाया गया",
+
+        students:
+            "छात्र",
+
+        studentsDescription:
+            "स्किल्स बनाएं, अवसर खोजें, आवेदन करें और आगे बढ़ें।",
+
+        industry:
+            "उद्योग",
+
+        industryDescription:
+            "अवसर पोस्ट करें और कुशल उम्मीदवार खोजें।",
+
+        institutions:
+            "संस्थान",
+
+        institutionsDescription:
+            "स्किल्स, अवसरों और छात्रों के करियर विकास की निगरानी करें।",
+
+        careerJourneyStarts:
+            "🌿 आपकी करियर यात्रा यहाँ से शुरू होती है",
+
+        turnSkillsIntoOpportunities:
+            "SAKSHAM के साथ अपनी स्किल्स को सार्थक अवसरों में बदलें।",
+
+        joinSaksham:
+            "SAKSHAM से जुड़ें",
+
+        explore:
+            "अन्वेषण करें",
+
+        ayushPathways:
+            "AYUSH करियर मार्ग",
+
+        companyPortal:
+            "कंपनी पोर्टल",
 
         siteName: "SAKSHAM",
 
@@ -695,6 +1077,187 @@ const translations = {
        ===================================================== */
 
     ne: {
+
+                 /* =================================================
+           HOME PAGE
+           ================================================= */
+
+        contact:
+            "सम्पर्क",
+
+        heroLabel:
+            "🌿 विद्यार्थी सीप विकास र अवसर प्लेटफर्म",
+
+        getStarted:
+            "सुरु गर्नुहोस्",
+
+        exploreSaksham:
+            "SAKSHAM अन्वेषण गर्नुहोस्",
+
+        stakeholdersConnected:
+            "सम्बन्धित पक्षहरू जोडिएका",
+
+        unifiedPlatform:
+            "एकीकृत प्लेटफर्म",
+
+        studentSkillPassport:
+            "विद्यार्थी सीप पासपोर्ट",
+
+        learnBuildConnect:
+            "सिक्नुहोस् • बनाउनुहोस् • जोडिनुहोस्",
+
+        skills:
+            "सीपहरू",
+
+        profile:
+            "प्रोफाइल",
+
+        academiaIndustry:
+            "शिक्षा ↔ उद्योग",
+
+        connectedEcosystem:
+            "विद्यार्थी, कलेज र कम्पनीहरूका लागि एकीकृत ecosystem।",
+
+        aboutSaksham:
+            "SAKSHAM को बारेमा",
+
+        connectingEducation:
+            "शिक्षालाई वास्तविक अवसरहरूसँग जोड्दै",
+
+        aboutDescriptionOne:
+            "SAKSHAM शैक्षिक शिक्षा, उद्योगका आवश्यकताहरू र करियर अवसरहरूबीचको दूरी कम गर्न डिजाइन गरिएको डिजिटल प्लेटफर्म हो।",
+
+        aboutDescriptionTwo:
+            "विद्यार्थीहरूले आफ्नो डिजिटल सीप प्रोफाइल बनाउन, सीपको कमी पहिचान गर्न, सम्बन्धित इन्टर्नशिप खोज्न र नयाँ प्रतिभाको खोजी गरिरहेका संस्थाहरूसँग जोडिन सक्छन्।",
+
+        buildSkills:
+            "सीप बनाउनुहोस्",
+
+        findOpportunities:
+            "अवसरहरू खोज्नुहोस्",
+
+        growCareer:
+            "करियर विकास गर्नुहोस्",
+
+        exploreAyushOpportunities:
+            "AYUSH मा अवसरहरू अन्वेषण गर्नुहोस्",
+
+        ayushDescription:
+            "SAKSHAM ले विद्यार्थीहरूलाई विभिन्न AYUSH disciplines मा सीप र करियर अवसरहरू खोज्न मद्दत गर्छ।",
+
+        howSakshamWorks:
+            "SAKSHAM कसरी काम गर्छ",
+
+        fromSkillsOpportunities:
+            "सीपदेखि अवसरसम्म",
+
+        simpleJourney:
+            "विद्यार्थीको विकासलाई ध्यानमा राखेर बनाइएको सरल यात्रा।",
+
+        buildYourProfile:
+            "आफ्नो प्रोफाइल बनाउनुहोस्",
+
+        buildProfileDescription:
+            "आफ्नो डिजिटल व्यावसायिक प्रोफाइल बनाउनुहोस् र शैक्षिक जानकारी थप्नुहोस्।",
+
+        mapYourSkills:
+            "आफ्ना सीपहरू म्याप गर्नुहोस्",
+
+        mapSkillsDescription:
+            "आफ्ना सीपहरू थप्नुहोस् र आफ्नो प्रोफाइल तथा उद्योगका आवश्यकताबीचको अन्तर पहिचान गर्नुहोस्।",
+
+        findYourMatch:
+            "आफ्नो मिलान खोज्नुहोस्",
+
+        findMatchDescription:
+            "आफ्नो discipline र skills का आधारमा अवसरहरू खोज्नुहोस्।",
+
+        growYourCareer:
+            "आफ्नो करियर विकास गर्नुहोस्",
+
+        growCareerDescription:
+            "अवसरहरूमा आवेदन दिनुहोस् र SAKSHAM मार्फत आफ्नो करियर यात्रा ट्र्याक गर्नुहोस्।",
+
+        whatSakshamOffers:
+            "SAKSHAM ले के प्रदान गर्छ",
+
+        everythingYouNeed:
+            "अगाडि बढ्न आवश्यक सबै कुरा",
+
+        skillMappingDescription:
+            "आफ्ना वर्तमान सीपहरू बुझ्नुहोस्, कमीहरू पहिचान गर्नुहोस् र उद्योगका आवश्यकताहरूका लागि तयारी गर्नुहोस्।",
+
+        internships:
+            "इन्टर्नशिप",
+
+        internshipsDescription:
+            "संस्थाहरूबाट सम्बन्धित इन्टर्नशिप र करियर अवसरहरू खोज्नुहोस्।",
+
+        skillMatch:
+            "सीप मिलान",
+
+        skillMatchDescription:
+            "अवसरका आवश्यकताहरूसँग आफ्ना सीपहरू तुलना गर्नुहोस् र आफ्नो मिलान बुझ्नुहोस्।",
+
+        applicationTracking:
+            "आवेदन ट्र्याकिङ",
+
+        applicationTrackingDescription:
+            "अवसरहरूमा आवेदन दिनुहोस् र आफ्नो आवेदनको स्थिति एउटै ठाउँमा ट्र्याक गर्नुहोस्।",
+
+        industryConnect:
+            "उद्योग कनेक्ट",
+
+        industryConnectDescription:
+            "विद्यार्थीहरूलाई संस्थाहरूसँग जोड्नुहोस् र अर्थपूर्ण उद्योग सम्पर्क बनाउनुहोस्।",
+
+        digitalSkillPassport:
+            "डिजिटल सीप पासपोर्ट",
+
+        digitalSkillPassportDescription:
+            "आफ्नो शैक्षिक र सीपसम्बन्धी जानकारीलाई व्यावसायिक डिजिटल प्रोफाइलमा व्यवस्थित राख्नुहोस्।",
+
+        onePlatform:
+            "एक प्लेटफर्म",
+
+        builtForEveryStakeholder:
+            "हरेक सम्बन्धित पक्षका लागि बनाइएको",
+
+        students:
+            "विद्यार्थीहरू",
+
+        studentsDescription:
+            "सीप बनाउनुहोस्, अवसर खोज्नुहोस्, आवेदन दिनुहोस् र अगाडि बढ्नुहोस्।",
+
+        industry:
+            "उद्योग",
+
+        industryDescription:
+            "अवसरहरू पोस्ट गर्नुहोस् र दक्ष उम्मेदवारहरू खोज्नुहोस्।",
+
+        institutions:
+            "संस्थाहरू",
+
+        institutionsDescription:
+            "सीप, अवसर र विद्यार्थीहरूको करियर विकासको निगरानी गर्नुहोस्।",
+
+        careerJourneyStarts:
+            "🌿 तपाईंको करियर यात्रा यहाँबाट सुरु हुन्छ",
+
+        turnSkillsIntoOpportunities:
+            "SAKSHAM मार्फत आफ्ना सीपहरूलाई अर्थपूर्ण अवसरहरूमा बदल्नुहोस्।",
+
+        joinSaksham:
+            "SAKSHAM मा जोडिनुहोस्",
+
+        explore:
+            "अन्वेषण",
+
+        ayushPathways:
+            "AYUSH करियर मार्गहरू",
+
+        companyPortal:
+            "कम्पनी पोर्टल",
 
         siteName: "SAKSHAM",
 
@@ -1025,6 +1588,190 @@ const translations = {
        ===================================================== */
 
     kn: {
+
+        /* =================================================
+   HOME PAGE
+   ================================================= */
+
+contact:
+    "ಸಂಪರ್ಕ",
+
+heroLabel:
+    "🌿 ವಿದ್ಯಾರ್ಥಿ ಕೌಶಲ್ಯ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ಅವಕಾಶ ವೇದಿಕೆ",
+
+getStarted:
+    "ಪ್ರಾರಂಭಿಸಿ",
+
+exploreSaksham:
+    "SAKSHAM ಅನ್ವೇಷಿಸಿ",
+
+ayushDisciplines:
+    "AYUSH ವಿಭಾಗಗಳು",
+
+stakeholdersConnected:
+    "ಸಂಬಂಧಿತ ವ್ಯಕ್ತಿಗಳು ಸಂಪರ್ಕಗೊಂಡಿದ್ದಾರೆ",
+
+unifiedPlatform:
+    "ಏಕೀಕೃತ ವೇದಿಕೆ",
+
+studentSkillPassport:
+    "ವಿದ್ಯಾರ್ಥಿ ಕೌಶಲ್ಯ ಪಾಸ್‌ಪೋರ್ಟ್",
+
+learnBuildConnect:
+    "ಕಲಿಯಿರಿ • ನಿರ್ಮಿಸಿ • ಸಂಪರ್ಕಿಸಿ",
+
+skills:
+    "ಕೌಶಲ್ಯಗಳು",
+
+profile:
+    "ಪ್ರೊಫೈಲ್",
+
+academiaIndustry:
+    "ಶಿಕ್ಷಣ ↔ ಉದ್ಯಮ",
+
+connectedEcosystem:
+    "ವಿದ್ಯಾರ್ಥಿಗಳು, ಕಾಲೇಜುಗಳು ಮತ್ತು ಕಂಪನಿಗಳಿಗಾಗಿ ಒಂದು ಸಂಪರ್ಕಿತ ecosystem.",
+
+aboutSaksham:
+    "SAKSHAM ಬಗ್ಗೆ",
+
+connectingEducation:
+    "ಶಿಕ್ಷಣವನ್ನು ನೈಜ ಅವಕಾಶಗಳೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುವುದು",
+
+aboutDescriptionOne:
+    "SAKSHAM ಶೈಕ್ಷಣಿಕ ಕಲಿಕೆ, ಉದ್ಯಮದ ಅಗತ್ಯತೆಗಳು ಮತ್ತು ವೃತ್ತಿ ಅವಕಾಶಗಳ ನಡುವಿನ ಅಂತರವನ್ನು ಕಡಿಮೆ ಮಾಡಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ಡಿಜಿಟಲ್ ವೇದಿಕೆಯಾಗಿದೆ.",
+
+aboutDescriptionTwo:
+    "ವಿದ್ಯಾರ್ಥಿಗಳು ತಮ್ಮ ಡಿಜಿಟಲ್ ಕೌಶಲ್ಯ ಪ್ರೊಫೈಲ್ ನಿರ್ಮಿಸಬಹುದು, ಕೌಶಲ್ಯ ಕೊರತೆಗಳನ್ನು ಗುರುತಿಸಬಹುದು, ಸಂಬಂಧಿತ ಇಂಟರ್ನ್‌ಶಿಪ್‌ಗಳನ್ನು ಕಂಡುಹಿಡಿಯಬಹುದು ಮತ್ತು ಹೊಸ ಪ್ರತಿಭೆಗಳನ್ನು ಹುಡುಕುತ್ತಿರುವ ಸಂಸ್ಥೆಗಳೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಬಹುದು.",
+
+buildSkills:
+    "ಕೌಶಲ್ಯಗಳನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಿ",
+
+findOpportunities:
+    "ಅವಕಾಶಗಳನ್ನು ಹುಡುಕಿ",
+
+growCareer:
+    "ವೃತ್ತಿಯನ್ನು ಬೆಳೆಸಿಕೊಳ್ಳಿ",
+
+exploreAyushOpportunities:
+    "AYUSH ನಲ್ಲಿ ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಿ",
+
+ayushDescription:
+    "SAKSHAM ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ವಿವಿಧ AYUSH ವಿಭಾಗಗಳಲ್ಲಿ ಕೌಶಲ್ಯ ಮತ್ತು ವೃತ್ತಿ ಅವಕಾಶಗಳನ್ನು ಕಂಡುಹಿಡಿಯಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.",
+
+howSakshamWorks:
+    "SAKSHAM ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ",
+
+fromSkillsOpportunities:
+    "ಕೌಶಲ್ಯಗಳಿಂದ ಅವಕಾಶಗಳವರೆಗೆ",
+
+simpleJourney:
+    "ವಿದ್ಯಾರ್ಥಿಗಳ ಬೆಳವಣಿಗೆಯನ್ನು ಗಮನದಲ್ಲಿಟ್ಟುಕೊಂಡು ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ಸರಳ ಪ್ರಯಾಣ.",
+
+buildYourProfile:
+    "ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ನಿರ್ಮಿಸಿ",
+
+buildProfileDescription:
+    "ನಿಮ್ಮ ಡಿಜಿಟಲ್ ವೃತ್ತಿಪರ ಪ್ರೊಫೈಲ್ ರಚಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಶೈಕ್ಷಣಿಕ ಮಾಹಿತಿಯನ್ನು ಸೇರಿಸಿ.",
+
+mapYourSkills:
+    "ನಿಮ್ಮ ಕೌಶಲ್ಯಗಳನ್ನು ಮ್ಯಾಪ್ ಮಾಡಿ",
+
+mapSkillsDescription:
+    "ನಿಮ್ಮ ಕೌಶಲ್ಯಗಳನ್ನು ಸೇರಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಹಾಗೂ ಉದ್ಯಮದ ಅಗತ್ಯತೆಗಳ ನಡುವಿನ ಅಂತರವನ್ನು ಗುರುತಿಸಿ.",
+
+findYourMatch:
+    "ನಿಮ್ಮ ಹೊಂದಾಣಿಕೆಯನ್ನು ಹುಡುಕಿ",
+
+findMatchDescription:
+    "ನಿಮ್ಮ ವಿಭಾಗ ಮತ್ತು ಕೌಶಲ್ಯಗಳ ಆಧಾರದ ಮೇಲೆ ಅವಕಾಶಗಳನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ.",
+
+growYourCareer:
+    "ನಿಮ್ಮ ವೃತ್ತಿಯನ್ನು ಬೆಳೆಸಿಕೊಳ್ಳಿ",
+
+growCareerDescription:
+    "ಅವಕಾಶಗಳಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ ಮತ್ತು SAKSHAM ಮೂಲಕ ನಿಮ್ಮ ವೃತ್ತಿ ಪ್ರಯಾಣವನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ.",
+
+whatSakshamOffers:
+    "SAKSHAM ಏನು ನೀಡುತ್ತದೆ",
+
+everythingYouNeed:
+    "ಬೆಳೆಯಲು ನಿಮಗೆ ಬೇಕಾದ ಎಲ್ಲವೂ",
+
+skillMappingDescription:
+    "ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಕೌಶಲ್ಯಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಿ, ಕೊರತೆಗಳನ್ನು ಗುರುತಿಸಿ ಮತ್ತು ಉದ್ಯಮದ ಅಗತ್ಯತೆಗಳಿಗೆ ಸಿದ್ಧರಾಗಿ.",
+
+internships:
+    "ಇಂಟರ್ನ್‌ಶಿಪ್‌ಗಳು",
+
+internshipsDescription:
+    "ಸಂಸ್ಥೆಗಳಿಂದ ಸಂಬಂಧಿತ ಇಂಟರ್ನ್‌ಶಿಪ್ ಮತ್ತು ವೃತ್ತಿ ಅವಕಾಶಗಳನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ.",
+
+skillMatch:
+    "ಕೌಶಲ್ಯ ಹೊಂದಾಣಿಕೆ",
+
+skillMatchDescription:
+    "ಅವಕಾಶದ ಅಗತ್ಯತೆಗಳೊಂದಿಗೆ ನಿಮ್ಮ ಕೌಶಲ್ಯಗಳನ್ನು ಹೋಲಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಹೊಂದಾಣಿಕೆಯನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಿ.",
+
+applicationTracking:
+    "ಅರ್ಜಿ ಟ್ರ್ಯಾಕಿಂಗ್",
+
+applicationTrackingDescription:
+    "ಅವಕಾಶಗಳಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಅರ್ಜಿಯ ಸ್ಥಿತಿಯನ್ನು ಒಂದೇ ಸ್ಥಳದಲ್ಲಿ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ.",
+
+industryConnect:
+    "ಉದ್ಯಮ ಸಂಪರ್ಕ",
+
+industryConnectDescription:
+    "ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಸಂಸ್ಥೆಗಳೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಿ ಮತ್ತು ಅರ್ಥಪೂರ್ಣ ಉದ್ಯಮ ಸಂಪರ್ಕಗಳನ್ನು ನಿರ್ಮಿಸಿ.",
+
+digitalSkillPassport:
+    "ಡಿಜಿಟಲ್ ಕೌಶಲ್ಯ ಪಾಸ್‌ಪೋರ್ಟ್",
+
+digitalSkillPassportDescription:
+    "ನಿಮ್ಮ ಶೈಕ್ಷಣಿಕ ಮತ್ತು ಕೌಶಲ್ಯ ಮಾಹಿತಿಯನ್ನು ವೃತ್ತಿಪರ ಡಿಜಿಟಲ್ ಪ್ರೊಫೈಲ್‌ನಲ್ಲಿ ವ್ಯವಸ್ಥಿತವಾಗಿ ಇರಿಸಿ.",
+
+onePlatform:
+    "ಒಂದು ವೇದಿಕೆ",
+
+builtForEveryStakeholder:
+    "ಪ್ರತಿಯೊಬ್ಬ ಸಂಬಂಧಿತ ವ್ಯಕ್ತಿಗಾಗಿ ನಿರ್ಮಿಸಲಾಗಿದೆ",
+
+students:
+    "ವಿದ್ಯಾರ್ಥಿಗಳು",
+
+studentsDescription:
+    "ಕೌಶಲ್ಯಗಳನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಿ, ಅವಕಾಶಗಳನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ, ಅರ್ಜಿ ಸಲ್ಲಿಸಿ ಮತ್ತು ಬೆಳೆಯಿರಿ.",
+
+industry:
+    "ಉದ್ಯಮ",
+
+industryDescription:
+    "ಅವಕಾಶಗಳನ್ನು ಪೋಸ್ಟ್ ಮಾಡಿ ಮತ್ತು ನುರಿತ ಅಭ್ಯರ್ಥಿಗಳನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ.",
+
+institutions:
+    "ಸಂಸ್ಥೆಗಳು",
+
+institutionsDescription:
+    "ಕೌಶಲ್ಯಗಳು, ಅವಕಾಶಗಳು ಮತ್ತು ವಿದ್ಯಾರ್ಥಿಗಳ ವೃತ್ತಿ ಅಭಿವೃದ್ಧಿಯನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಿ.",
+
+careerJourneyStarts:
+    "🌿 ನಿಮ್ಮ ವೃತ್ತಿ ಪ್ರಯಾಣ ಇಲ್ಲಿ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ",
+
+turnSkillsIntoOpportunities:
+    "SAKSHAM ಮೂಲಕ ನಿಮ್ಮ ಕೌಶಲ್ಯಗಳನ್ನು ಅರ್ಥಪೂರ್ಣ ಅವಕಾಶಗಳಾಗಿ ಪರಿವರ್ತಿಸಿ.",
+
+joinSaksham:
+    "SAKSHAM ಗೆ ಸೇರಿ",
+
+explore:
+    "ಅನ್ವೇಷಿಸಿ",
+
+ayushPathways:
+    "AYUSH ವೃತ್ತಿ ಮಾರ್ಗಗಳು",
+
+companyPortal:
+    "ಕಂಪನಿ ಪೋರ್ಟಲ್",
 
         siteName: "SAKSHAM",
 

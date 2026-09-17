@@ -12,7 +12,6 @@
 
 </head>
 
-
 <body class="home-page">
 
 
@@ -26,7 +25,9 @@
 
             <div>
                 <strong>SAKSHAM</strong>
-                <small>Skills • Opportunities • Growth</small>
+                <small data-translate="footerTagline">
+                    Skills • Opportunities • Growth
+                </small>
             </div>
 
         </div>
@@ -34,31 +35,44 @@
 
         <div class="home-nav-links">
 
-            <a href="#home" class="active">
+            <a href="#home" class="active" data-translate="home">
                 Home
             </a>
 
-            <a href="#about">
+            <a href="#about" data-translate="about">
                 About
             </a>
 
-            <a href="#ayush">
+            <a href="#ayush" data-translate="ayush">
                 AYUSH
             </a>
 
-            <a href="#features">
+            <a href="#features" data-translate="features">
                 Features
             </a>
 
-            <a href="#contact">
+            <a href="#contact" data-translate="contact">
                 Contact
             </a>
+
+
+            <!-- Language -->
+
+            <select id="languageSelect" class="language-select">
+
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+                <option value="ne">नेपाली</option>
+                <option value="kn">ಕನ್ನಡ</option>
+
+            </select>
+
 
             <button
                 class="home-login-btn"
                 onclick="window.location.href='login.html'">
 
-                Login →
+                <span data-translate="login">Login</span> →
 
             </button>
 
@@ -81,7 +95,9 @@
         <div class="home-hero-content">
 
 
-            <div class="hero-government-label">
+            <div
+                class="hero-government-label"
+                data-translate="heroLabel">
 
                 🌿 STUDENT SKILL DEVELOPMENT & OPPORTUNITY PLATFORM
 
@@ -90,13 +106,20 @@
 
             <h1>
 
-                Empower Your Skills.
-                <span>Shape Your Future.</span>
+                <span data-translate="heroTitle">
+                    Empower Your Skills.
+                </span>
+
+                <span data-translate="heroTitleHighlight">
+                    Shape Your Future.
+                </span>
 
             </h1>
 
 
-            <p class="home-hero-text">
+            <p
+                class="home-hero-text"
+                data-translate="heroDescription">
 
                 SAKSHAM brings students, educational institutions
                 and industry together to build skills, discover
@@ -112,7 +135,9 @@
                     class="home-primary-btn"
                     onclick="window.location.href='login.html'">
 
-                    Get Started →
+                    <span data-translate="getStarted">
+                        Get Started
+                    </span> →
 
                 </button>
 
@@ -121,7 +146,9 @@
                     class="home-secondary-btn"
                     onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
 
-                    Explore SAKSHAM
+                    <span data-translate="exploreSaksham">
+                        Explore SAKSHAM
+                    </span>
 
                 </button>
 
@@ -133,17 +160,23 @@
 
                 <div>
                     <strong>5+</strong>
-                    <span>AYUSH Disciplines</span>
+                    <span data-translate="ayushDisciplines">
+                        AYUSH Disciplines
+                    </span>
                 </div>
 
                 <div>
                     <strong>3</strong>
-                    <span>Stakeholders Connected</span>
+                    <span data-translate="stakeholdersConnected">
+                        Stakeholders Connected
+                    </span>
                 </div>
 
                 <div>
                     <strong>1</strong>
-                    <span>Unified Platform</span>
+                    <span data-translate="unifiedPlatform">
+                        Unified Platform
+                    </span>
                 </div>
 
             </div>
@@ -159,7 +192,6 @@
 
 
             <div class="visual-glow"></div>
-
 
             <div class="career-orbit orbit-one"></div>
             <div class="career-orbit orbit-two"></div>
@@ -186,12 +218,12 @@
                 </div>
 
 
-                <h3>
+                <h3 data-translate="studentSkillPassport">
                     Student Skill Passport
                 </h3>
 
 
-                <p>
+                <p data-translate="learnBuildConnect">
                     Learn • Build • Connect
                 </p>
 
@@ -199,14 +231,21 @@
                 <div class="hero-skill-bars">
 
                     <div>
-                        <span>Skills</span>
+                        <span data-translate="skills">
+                            Skills
+                        </span>
+
                         <div class="skill-bar">
                             <span style="width:82%"></span>
                         </div>
                     </div>
 
+
                     <div>
-                        <span>Profile</span>
+                        <span data-translate="profile">
+                            Profile
+                        </span>
+
                         <div class="skill-bar">
                             <span style="width:70%"></span>
                         </div>
@@ -219,19 +258,19 @@
 
 
             <div class="floating-domain domain-ayurveda">
-                🌿 Ayurveda
+                🌿 <span data-translate="ayurveda">Ayurveda</span>
             </div>
 
             <div class="floating-domain domain-homeopathy">
-                🌸 Homeopathy
+                🌸 <span data-translate="homeopathy">Homeopathy</span>
             </div>
 
             <div class="floating-domain domain-yoga">
-                🧘 Yoga
+                🧘 <span data-translate="yogaNaturopathy">Yoga</span>
             </div>
 
             <div class="floating-domain domain-unani">
-                🌱 Unani
+                🌱 <span data-translate="unani">Unani</span>
             </div>
 
 
@@ -248,7 +287,6 @@
 
         <div class="about-visual">
 
-
             <div class="about-pattern"></div>
 
 
@@ -258,17 +296,16 @@
                     🤝
                 </div>
 
-                <h3>
+                <h3 data-translate="academiaIndustry">
                     Academia ↔ Industry
                 </h3>
 
-                <p>
+                <p data-translate="connectedEcosystem">
                     One connected ecosystem for
                     students, colleges and companies.
                 </p>
 
             </div>
-
 
         </div>
 
@@ -277,18 +314,22 @@
         <div class="about-content">
 
 
-            <span class="home-section-label">
+            <span
+                class="home-section-label"
+                data-translate="aboutSaksham">
+
                 ABOUT SAKSHAM
+
             </span>
 
 
-            <h2>
+            <h2 data-translate="connectingEducation">
                 Connecting Education
                 With Real Opportunities
             </h2>
 
 
-            <p>
+            <p data-translate="aboutDescriptionOne">
 
                 SAKSHAM is a digital platform designed to
                 bridge the gap between academic learning,
@@ -297,7 +338,7 @@
             </p>
 
 
-            <p>
+            <p data-translate="aboutDescriptionTwo">
 
                 Students can build their digital skill profile,
                 identify skill gaps, discover relevant
@@ -312,19 +353,25 @@
 
                 <div>
                     <strong>01</strong>
-                    <span>Build Skills</span>
+                    <span data-translate="buildSkills">
+                        Build Skills
+                    </span>
                 </div>
 
 
                 <div>
                     <strong>02</strong>
-                    <span>Find Opportunities</span>
+                    <span data-translate="findOpportunities">
+                        Find Opportunities
+                    </span>
                 </div>
 
 
                 <div>
                     <strong>03</strong>
-                    <span>Grow Your Career</span>
+                    <span data-translate="growCareer">
+                        Grow Your Career
+                    </span>
                 </div>
 
 
@@ -345,17 +392,21 @@
         <div class="home-section-heading">
 
 
-            <span class="home-section-label">
+            <span
+                class="home-section-label"
+                data-translate="ayushCareerPathways">
+
                 AYUSH CAREER PATHWAYS
+
             </span>
 
 
-            <h2>
+            <h2 data-translate="exploreAyushOpportunities">
                 Explore Opportunities Across AYUSH
             </h2>
 
 
-            <p>
+            <p data-translate="ayushDescription">
 
                 SAKSHAM helps students discover skill and
                 career opportunities across different AYUSH
@@ -376,7 +427,10 @@
                 <span class="domain-icon">🌿</span>
 
                 <div>
-                    <strong>Ayurveda</strong>
+                    <strong data-translate="ayurveda">
+                        Ayurveda
+                    </strong>
+
                     <small>BAMS</small>
                 </div>
 
@@ -390,7 +444,10 @@
                 <span class="domain-icon">🌸</span>
 
                 <div>
-                    <strong>Homeopathy</strong>
+                    <strong data-translate="homeopathy">
+                        Homeopathy
+                    </strong>
+
                     <small>BHMS</small>
                 </div>
 
@@ -404,7 +461,10 @@
                 <span class="domain-icon">🧘</span>
 
                 <div>
-                    <strong>Yoga & Naturopathy</strong>
+                    <strong data-translate="yogaNaturopathy">
+                        Yoga & Naturopathy
+                    </strong>
+
                     <small>BNYS</small>
                 </div>
 
@@ -418,7 +478,10 @@
                 <span class="domain-icon">🌱</span>
 
                 <div>
-                    <strong>Unani</strong>
+                    <strong data-translate="unani">
+                        Unani
+                    </strong>
+
                     <small>BUMS</small>
                 </div>
 
@@ -432,7 +495,10 @@
                 <span class="domain-icon">🍃</span>
 
                 <div>
-                    <strong>Siddha</strong>
+                    <strong data-translate="siddha">
+                        Siddha
+                    </strong>
+
                     <small>BSMS</small>
                 </div>
 
@@ -454,15 +520,21 @@
 
         <div class="home-section-heading">
 
-            <span class="home-section-label">
+            <span
+                class="home-section-label"
+                data-translate="howSakshamWorks">
+
                 HOW SAKSHAM WORKS
+
             </span>
 
-            <h2>
+
+            <h2 data-translate="fromSkillsOpportunities">
                 From Skills To Opportunities
             </h2>
 
-            <p>
+
+            <p data-translate="simpleJourney">
                 A simple journey designed around student growth.
             </p>
 
@@ -483,11 +555,11 @@
                     👤
                 </div>
 
-                <h3>
+                <h3 data-translate="buildYourProfile">
                     Build Your Profile
                 </h3>
 
-                <p>
+                <p data-translate="buildProfileDescription">
                     Create your digital professional profile
                     and add your academic information.
                 </p>
@@ -508,11 +580,11 @@
                     🛠️
                 </div>
 
-                <h3>
+                <h3 data-translate="mapYourSkills">
                     Map Your Skills
                 </h3>
 
-                <p>
+                <p data-translate="mapSkillsDescription">
                     Add your skills and identify gaps between
                     your profile and industry requirements.
                 </p>
@@ -533,11 +605,11 @@
                     🎯
                 </div>
 
-                <h3>
+                <h3 data-translate="findYourMatch">
                     Find Your Match
                 </h3>
 
-                <p>
+                <p data-translate="findMatchDescription">
                     Discover opportunities based on your
                     discipline and skills.
                 </p>
@@ -558,11 +630,11 @@
                     🚀
                 </div>
 
-                <h3>
+                <h3 data-translate="growYourCareer">
                     Grow Your Career
                 </h3>
 
-                <p>
+                <p data-translate="growCareerDescription">
                     Apply for opportunities and track your
                     career journey through SAKSHAM.
                 </p>
@@ -583,11 +655,16 @@
 
         <div class="home-section-heading">
 
-            <span class="home-section-label">
+            <span
+                class="home-section-label"
+                data-translate="whatSakshamOffers">
+
                 WHAT SAKSHAM OFFERS
+
             </span>
 
-            <h2>
+
+            <h2 data-translate="everythingYouNeed">
                 Everything You Need To Grow
             </h2>
 
@@ -608,11 +685,11 @@
                     01
                 </span>
 
-                <h3>
+                <h3 data-translate="skillMapping">
                     Skill Mapping
                 </h3>
 
-                <p>
+                <p data-translate="skillMappingDescription">
                     Understand your current skills,
                     identify gaps and prepare for industry needs.
                 </p>
@@ -630,11 +707,11 @@
                     02
                 </span>
 
-                <h3>
+                <h3 data-translate="internships">
                     Internships
                 </h3>
 
-                <p>
+                <p data-translate="internshipsDescription">
                     Discover relevant internship and career
                     opportunities from organizations.
                 </p>
@@ -652,11 +729,11 @@
                     03
                 </span>
 
-                <h3>
+                <h3 data-translate="skillMatch">
                     Skill Match
                 </h3>
 
-                <p>
+                <p data-translate="skillMatchDescription">
                     Compare your skills with opportunity
                     requirements and understand your match.
                 </p>
@@ -674,11 +751,11 @@
                     04
                 </span>
 
-                <h3>
+                <h3 data-translate="applicationTracking">
                     Application Tracking
                 </h3>
 
-                <p>
+                <p data-translate="applicationTrackingDescription">
                     Apply for opportunities and track your
                     application status in one place.
                 </p>
@@ -696,11 +773,11 @@
                     05
                 </span>
 
-                <h3>
+                <h3 data-translate="industryConnect">
                     Industry Connect
                 </h3>
 
-                <p>
+                <p data-translate="industryConnectDescription">
                     Connect students with organizations and
                     create meaningful industry interactions.
                 </p>
@@ -718,11 +795,11 @@
                     06
                 </span>
 
-                <h3>
+                <h3 data-translate="digitalSkillPassport">
                     Digital Skill Passport
                 </h3>
 
-                <p>
+                <p data-translate="digitalSkillPassportDescription">
                     Keep your academic and skill information
                     organized in a professional digital profile.
                 </p>
@@ -743,11 +820,16 @@
 
         <div class="home-section-heading">
 
-            <span class="home-section-label">
+            <span
+                class="home-section-label"
+                data-translate="onePlatform">
+
                 ONE PLATFORM
+
             </span>
 
-            <h2>
+
+            <h2 data-translate="builtForEveryStakeholder">
                 Built For Every Stakeholder
             </h2>
 
@@ -762,11 +844,11 @@
 
                 <span>🎓</span>
 
-                <h3>
+                <h3 data-translate="students">
                     Students
                 </h3>
 
-                <p>
+                <p data-translate="studentsDescription">
                     Build skills, discover opportunities,
                     apply and grow.
                 </p>
@@ -778,11 +860,11 @@
 
                 <span>🏢</span>
 
-                <h3>
+                <h3 data-translate="industry">
                     Industry
                 </h3>
 
-                <p>
+                <p data-translate="industryDescription">
                     Post opportunities and discover
                     skilled candidates.
                 </p>
@@ -794,11 +876,11 @@
 
                 <span>🏛️</span>
 
-                <h3>
+                <h3 data-translate="institutions">
                     Institutions
                 </h3>
 
-                <p>
+                <p data-translate="institutionsDescription">
                     Monitor skills, opportunities and
                     student career development.
                 </p>
@@ -822,24 +904,29 @@
 
         <div class="cta-content">
 
-            <span>
+            <span data-translate="careerJourneyStarts">
                 🌿 YOUR CAREER JOURNEY STARTS HERE
             </span>
 
-            <h2>
+
+            <h2 data-translate="learnBuildConnectSucceed">
                 Learn. Build. Connect. Succeed.
             </h2>
 
-            <p>
+
+            <p data-translate="turnSkillsIntoOpportunities">
                 Turn your skills into meaningful opportunities
                 with SAKSHAM.
             </p>
+
 
             <button
                 class="home-cta-btn"
                 onclick="window.location.href='login.html'">
 
-                Join SAKSHAM →
+                <span data-translate="joinSaksham">
+                    Join SAKSHAM
+                </span> →
 
             </button>
 
@@ -870,7 +957,7 @@
                 </div>
 
 
-                <p>
+                <p data-translate="footerDescription">
                     Empowering Skills.
                     Connecting Opportunities.
                 </p>
@@ -882,19 +969,19 @@
 
             <div class="footer-column">
 
-                <h4>
+                <h4 data-translate="platform">
                     Platform
                 </h4>
 
-                <a href="#home">
+                <a href="#home" data-translate="home">
                     Home
                 </a>
 
-                <a href="#about">
+                <a href="#about" data-translate="about">
                     About
                 </a>
 
-                <a href="#features">
+                <a href="#features" data-translate="features">
                     Features
                 </a>
 
@@ -904,19 +991,19 @@
 
             <div class="footer-column">
 
-                <h4>
+                <h4 data-translate="explore">
                     Explore
                 </h4>
 
-                <a href="#ayush">
+                <a href="#ayush" data-translate="ayushPathways">
                     AYUSH Pathways
                 </a>
 
-                <a href="login.html">
+                <a href="login.html" data-translate="studentPortal">
                     Student Portal
                 </a>
 
-                <a href="login.html">
+                <a href="login.html" data-translate="companyPortal">
                     Company Portal
                 </a>
 
@@ -930,7 +1017,7 @@
                     SAKSHAM
                 </h4>
 
-                <p>
+                <p data-translate="platformDescription">
                     Student Skill Development
                     & Opportunity Platform
                 </p>
@@ -944,11 +1031,11 @@
 
         <div class="footer-bottom">
 
-            <p>
+            <p data-translate="allRightsReserved">
                 © 2026 SAKSHAM. All Rights Reserved.
             </p>
 
-            <p>
+            <p data-translate="footerTagline">
                 Skills • Opportunities • Growth
             </p>
 
@@ -959,9 +1046,10 @@
 
 
 
-    <!-- Existing JavaScript -->
+    <!-- JavaScript -->
 
     <script src="script.js"></script>
+    <script src="translations.js"></script>
 
 
 </body>
