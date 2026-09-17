@@ -1,8 +1,8 @@
 const translations = {
 
-    // =====================================
-    // ENGLISH
-    // =====================================
+    /* =====================================================
+       ENGLISH
+    ===================================================== */
 
     en: {
 
@@ -11,61 +11,54 @@ const translations = {
         dashboard: "Dashboard",
         home: "Home",
         mySkills: "My Skills",
-        skillPassport: "Digital Skill Passport",
+        skillPassport: "Skill Passport",
         opportunities: "Opportunities",
         applications: "Applications",
 
         studentProfile: "Student Profile",
         myProfile: "My Profile",
-
         profileDescription:
-            "Manage your personal information, academic details and professional skills on SAKSHAM.",
+            "Manage your personal and academic information.",
 
-        basicDetails: "BASIC DETAILS",
+        basicDetails: "Basic Details",
         personalInformation: "Personal Information",
         fullName: "Full Name",
         emailAddress: "Email Address",
         role: "Role",
         platform: "Platform",
 
-        education: "EDUCATION",
+        education: "Education",
         academicInformation: "Academic Information",
-        collegeInstitution: "COLLEGE / INSTITUTION",
-        degree: "DEGREE",
-        branch: "BRANCH",
-        graduationYear: "GRADUATION YEAR",
+        collegeInstitution: "College / Institution",
+        degree: "Degree",
+        branch: "Branch",
+        graduationYear: "Graduation Year",
 
-        professionalProfile: "PROFESSIONAL PROFILE",
+        professionalProfile: "Professional Profile",
 
         editAcademic: "Edit Academic Information",
-        updateAcademic: "Update your academic details.",
+        updateAcademic: "Update Academic Information",
         saveAcademic: "Save Academic Information",
 
         skillsDescription:
-            "Manage your professional and AYUSH skills.",
-
+            "Add and manage your professional skills.",
         loadingSkills: "Loading skills...",
-
         addManageSkills: "Add / Manage Skills",
 
-        buildProfile: "Build your professional profile",
-
+        buildProfile: "Build Your Profile",
         keepProfileUpdated:
-            "Keep your information updated to discover better opportunities.",
+            "Keep your professional profile updated.",
 
         completeProfileDescription:
-            "Complete your profile and skills to improve your career opportunities.",
+            "Complete your academic and professional information to improve your opportunities.",
 
         backToDashboard: "Back to Dashboard",
-
         logout: "Logout",
 
-        notAdded: "Not added",
-
-        noSkills: "No skills added yet.",
-
+        notAdded: "Not Added",
+        noSkills: "No skills added",
         addSkillsMessage:
-            "Add your skills to build your professional profile.",
+            "Add your professional skills to build your profile.",
 
         collegePlaceholder: "Enter college / institution",
         degreePlaceholder: "Enter degree",
@@ -73,167 +66,315 @@ const translations = {
         graduationYearPlaceholder: "Enter graduation year",
 
         fillAcademic:
-            "Please fill all academic fields.",
+            "Please fill all academic information.",
 
         academicSaved:
-            "Academic information saved successfully! 🎓",
+            "Academic information saved successfully.",
 
         academicSaveError:
-            "Failed to save academic information.",
+            "Unable to save academic information.",
 
         profileLoadError:
-            "Failed to load profile.",
+            "Unable to load profile.",
 
         loginFirst:
             "Please login first.",
 
-        // DASHBOARD
+        /* Student Portal */
 
         studentPortal: "Student Portal",
 
         sakshamStudentPortal:
-            "🌿 SAKSHAM STUDENT PORTAL",
+            "SAKSHAM Student Portal",
 
-        heroTitle:
-            "Empower Your Skills.",
-
-        heroTitleHighlight:
-            "Shape Your Future.",
+        heroTitle: "Build Your Future",
+        heroTitleHighlight: "With SAKSHAM",
 
         heroDescription:
-            "Build your professional profile, strengthen your skills, discover meaningful opportunities and connect with the world of AYUSH careers.",
+            "Build your skills, discover opportunities and connect with the right career path.",
 
         exploreOpportunities:
-            "Explore Opportunities →",
+            "Explore Opportunities",
 
         completeMyProfile:
             "Complete My Profile",
 
-        quickAccess:
-            "QUICK ACCESS",
+        quickAccess: "Quick Access",
 
-        careerJourney:
-            "Your Career Journey",
+        careerJourney: "Your Career Journey",
 
         everythingOnePlace:
-            "Everything you need in one place.",
+            "Everything you need to build your career in one place.",
 
         managePersonalInfo:
-            "Manage your personal, academic and professional information.",
+            "Manage your personal information.",
 
-        viewProfile:
-            "View Profile →",
+        viewProfile: "View Profile",
 
         addSkillsTrack:
-            "Add your skills and keep track of your current skill levels.",
+            "Add your skills and track your progress.",
 
-        manageSkills:
-            "Manage Skills →",
+        manageSkills: "Manage Skills",
 
         ayushSkillPassport:
-            "🪪 AYUSH Skill Passport →",
+            "AYUSH Skill Passport",
 
-        skillMapping:
-            "Skill Mapping",
+        skillMapping: "Skill Mapping",
 
         identifySkillGaps:
-            "Identify skill gaps and understand what employers are looking for.",
+            "Identify your skill gaps and improve your career readiness.",
 
-        exploreSkills:
-            "Explore Skills →",
+        exploreSkills: "Explore Skills",
 
         opportunitiesTitle:
             "Opportunities",
 
         discoverInternships:
-            "Discover internships and career opportunities matching your profile.",
+            "Discover internships, jobs and career opportunities.",
 
         findOpportunities:
-            "Find Opportunities →",
+            "Find Opportunities",
 
         myApplications:
             "My Applications",
 
         trackApplications:
-            "Track your applications and monitor their progress.",
+            "Track your internship and job applications.",
 
         trackApplicationsButton:
-            "Track Applications →",
+            "Track Applications",
 
         recommendations:
             "Recommendations",
 
         personalizedOpportunities:
-            "Get personalized opportunities based on your skills and interests.",
+            "Get personalized career opportunities.",
 
         viewRecommendations:
-            "View Recommendations →",
+            "View Recommendations",
 
-        yourProgress:
-            "YOUR PROGRESS",
+        yourProgress: "Your Progress",
 
         keepMovingForward:
-            "Keep Moving Forward",
+            "Keep moving forward and build your professional future.",
 
         buildProfileSkills:
-            "Build your profile and skills to unlock better opportunities.",
+            "Build your profile and skills.",
 
-        skillsAdded:
-            "Skills Added",
+        skillsAdded: "Skills Added",
 
-        shortlisted:
-            "Shortlisted",
+        shortlisted: "Shortlisted",
 
         profileCompletion:
             "Profile Completion",
 
         ayushCareerPathways:
-            "AYUSH CAREER PATHWAYS",
+            "AYUSH Career Pathways",
 
         exploreDiscipline:
-            "Explore Your Discipline",
+            "Explore opportunities based on your AYUSH discipline.",
 
-        ayushDomains:
-            "Discover opportunities across AYUSH domains.",
+        ayushDomains: "AYUSH Domains",
 
-        ayurveda:
-            "Ayurveda",
-
-        homeopathy:
-            "Homeopathy",
-
-        yogaNaturopathy:
-            "Yoga & Naturopathy",
-
-        unani:
-            "Unani",
-
-        siddha:
-            "Siddha",
+        ayurveda: "Ayurveda",
+        homeopathy: "Homeopathy",
+        yogaNaturopathy: "Yoga & Naturopathy",
+        unani: "Unani",
+        siddha: "Siddha",
 
         yourFutureStarts:
-            "🌿 YOUR FUTURE STARTS HERE",
+            "Your Future Starts Here",
 
         learnBuildConnectSucceed:
             "Learn. Build. Connect. Succeed.",
 
         futureDescription:
-            "SAKSHAM helps you turn your skills into real career opportunities.",
+            "Develop your skills, connect with opportunities and take the next step toward your career.",
 
         footerDescription:
-            "Empowering Skills. Connecting Opportunities.",
+            "SAKSHAM connects students, institutions and industry through skills and opportunities.",
 
         allRightsReserved:
-            "© 2026 SAKSHAM. All Rights Reserved.",
+            "All rights reserved.",
 
         platformDescription:
-            "Student Skill Development & Opportunity Platform"
+            "A student skill-development and opportunity platform.",
+
+
+        /* =================================================
+           STUDENT SKILLS
+           ================================================= */
+
+        buildProfessionalSkillProfile:
+            "Build Your Professional Skill Profile 🪷",
+
+        buildProfessionalSkillProfileDesc:
+            "Select your AYUSH discipline, choose your professional skills and create your digital SAKSHAM Skill Passport.",
+
+        stepOne:
+            "STEP ONE",
+
+        selectAYUSHDiscipline:
+            "Select Your AYUSH Discipline 🎓",
+
+        selectAYUSHDisciplineDesc:
+            "Choose the discipline you are currently studying.",
+
+        ayushDiscipline:
+            "AYUSH Discipline",
+
+        selectYourDiscipline:
+            "Select your discipline",
+
+        stepTwo:
+            "STEP TWO",
+
+        selectProfessionalSkills:
+            "Select Your Professional Skills 🛠️",
+
+        selectProfessionalSkillsDesc:
+            "Select the skills you currently have.",
+
+        selectDisciplineToViewSkills:
+            "Choose an AYUSH discipline above to view relevant professional skills.",
+
+        stepThree:
+            "STEP THREE",
+
+        selectSkillLevel:
+            "Select Your Skill Level 📈",
+
+        selectSkillLevelDesc:
+            "Tell us your overall professional skill level.",
+
+        overallSkillLevel:
+            "Your Overall Skill Level",
+
+        selectSkillLevelPlaceholder:
+            "Select skill level",
+
+        beginner:
+            "Beginner",
+
+        beginnerDesc:
+            "Learning the fundamentals",
+
+        intermediate:
+            "Intermediate",
+
+        intermediateDesc:
+            "Comfortable with practical work",
+
+        advanced:
+            "Advanced",
+
+        advancedDesc:
+            "Strong practical expertise",
+
+        finalStep:
+            "FINAL STEP",
+
+        createYourSkillPassport:
+            "Create Your SAKSHAM Skill Passport",
+
+        skillPassportSaveDesc:
+            "Your selected discipline, skills and skill level will be securely saved to your SAKSHAM profile.",
+
+        generateMySkillPassport:
+            "✨ Generate My Skill Passport",
+
+        digitalProfile:
+            "DIGITAL PROFILE",
+
+        yourAYUSHSkillPassport:
+            "Your AYUSH Skill Passport 🪷",
+
+        professionalProfileCreated:
+            "Your professional skill profile has been created.",
+
+        verifiedProfile:
+            "VERIFIED PROFILE",
+
+        sakshamStudent:
+            "SAKSHAM Student",
+
+        ayushSkillProfile:
+            "AYUSH Skill Profile",
+
+        discipline:
+            "DISCIPLINE",
+
+        skillLevel:
+            "SKILL LEVEL",
+
+        selectedSkills:
+            "🛠️ Selected Skills",
+
+        professionalSkills:
+            "Professional Skills",
+
+        footerTagline:
+            "Empowering Skills. Connecting Opportunities.",
+
+        selectDisciplineAlert:
+            "Please select your AYUSH discipline.",
+
+        selectSkillAlert:
+            "Please select at least one skill.",
+
+        selectLevelAlert:
+            "Please select your skill level.",
+
+        passportSaved:
+            "AYUSH Skill Passport saved successfully! 🎉",
+
+        saveError:
+            "Unable to save skills. Please make sure the backend is running.",
+
+        panchakarma:
+            "Panchakarma",
+
+        herbalFormulation:
+            "Herbal Formulation",
+
+        patientCounselling:
+            "Patient Counselling",
+
+        clinicalCaseTaking:
+            "Clinical Case-taking",
+
+        researchPublication:
+            "Research & Publication",
+
+        pharmacovigilance:
+            "Pharmacovigilance",
+
+        homeopathicPharmacy:
+            "Homeopathic Pharmacy",
+
+        materiaMedica:
+            "Materia Medica",
+
+        yogaTherapy:
+            "Yoga Therapy",
+
+        naturopathyDietPlanning:
+            "Naturopathy Diet Planning",
+
+        lifestyleManagement:
+            "Lifestyle Management",
+
+        unaniClinicalPractice:
+            "Unani Clinical Practice",
+
+        siddhaClinicalPractice:
+            "Siddha Clinical Practice"
     },
 
 
-    // =====================================
-    // HINDI
-    // =====================================
+    /* =====================================================
+       HINDI
+       ===================================================== */
 
     hi: {
 
@@ -242,15 +383,14 @@ const translations = {
         dashboard: "डैशबोर्ड",
         home: "होम",
         mySkills: "मेरी स्किल्स",
-        skillPassport: "डिजिटल स्किल पासपोर्ट",
+        skillPassport: "स्किल पासपोर्ट",
         opportunities: "अवसर",
         applications: "आवेदन",
 
         studentProfile: "छात्र प्रोफ़ाइल",
         myProfile: "मेरी प्रोफ़ाइल",
-
         profileDescription:
-            "SAKSHAM पर अपनी व्यक्तिगत जानकारी, शैक्षणिक विवरण और पेशेवर स्किल्स को मैनेज करें।",
+            "अपनी व्यक्तिगत और शैक्षणिक जानकारी प्रबंधित करें।",
 
         basicDetails: "मूल विवरण",
         personalInformation: "व्यक्तिगत जानकारी",
@@ -263,40 +403,36 @@ const translations = {
         academicInformation: "शैक्षणिक जानकारी",
         collegeInstitution: "कॉलेज / संस्थान",
         degree: "डिग्री",
-        branch: "शाखा",
+        branch: "ब्रांच",
         graduationYear: "स्नातक वर्ष",
 
-        professionalProfile: "पेशेवर प्रोफ़ाइल",
+        professionalProfile: "प्रोफेशनल प्रोफ़ाइल",
 
         editAcademic: "शैक्षणिक जानकारी संपादित करें",
-        updateAcademic: "अपनी शैक्षणिक जानकारी अपडेट करें।",
+        updateAcademic: "शैक्षणिक जानकारी अपडेट करें",
         saveAcademic: "शैक्षणिक जानकारी सेव करें",
 
         skillsDescription:
-            "अपनी पेशेवर और AYUSH स्किल्स मैनेज करें।",
+            "अपनी प्रोफेशनल स्किल्स जोड़ें और प्रबंधित करें।",
 
         loadingSkills: "स्किल्स लोड हो रही हैं...",
+        addManageSkills: "स्किल्स जोड़ें / प्रबंधित करें",
 
-        addManageSkills: "स्किल्स जोड़ें / मैनेज करें",
-
-        buildProfile: "अपनी प्रोफ़ेशनल प्रोफ़ाइल बनाएं",
+        buildProfile: "अपनी प्रोफ़ाइल बनाएं",
 
         keepProfileUpdated:
-            "बेहतर अवसर खोजने के लिए अपनी जानकारी अपडेट रखें।",
+            "अपनी प्रोफेशनल प्रोफ़ाइल को अपडेट रखें।",
 
         completeProfileDescription:
-            "अपने करियर के बेहतर अवसरों के लिए अपनी प्रोफ़ाइल और स्किल्स पूरी करें।",
+            "अपने शैक्षणिक और प्रोफेशनल विवरण पूरे करें ताकि बेहतर अवसर मिल सकें।",
 
         backToDashboard: "डैशबोर्ड पर वापस जाएं",
-
         logout: "लॉगआउट",
 
         notAdded: "जोड़ा नहीं गया",
-
-        noSkills: "अभी तक कोई स्किल नहीं जोड़ी गई है।",
-
+        noSkills: "कोई स्किल नहीं जोड़ी गई",
         addSkillsMessage:
-            "अपनी प्रोफ़ेशनल प्रोफ़ाइल बनाने के लिए स्किल्स जोड़ें।",
+            "अपनी प्रोफ़ाइल बनाने के लिए प्रोफेशनल स्किल्स जोड़ें।",
 
         collegePlaceholder: "कॉलेज / संस्थान दर्ज करें",
         degreePlaceholder: "डिग्री दर्ज करें",
@@ -307,7 +443,7 @@ const translations = {
             "कृपया सभी शैक्षणिक जानकारी भरें।",
 
         academicSaved:
-            "शैक्षणिक जानकारी सफलतापूर्वक सेव हो गई! 🎓",
+            "शैक्षणिक जानकारी सफलतापूर्वक सेव हो गई।",
 
         academicSaveError:
             "शैक्षणिक जानकारी सेव नहीं हो सकी।",
@@ -321,156 +457,258 @@ const translations = {
         studentPortal: "छात्र पोर्टल",
 
         sakshamStudentPortal:
-            "🌿 SAKSHAM छात्र पोर्टल",
+            "SAKSHAM छात्र पोर्टल",
 
-        heroTitle:
-            "अपनी स्किल्स को मजबूत बनाएं।",
-
-        heroTitleHighlight:
-            "अपना भविष्य बनाएं।",
+        heroTitle: "अपना भविष्य बनाएं",
+        heroTitleHighlight: "SAKSHAM के साथ",
 
         heroDescription:
-            "अपनी प्रोफ़ेशनल प्रोफ़ाइल बनाएं, स्किल्स मजबूत करें, बेहतर अवसर खोजें और AYUSH करियर की दुनिया से जुड़ें।",
+            "अपनी स्किल्स बनाएं, अवसर खोजें और सही करियर पथ से जुड़ें।",
 
-        exploreOpportunities:
-            "अवसर खोजें →",
+        exploreOpportunities: "अवसर देखें",
+        completeMyProfile: "मेरी प्रोफ़ाइल पूरी करें",
 
-        completeMyProfile:
-            "मेरी प्रोफ़ाइल पूरी करें",
+        quickAccess: "त्वरित एक्सेस",
 
-        quickAccess:
-            "त्वरित पहुँच",
-
-        careerJourney:
-            "आपकी करियर यात्रा",
+        careerJourney: "आपकी करियर यात्रा",
 
         everythingOnePlace:
-            "आपकी ज़रूरत की हर चीज़ एक ही जगह।",
+            "आपका करियर बनाने के लिए आवश्यक सभी चीज़ें एक ही जगह।",
 
         managePersonalInfo:
-            "अपनी व्यक्तिगत, शैक्षणिक और पेशेवर जानकारी मैनेज करें।",
+            "अपनी व्यक्तिगत जानकारी प्रबंधित करें।",
 
-        viewProfile:
-            "प्रोफ़ाइल देखें →",
+        viewProfile: "प्रोफ़ाइल देखें",
 
         addSkillsTrack:
-            "अपनी स्किल्स जोड़ें और अपने वर्तमान स्किल लेवल को ट्रैक करें।",
+            "अपनी स्किल्स जोड़ें और अपनी प्रगति देखें।",
 
-        manageSkills:
-            "स्किल्स मैनेज करें →",
+        manageSkills: "स्किल्स प्रबंधित करें",
 
         ayushSkillPassport:
-            "🪪 AYUSH स्किल पासपोर्ट →",
+            "AYUSH स्किल पासपोर्ट",
 
-        skillMapping:
-            "स्किल मैपिंग",
+        skillMapping: "स्किल मैपिंग",
 
         identifySkillGaps:
-            "स्किल गैप पहचानें और समझें कि नियोक्ता क्या चाहते हैं।",
+            "अपनी स्किल गैप पहचानें और करियर तैयारी बेहतर करें।",
 
-        exploreSkills:
-            "स्किल्स देखें →",
+        exploreSkills: "स्किल्स देखें",
 
-        opportunitiesTitle:
-            "अवसर",
+        opportunitiesTitle: "अवसर",
 
         discoverInternships:
-            "अपनी प्रोफ़ाइल के अनुसार इंटर्नशिप और करियर अवसर खोजें।",
+            "इंटर्नशिप, जॉब और करियर अवसर खोजें।",
 
-        findOpportunities:
-            "अवसर खोजें →",
+        findOpportunities: "अवसर खोजें",
 
-        myApplications:
-            "मेरे आवेदन",
+        myApplications: "मेरे आवेदन",
 
         trackApplications:
-            "अपने आवेदनों को ट्रैक करें और उनकी प्रगति देखें।",
+            "अपने इंटर्नशिप और जॉब आवेदन ट्रैक करें।",
 
         trackApplicationsButton:
-            "आवेदन ट्रैक करें →",
+            "आवेदन ट्रैक करें",
 
-        recommendations:
-            "सिफारिशें",
+        recommendations: "सिफारिशें",
 
         personalizedOpportunities:
-            "अपनी स्किल्स और रुचियों के आधार पर व्यक्तिगत अवसर पाएं।",
+            "अपने लिए व्यक्तिगत करियर अवसर प्राप्त करें।",
 
         viewRecommendations:
-            "सिफारिशें देखें →",
+            "सिफारिशें देखें",
 
-        yourProgress:
-            "आपकी प्रगति",
+        yourProgress: "आपकी प्रगति",
 
         keepMovingForward:
-            "आगे बढ़ते रहें",
+            "आगे बढ़ते रहें और अपना प्रोफेशनल भविष्य बनाएं।",
 
         buildProfileSkills:
-            "बेहतर अवसर पाने के लिए अपनी प्रोफ़ाइल और स्किल्स बनाएं।",
+            "अपनी प्रोफ़ाइल और स्किल्स बनाएं।",
 
-        skillsAdded:
-            "जोड़ी गई स्किल्स",
+        skillsAdded: "जोड़ी गई स्किल्स",
 
-        shortlisted:
-            "शॉर्टलिस्टेड",
+        shortlisted: "शॉर्टलिस्टेड",
 
         profileCompletion:
             "प्रोफ़ाइल पूर्णता",
 
         ayushCareerPathways:
-            "AYUSH करियर पाथवे",
+            "AYUSH करियर पथ",
 
         exploreDiscipline:
-            "अपनी डिसिप्लिन देखें",
+            "अपने AYUSH discipline के आधार पर अवसर देखें।",
 
-        ayushDomains:
-            "AYUSH के विभिन्न क्षेत्रों में अवसर खोजें।",
+        ayushDomains: "AYUSH क्षेत्र",
 
         ayurveda: "आयुर्वेद",
         homeopathy: "होम्योपैथी",
-        yogaNaturopathy: "योग और प्राकृतिक चिकित्सा",
+        yogaNaturopathy: "योग एवं प्राकृतिक चिकित्सा",
         unani: "यूनानी",
         siddha: "सिद्ध",
 
         yourFutureStarts:
-            "🌿 आपका भविष्य यहाँ से शुरू होता है",
+            "आपका भविष्य यहां से शुरू होता है",
 
         learnBuildConnectSucceed:
             "सीखें। बनाएं। जुड़ें। सफल हों।",
 
         futureDescription:
-            "SAKSHAM आपकी स्किल्स को वास्तविक करियर अवसरों में बदलने में मदद करता है।",
+            "अपनी स्किल्स विकसित करें, अवसरों से जुड़ें और अपने करियर की ओर अगला कदम बढ़ाएं।",
 
         footerDescription:
-            "स्किल्स को मजबूत बनाना। अवसरों से जोड़ना।",
+            "SAKSHAM छात्रों, संस्थानों और उद्योग को स्किल्स और अवसरों के माध्यम से जोड़ता है।",
 
         allRightsReserved:
-            "© 2026 SAKSHAM. सर्वाधिकार सुरक्षित।",
+            "सर्वाधिकार सुरक्षित।",
 
         platformDescription:
-            "छात्र स्किल विकास और अवसर प्लेटफ़ॉर्म"
+            "छात्र स्किल डेवलपमेंट और अवसरों का प्लेटफ़ॉर्म।",
+
+
+        /* Student Skills */
+
+        buildProfessionalSkillProfile:
+            "अपनी प्रोफेशनल स्किल प्रोफ़ाइल बनाएं 🪷",
+
+        buildProfessionalSkillProfileDesc:
+            "अपना AYUSH discipline चुनें, प्रोफेशनल स्किल्स चुनें और अपना डिजिटल SAKSHAM Skill Passport बनाएं।",
+
+        stepOne: "पहला चरण",
+
+        selectAYUSHDiscipline:
+            "अपना AYUSH Discipline चुनें 🎓",
+
+        selectAYUSHDisciplineDesc:
+            "वह discipline चुनें जिसकी आप वर्तमान में पढ़ाई कर रहे हैं।",
+
+        ayushDiscipline: "AYUSH Discipline",
+
+        selectYourDiscipline:
+            "अपना discipline चुनें",
+
+        stepTwo: "दूसरा चरण",
+
+        selectProfessionalSkills:
+            "अपनी प्रोफेशनल स्किल्स चुनें 🛠️",
+
+        selectProfessionalSkillsDesc:
+            "वे स्किल्स चुनें जो आपके पास वर्तमान में हैं।",
+
+        selectDisciplineToViewSkills:
+            "संबंधित प्रोफेशनल स्किल्स देखने के लिए ऊपर AYUSH discipline चुनें।",
+
+        stepThree: "तीसरा चरण",
+
+        selectSkillLevel:
+            "अपना स्किल लेवल चुनें 📈",
+
+        selectSkillLevelDesc:
+            "अपना कुल प्रोफेशनल स्किल लेवल बताएं।",
+
+        overallSkillLevel:
+            "आपका कुल स्किल लेवल",
+
+        selectSkillLevelPlaceholder:
+            "स्किल लेवल चुनें",
+
+        beginner: "शुरुआती",
+        beginnerDesc: "बुनियादी चीज़ें सीख रहे हैं",
+
+        intermediate: "मध्यवर्ती",
+        intermediateDesc:
+            "प्रैक्टिकल कार्य करने में सक्षम",
+
+        advanced: "उन्नत",
+        advancedDesc:
+            "मजबूत प्रैक्टिकल विशेषज्ञता",
+
+        finalStep: "अंतिम चरण",
+
+        createYourSkillPassport:
+            "अपना SAKSHAM Skill Passport बनाएं",
+
+        skillPassportSaveDesc:
+            "आपका चुना हुआ discipline, skills और skill level आपके SAKSHAM profile में सुरक्षित रूप से सेव किया जाएगा।",
+
+        generateMySkillPassport:
+            "✨ मेरा Skill Passport बनाएं",
+
+        digitalProfile: "डिजिटल प्रोफ़ाइल",
+
+        yourAYUSHSkillPassport:
+            "आपका AYUSH Skill Passport 🪷",
+
+        professionalProfileCreated:
+            "आपकी प्रोफेशनल स्किल प्रोफ़ाइल बन गई है।",
+
+        verifiedProfile: "सत्यापित प्रोफ़ाइल",
+
+        sakshamStudent: "SAKSHAM छात्र",
+
+        ayushSkillProfile: "AYUSH Skill Profile",
+
+        discipline: "DISCIPLINE",
+        skillLevel: "SKILL LEVEL",
+
+        selectedSkills: "🛠️ चुनी गई स्किल्स",
+
+        professionalSkills:
+            "प्रोफेशनल स्किल्स",
+
+        footerTagline:
+            "स्किल्स को सशक्त बनाना। अवसरों से जोड़ना।",
+
+        selectDisciplineAlert:
+            "कृपया अपना AYUSH discipline चुनें।",
+
+        selectSkillAlert:
+            "कृपया कम से कम एक skill चुनें।",
+
+        selectLevelAlert:
+            "कृपया अपना skill level चुनें।",
+
+        passportSaved:
+            "AYUSH Skill Passport सफलतापूर्वक सेव हो गया! 🎉",
+
+        saveError:
+            "Skills सेव नहीं हो सकीं। कृपया सुनिश्चित करें कि backend चल रहा है।",
+
+        panchakarma: "पंचकर्म",
+        herbalFormulation: "हर्बल फॉर्मुलेशन",
+        patientCounselling: "पेशेंट काउंसलिंग",
+        clinicalCaseTaking: "क्लिनिकल केस-टेकिंग",
+        researchPublication: "रिसर्च एवं पब्लिकेशन",
+        pharmacovigilance: "फार्माकोविजिलेंस",
+        homeopathicPharmacy: "होम्योपैथिक फार्मेसी",
+        materiaMedica: "मटेरिया मेडिका",
+        yogaTherapy: "योग थेरेपी",
+        naturopathyDietPlanning: "प्राकृतिक चिकित्सा डाइट प्लानिंग",
+        lifestyleManagement: "लाइफस्टाइल मैनेजमेंट",
+        unaniClinicalPractice: "यूनानी क्लिनिकल प्रैक्टिस",
+        siddhaClinicalPractice: "सिद्ध क्लिनिकल प्रैक्टिस"
     },
 
 
-    // =====================================
-    // NEPALI
-    // =====================================
+    /* =====================================================
+       NEPALI
+       ===================================================== */
 
     ne: {
 
         siteName: "SAKSHAM",
 
         dashboard: "ड्यासबोर्ड",
-        home: "गृहपृष्ठ",
+        home: "होम",
         mySkills: "मेरा सीपहरू",
-        skillPassport: "डिजिटल सीप पासपोर्ट",
+        skillPassport: "सीप पासपोर्ट",
         opportunities: "अवसरहरू",
         applications: "आवेदनहरू",
 
         studentProfile: "विद्यार्थी प्रोफाइल",
         myProfile: "मेरो प्रोफाइल",
-
         profileDescription:
-            "SAKSHAM मा आफ्नो व्यक्तिगत जानकारी, शैक्षिक विवरण र व्यावसायिक सीपहरू व्यवस्थापन गर्नुहोस्।",
+            "आफ्नो व्यक्तिगत र शैक्षिक जानकारी व्यवस्थापन गर्नुहोस्।",
 
         basicDetails: "आधारभूत विवरण",
         personalInformation: "व्यक्तिगत जानकारी",
@@ -489,45 +727,49 @@ const translations = {
         professionalProfile: "व्यावसायिक प्रोफाइल",
 
         editAcademic: "शैक्षिक जानकारी सम्पादन गर्नुहोस्",
-        updateAcademic: "आफ्नो शैक्षिक विवरण अपडेट गर्नुहोस्।",
+        updateAcademic: "शैक्षिक जानकारी अपडेट गर्नुहोस्",
         saveAcademic: "शैक्षिक जानकारी सुरक्षित गर्नुहोस्",
 
         skillsDescription:
-            "आफ्ना व्यावसायिक र AYUSH सीपहरू व्यवस्थापन गर्नुहोस्।",
+            "आफ्ना व्यावसायिक सीपहरू थप्नुहोस् र व्यवस्थापन गर्नुहोस्।",
 
         loadingSkills: "सीपहरू लोड हुँदैछन्...",
+        addManageSkills: "सीप थप्नुहोस् / व्यवस्थापन गर्नुहोस्",
 
-        addManageSkills: "सीपहरू थप्नुहोस् / व्यवस्थापन गर्नुहोस्",
-
-        buildProfile: "आफ्नो व्यावसायिक प्रोफाइल बनाउनुहोस्",
+        buildProfile: "आफ्नो प्रोफाइल बनाउनुहोस्",
 
         keepProfileUpdated:
-            "राम्रो अवसरहरू खोज्न आफ्नो जानकारी अपडेट राख्नुहोस्।",
+            "आफ्नो व्यावसायिक प्रोफाइल अपडेट राख्नुहोस्।",
 
         completeProfileDescription:
-            "आफ्नो करियर अवसरहरू सुधार गर्न प्रोफाइल र सीपहरू पूरा गर्नुहोस्।",
+            "राम्रो अवसर प्राप्त गर्न आफ्नो शैक्षिक र व्यावसायिक जानकारी पूरा गर्नुहोस्।",
 
         backToDashboard: "ड्यासबोर्डमा फर्कनुहोस्",
-
         logout: "लगआउट",
 
         notAdded: "थपिएको छैन",
-
-        noSkills: "अहिलेसम्म कुनै सीप थपिएको छैन।",
+        noSkills: "कुनै सीप थपिएको छैन",
 
         addSkillsMessage:
-            "आफ्नो व्यावसायिक प्रोफाइल बनाउन सीपहरू थप्नुहोस्।",
+            "आफ्नो प्रोफाइल बनाउन व्यावसायिक सीपहरू थप्नुहोस्।",
 
-        collegePlaceholder: "कलेज / संस्था प्रविष्ट गर्नुहोस्",
-        degreePlaceholder: "डिग्री प्रविष्ट गर्नुहोस्",
-        branchPlaceholder: "शाखा प्रविष्ट गर्नुहोस्",
-        graduationYearPlaceholder: "स्नातक वर्ष प्रविष्ट गर्नुहोस्",
+        collegePlaceholder:
+            "कलेज / संस्था प्रविष्ट गर्नुहोस्",
+
+        degreePlaceholder:
+            "डिग्री प्रविष्ट गर्नुहोस्",
+
+        branchPlaceholder:
+            "शाखा प्रविष्ट गर्नुहोस्",
+
+        graduationYearPlaceholder:
+            "स्नातक वर्ष प्रविष्ट गर्नुहोस्",
 
         fillAcademic:
             "कृपया सबै शैक्षिक जानकारी भर्नुहोस्।",
 
         academicSaved:
-            "शैक्षिक जानकारी सफलतापूर्वक सुरक्षित भयो! 🎓",
+            "शैक्षिक जानकारी सफलतापूर्वक सुरक्षित भयो।",
 
         academicSaveError:
             "शैक्षिक जानकारी सुरक्षित गर्न सकिएन।",
@@ -541,97 +783,82 @@ const translations = {
         studentPortal: "विद्यार्थी पोर्टल",
 
         sakshamStudentPortal:
-            "🌿 SAKSHAM विद्यार्थी पोर्टल",
+            "SAKSHAM विद्यार्थी पोर्टल",
 
-        heroTitle:
-            "आफ्नो सीपहरू बलियो बनाउनुहोस्।",
-
-        heroTitleHighlight:
-            "आफ्नो भविष्य बनाउनुहोस्।",
+        heroTitle: "आफ्नो भविष्य बनाउनुहोस्",
+        heroTitleHighlight: "SAKSHAM सँग",
 
         heroDescription:
-            "आफ्नो व्यावसायिक प्रोफाइल बनाउनुहोस्, सीपहरू बलियो बनाउनुहोस्, राम्रो अवसरहरू खोज्नुहोस् र AYUSH करियरसँग जोडिनुहोस्।",
+            "आफ्नो सीप विकास गर्नुहोस्, अवसरहरू खोज्नुहोस् र सही करियर मार्गसँग जोडिनुहोस्।",
 
         exploreOpportunities:
-            "अवसरहरू खोज्नुहोस् →",
+            "अवसरहरू हेर्नुहोस्",
 
         completeMyProfile:
             "मेरो प्रोफाइल पूरा गर्नुहोस्",
 
-        quickAccess:
-            "द्रुत पहुँच",
+        quickAccess: "द्रुत पहुँच",
 
-        careerJourney:
-            "तपाईंको करियर यात्रा",
+        careerJourney: "तपाईंको करियर यात्रा",
 
         everythingOnePlace:
-            "तपाईंलाई चाहिने सबै कुरा एउटै ठाउँमा।",
+            "तपाईंको करियर बनाउन आवश्यक सबै कुरा एउटै ठाउँमा।",
 
         managePersonalInfo:
-            "आफ्नो व्यक्तिगत, शैक्षिक र व्यावसायिक जानकारी व्यवस्थापन गर्नुहोस्।",
+            "आफ्नो व्यक्तिगत जानकारी व्यवस्थापन गर्नुहोस्।",
 
-        viewProfile:
-            "प्रोफाइल हेर्नुहोस् →",
+        viewProfile: "प्रोफाइल हेर्नुहोस्",
 
         addSkillsTrack:
-            "आफ्ना सीपहरू थप्नुहोस् र हालको सीप स्तर ट्र्याक गर्नुहोस्।",
+            "सीपहरू थप्नुहोस् र आफ्नो प्रगति हेर्नुहोस्।",
 
-        manageSkills:
-            "सीपहरू व्यवस्थापन गर्नुहोस् →",
+        manageSkills: "सीप व्यवस्थापन गर्नुहोस्",
 
         ayushSkillPassport:
-            "🪪 AYUSH सीप पासपोर्ट →",
+            "AYUSH सीप पासपोर्ट",
 
-        skillMapping:
-            "सीप म्यापिङ",
+        skillMapping: "सीप म्यापिङ",
 
         identifySkillGaps:
-            "सीपको कमी पहिचान गर्नुहोस् र रोजगारदाताले के खोजिरहेका छन् बुझ्नुहोस्।",
+            "आफ्नो सीपको कमी पहिचान गर्नुहोस् र करियर तयारी सुधार गर्नुहोस्।",
 
-        exploreSkills:
-            "सीपहरू हेर्नुहोस् →",
+        exploreSkills: "सीपहरू हेर्नुहोस्",
 
-        opportunitiesTitle:
-            "अवसरहरू",
+        opportunitiesTitle: "अवसरहरू",
 
         discoverInternships:
-            "आफ्नो प्रोफाइलसँग मिल्ने इन्टर्नशिप र करियर अवसरहरू खोज्नुहोस्।",
+            "इन्टर्नशिप, जागिर र करियर अवसरहरू खोज्नुहोस्।",
 
         findOpportunities:
-            "अवसरहरू खोज्नुहोस् →",
+            "अवसरहरू खोज्नुहोस्",
 
-        myApplications:
-            "मेरा आवेदनहरू",
+        myApplications: "मेरा आवेदनहरू",
 
         trackApplications:
-            "आफ्ना आवेदनहरू ट्र्याक गर्नुहोस् र प्रगति हेर्नुहोस्।",
+            "आफ्ना इन्टर्नशिप र जागिर आवेदनहरू ट्र्याक गर्नुहोस्।",
 
         trackApplicationsButton:
-            "आवेदनहरू ट्र्याक गर्नुहोस् →",
+            "आवेदनहरू ट्र्याक गर्नुहोस्",
 
-        recommendations:
-            "सिफारिसहरू",
+        recommendations: "सिफारिसहरू",
 
         personalizedOpportunities:
-            "आफ्ना सीप र रुचिका आधारमा व्यक्तिगत अवसरहरू प्राप्त गर्नुहोस्।",
+            "तपाईंका लागि व्यक्तिगत करियर अवसरहरू प्राप्त गर्नुहोस्।",
 
         viewRecommendations:
-            "सिफारिसहरू हेर्नुहोस् →",
+            "सिफारिसहरू हेर्नुहोस्",
 
-        yourProgress:
-            "तपाईंको प्रगति",
+        yourProgress: "तपाईंको प्रगति",
 
         keepMovingForward:
-            "अगाडि बढिरहनुहोस्",
+            "अगाडि बढिरहनुहोस् र आफ्नो व्यावसायिक भविष्य बनाउनुहोस्।",
 
         buildProfileSkills:
-            "राम्रो अवसरहरू प्राप्त गर्न आफ्नो प्रोफाइल र सीपहरू बनाउनुहोस्।",
+            "आफ्नो प्रोफाइल र सीपहरू बनाउनुहोस्।",
 
-        skillsAdded:
-            "थपिएका सीपहरू",
+        skillsAdded: "थपिएका सीपहरू",
 
-        shortlisted:
-            "छनोट गरिएका",
+        shortlisted: "छानिएका",
 
         profileCompletion:
             "प्रोफाइल पूर्णता",
@@ -640,10 +867,9 @@ const translations = {
             "AYUSH करियर मार्गहरू",
 
         exploreDiscipline:
-            "आफ्नो विषय हेर्नुहोस्",
+            "आफ्नो AYUSH discipline अनुसार अवसरहरू हेर्नुहोस्।",
 
-        ayushDomains:
-            "AYUSH का विभिन्न क्षेत्रमा अवसरहरू खोज्नुहोस्।",
+        ayushDomains: "AYUSH क्षेत्रहरू",
 
         ayurveda: "आयुर्वेद",
         homeopathy: "होमियोप्याथी",
@@ -652,28 +878,151 @@ const translations = {
         siddha: "सिद्ध",
 
         yourFutureStarts:
-            "🌿 तपाईंको भविष्य यहाँबाट सुरु हुन्छ",
+            "तपाईंको भविष्य यहाँबाट सुरु हुन्छ",
 
         learnBuildConnectSucceed:
             "सिक्नुहोस्। बनाउनुहोस्। जोडिनुहोस्। सफल हुनुहोस्।",
 
         futureDescription:
-            "SAKSHAM ले तपाईंका सीपहरूलाई वास्तविक करियर अवसरहरूमा बदल्न मद्दत गर्छ।",
+            "आफ्नो सीप विकास गर्नुहोस्, अवसरहरूसँग जोडिनुहोस् र आफ्नो करियरतर्फ अर्को कदम चाल्नुहोस्।",
 
         footerDescription:
-            "सीपहरूलाई सशक्त बनाउँदै। अवसरहरूसँग जोड्दै।",
+            "SAKSHAM ले सीप र अवसरमार्फत विद्यार्थी, संस्था र उद्योगलाई जोड्छ।",
 
         allRightsReserved:
-            "© 2026 SAKSHAM. सर्वाधिकार सुरक्षित।",
+            "सबै अधिकार सुरक्षित।",
 
         platformDescription:
-            "विद्यार्थी सीप विकास तथा अवसर प्लेटफर्म"
+            "विद्यार्थी सीप विकास र अवसरहरूको प्लेटफर्म।",
+
+        buildProfessionalSkillProfile:
+            "आफ्नो व्यावसायिक सीप प्रोफाइल बनाउनुहोस् 🪷",
+
+        buildProfessionalSkillProfileDesc:
+            "आफ्नो AYUSH discipline छान्नुहोस्, व्यावसायिक सीपहरू छान्नुहोस् र डिजिटल SAKSHAM Skill Passport बनाउनुहोस्।",
+
+        stepOne: "पहिलो चरण",
+
+        selectAYUSHDiscipline:
+            "आफ्नो AYUSH Discipline छान्नुहोस् 🎓",
+
+        selectAYUSHDisciplineDesc:
+            "तपाईंले हाल अध्ययन गरिरहेको discipline छान्नुहोस्।",
+
+        ayushDiscipline:
+            "AYUSH Discipline",
+
+        selectYourDiscipline:
+            "आफ्नो discipline छान्नुहोस्",
+
+        stepTwo: "दोस्रो चरण",
+
+        selectProfessionalSkills:
+            "आफ्ना व्यावसायिक सीपहरू छान्नुहोस् 🛠️",
+
+        selectProfessionalSkillsDesc:
+            "तपाईंसँग हाल भएका सीपहरू छान्नुहोस्।",
+
+        selectDisciplineToViewSkills:
+            "सम्बन्धित व्यावसायिक सीपहरू हेर्न माथि AYUSH discipline छान्नुहोस्।",
+
+        stepThree: "तेस्रो चरण",
+
+        selectSkillLevel:
+            "आफ्नो सीप स्तर छान्नुहोस् 📈",
+
+        selectSkillLevelDesc:
+            "आफ्नो समग्र व्यावसायिक सीप स्तर बताउनुहोस्।",
+
+        overallSkillLevel:
+            "तपाईंको समग्र सीप स्तर",
+
+        selectSkillLevelPlaceholder:
+            "सीप स्तर छान्नुहोस्",
+
+        beginner: "सुरुवाती",
+        beginnerDesc: "आधारभूत कुरा सिक्दै",
+
+        intermediate: "मध्यवर्ती",
+        intermediateDesc: "व्यावहारिक काममा सहज",
+
+        advanced: "उन्नत",
+        advancedDesc: "बलियो व्यावहारिक विशेषज्ञता",
+
+        finalStep: "अन्तिम चरण",
+
+        createYourSkillPassport:
+            "आफ्नो SAKSHAM Skill Passport बनाउनुहोस्",
+
+        skillPassportSaveDesc:
+            "तपाईंले छानेको discipline, skills र skill level तपाईंको SAKSHAM profile मा सुरक्षित रूपमा बचत हुनेछ।",
+
+        generateMySkillPassport:
+            "✨ मेरो Skill Passport बनाउनुहोस्",
+
+        digitalProfile: "डिजिटल प्रोफाइल",
+
+        yourAYUSHSkillPassport:
+            "तपाईंको AYUSH Skill Passport 🪷",
+
+        professionalProfileCreated:
+            "तपाईंको व्यावसायिक सीप प्रोफाइल तयार भएको छ।",
+
+        verifiedProfile:
+            "प्रमाणित प्रोफाइल",
+
+        sakshamStudent:
+            "SAKSHAM विद्यार्थी",
+
+        ayushSkillProfile:
+            "AYUSH Skill Profile",
+
+        discipline: "DISCIPLINE",
+        skillLevel: "SKILL LEVEL",
+
+        selectedSkills:
+            "🛠️ चयन गरिएका सीपहरू",
+
+        professionalSkills:
+            "व्यावसायिक सीपहरू",
+
+        footerTagline:
+            "सीपलाई सशक्त बनाउँदै। अवसरसँग जोड्दै।",
+
+        selectDisciplineAlert:
+            "कृपया आफ्नो AYUSH discipline छान्नुहोस्।",
+
+        selectSkillAlert:
+            "कृपया कम्तीमा एउटा skill छान्नुहोस्।",
+
+        selectLevelAlert:
+            "कृपया आफ्नो skill level छान्नुहोस्।",
+
+        passportSaved:
+            "AYUSH Skill Passport सफलतापूर्वक सुरक्षित भयो! 🎉",
+
+        saveError:
+            "Skills सुरक्षित गर्न सकिएन। कृपया backend चलिरहेको छ कि छैन जाँच गर्नुहोस्।",
+
+        panchakarma: "पञ्चकर्म",
+        herbalFormulation: "हर्बल फर्मुलेसन",
+        patientCounselling: "बिरामी परामर्श",
+        clinicalCaseTaking: "क्लिनिकल केस टेकिङ",
+        researchPublication: "अनुसन्धान र प्रकाशन",
+        pharmacovigilance: "फार्माकोभिजिलेन्स",
+        homeopathicPharmacy: "होमियोप्याथिक फार्मेसी",
+        materiaMedica: "मेटेरिया मेडिका",
+        yogaTherapy: "योग थेरापी",
+        naturopathyDietPlanning: "प्राकृतिक चिकित्सा डाइट योजना",
+        lifestyleManagement: "जीवनशैली व्यवस्थापन",
+        unaniClinicalPractice: "युनानी क्लिनिकल अभ्यास",
+        siddhaClinicalPractice: "सिद्ध क्लिनिकल अभ्यास"
     },
 
 
-    // =====================================
-    // KANNADA
-    // =====================================
+    /* =====================================================
+       KANNADA
+       ===================================================== */
 
     kn: {
 
@@ -682,15 +1031,14 @@ const translations = {
         dashboard: "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
         home: "ಮುಖಪುಟ",
         mySkills: "ನನ್ನ ಕೌಶಲ್ಯಗಳು",
-        skillPassport: "ಡಿಜಿಟಲ್ ಕೌಶಲ್ಯ ಪಾಸ್‌ಪೋರ್ಟ್",
+        skillPassport: "ಸ್ಕಿಲ್ ಪಾಸ್‌ಪೋರ್ಟ್",
         opportunities: "ಅವಕಾಶಗಳು",
         applications: "ಅರ್ಜಿಗಳು",
 
         studentProfile: "ವಿದ್ಯಾರ್ಥಿ ಪ್ರೊಫೈಲ್",
         myProfile: "ನನ್ನ ಪ್ರೊಫೈಲ್",
-
         profileDescription:
-            "SAKSHAM ನಲ್ಲಿ ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ, ಶೈಕ್ಷಣಿಕ ವಿವರಗಳು ಮತ್ತು ವೃತ್ತಿಪರ ಕೌಶಲ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸಿ.",
+            "ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಮತ್ತು ಶೈಕ್ಷಣಿಕ ಮಾಹಿತಿಯನ್ನು ನಿರ್ವಹಿಸಿ.",
 
         basicDetails: "ಮೂಲ ವಿವರಗಳು",
         personalInformation: "ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ",
@@ -704,16 +1052,16 @@ const translations = {
         collegeInstitution: "ಕಾಲೇಜು / ಸಂಸ್ಥೆ",
         degree: "ಪದವಿ",
         branch: "ಶಾಖೆ",
-        graduationYear: "ಪದವಿ ಪೂರ್ಣಗೊಳಿಸುವ ವರ್ಷ",
+        graduationYear: "ಪದವಿ ಪೂರ್ಣಗೊಳಿಸಿದ ವರ್ಷ",
 
         professionalProfile: "ವೃತ್ತಿಪರ ಪ್ರೊಫೈಲ್",
 
         editAcademic: "ಶೈಕ್ಷಣಿಕ ಮಾಹಿತಿಯನ್ನು ಸಂಪಾದಿಸಿ",
-        updateAcademic: "ನಿಮ್ಮ ಶೈಕ್ಷಣಿಕ ವಿವರಗಳನ್ನು ನವೀಕರಿಸಿ.",
+        updateAcademic: "ಶೈಕ್ಷಣಿಕ ಮಾಹಿತಿಯನ್ನು ನವೀಕರಿಸಿ",
         saveAcademic: "ಶೈಕ್ಷಣಿಕ ಮಾಹಿತಿಯನ್ನು ಉಳಿಸಿ",
 
         skillsDescription:
-            "ನಿಮ್ಮ ವೃತ್ತಿಪರ ಮತ್ತು AYUSH ಕೌಶಲ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸಿ.",
+            "ನಿಮ್ಮ ವೃತ್ತಿಪರ ಕೌಶಲ್ಯಗಳನ್ನು ಸೇರಿಸಿ ಮತ್ತು ನಿರ್ವಹಿಸಿ.",
 
         loadingSkills: "ಕೌಶಲ್ಯಗಳನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ...",
 
@@ -721,13 +1069,13 @@ const translations = {
             "ಕೌಶಲ್ಯಗಳನ್ನು ಸೇರಿಸಿ / ನಿರ್ವಹಿಸಿ",
 
         buildProfile:
-            "ನಿಮ್ಮ ವೃತ್ತಿಪರ ಪ್ರೊಫೈಲ್ ನಿರ್ಮಿಸಿ",
+            "ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ನಿರ್ಮಿಸಿ",
 
         keepProfileUpdated:
-            "ಉತ್ತಮ ಅವಕಾಶಗಳನ್ನು ಕಂಡುಹಿಡಿಯಲು ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ನವೀಕರಿಸಿ.",
+            "ನಿಮ್ಮ ವೃತ್ತಿಪರ ಪ್ರೊಫೈಲ್ ಅನ್ನು ನವೀಕರಿಸಿ.",
 
         completeProfileDescription:
-            "ಉತ್ತಮ ವೃತ್ತಿ ಅವಕಾಶಗಳಿಗಾಗಿ ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಮತ್ತು ಕೌಶಲ್ಯಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ.",
+            "ಉತ್ತಮ ಅವಕಾಶಗಳನ್ನು ಪಡೆಯಲು ನಿಮ್ಮ ಶೈಕ್ಷಣಿಕ ಮತ್ತು ವೃತ್ತಿಪರ ಮಾಹಿತಿಯನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ.",
 
         backToDashboard:
             "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ಗೆ ಹಿಂತಿರುಗಿ",
@@ -737,10 +1085,10 @@ const translations = {
         notAdded: "ಸೇರಿಸಲಾಗಿಲ್ಲ",
 
         noSkills:
-            "ಇನ್ನೂ ಯಾವುದೇ ಕೌಶಲ್ಯಗಳನ್ನು ಸೇರಿಸಲಾಗಿಲ್ಲ.",
+            "ಯಾವುದೇ ಕೌಶಲ್ಯಗಳನ್ನು ಸೇರಿಸಲಾಗಿಲ್ಲ",
 
         addSkillsMessage:
-            "ನಿಮ್ಮ ವೃತ್ತಿಪರ ಪ್ರೊಫೈಲ್ ನಿರ್ಮಿಸಲು ಕೌಶಲ್ಯಗಳನ್ನು ಸೇರಿಸಿ.",
+            "ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ನಿರ್ಮಿಸಲು ವೃತ್ತಿಪರ ಕೌಶಲ್ಯಗಳನ್ನು ಸೇರಿಸಿ.",
 
         collegePlaceholder:
             "ಕಾಲೇಜು / ಸಂಸ್ಥೆಯನ್ನು ನಮೂದಿಸಿ",
@@ -752,13 +1100,13 @@ const translations = {
             "ಶಾಖೆಯನ್ನು ನಮೂದಿಸಿ",
 
         graduationYearPlaceholder:
-            "ಪದವಿ ಪೂರ್ಣಗೊಳಿಸುವ ವರ್ಷವನ್ನು ನಮೂದಿಸಿ",
+            "ಪದವಿ ಪೂರ್ಣಗೊಳಿಸಿದ ವರ್ಷವನ್ನು ನಮೂದಿಸಿ",
 
         fillAcademic:
             "ದಯವಿಟ್ಟು ಎಲ್ಲಾ ಶೈಕ್ಷಣಿಕ ಮಾಹಿತಿಯನ್ನು ಭರ್ತಿ ಮಾಡಿ.",
 
         academicSaved:
-            "ಶೈಕ್ಷಣಿಕ ಮಾಹಿತಿ ಯಶಸ್ವಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ! 🎓",
+            "ಶೈಕ್ಷಣಿಕ ಮಾಹಿತಿ ಯಶಸ್ವಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ.",
 
         academicSaveError:
             "ಶೈಕ್ಷಣಿಕ ಮಾಹಿತಿಯನ್ನು ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.",
@@ -773,19 +1121,19 @@ const translations = {
             "ವಿದ್ಯಾರ್ಥಿ ಪೋರ್ಟಲ್",
 
         sakshamStudentPortal:
-            "🌿 SAKSHAM ವಿದ್ಯಾರ್ಥಿ ಪೋರ್ಟಲ್",
+            "SAKSHAM ವಿದ್ಯಾರ್ಥಿ ಪೋರ್ಟಲ್",
 
         heroTitle:
-            "ನಿಮ್ಮ ಕೌಶಲ್ಯಗಳನ್ನು ಬಲಪಡಿಸಿ.",
+            "ನಿಮ್ಮ ಭವಿಷ್ಯವನ್ನು ನಿರ್ಮಿಸಿ",
 
         heroTitleHighlight:
-            "ನಿಮ್ಮ ಭವಿಷ್ಯವನ್ನು ರೂಪಿಸಿ.",
+            "SAKSHAM ಜೊತೆ",
 
         heroDescription:
-            "ನಿಮ್ಮ ವೃತ್ತಿಪರ ಪ್ರೊಫೈಲ್ ನಿರ್ಮಿಸಿ, ಕೌಶಲ್ಯಗಳನ್ನು ಬಲಪಡಿಸಿ, ಉತ್ತಮ ಅವಕಾಶಗಳನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ ಮತ್ತು AYUSH ವೃತ್ತಿ ಜಗತ್ತಿನೊಂದಿಗೆ ಸಂಪರ್ಕ ಹೊಂದಿರಿ.",
+            "ನಿಮ್ಮ ಕೌಶಲ್ಯಗಳನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಿ, ಅವಕಾಶಗಳನ್ನು ಹುಡುಕಿ ಮತ್ತು ಸರಿಯಾದ ವೃತ್ತಿ ಮಾರ್ಗದೊಂದಿಗೆ ಸಂಪರ್ಕ ಹೊಂದಿ.",
 
         exploreOpportunities:
-            "ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಿ →",
+            "ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಿ",
 
         completeMyProfile:
             "ನನ್ನ ಪ್ರೊಫೈಲ್ ಪೂರ್ಣಗೊಳಿಸಿ",
@@ -797,70 +1145,70 @@ const translations = {
             "ನಿಮ್ಮ ವೃತ್ತಿ ಪ್ರಯಾಣ",
 
         everythingOnePlace:
-            "ನಿಮಗೆ ಬೇಕಾದ ಎಲ್ಲವೂ ಒಂದೇ ಸ್ಥಳದಲ್ಲಿ.",
+            "ನಿಮ್ಮ ವೃತ್ತಿಯನ್ನು ನಿರ್ಮಿಸಲು ಬೇಕಾದ ಎಲ್ಲವೂ ಒಂದೇ ಸ್ಥಳದಲ್ಲಿ.",
 
         managePersonalInfo:
-            "ನಿಮ್ಮ ವೈಯಕ್ತಿಕ, ಶೈಕ್ಷಣಿಕ ಮತ್ತು ವೃತ್ತಿಪರ ಮಾಹಿತಿಯನ್ನು ನಿರ್ವಹಿಸಿ.",
+            "ನಿಮ್ಮ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ನಿರ್ವಹಿಸಿ.",
 
         viewProfile:
-            "ಪ್ರೊಫೈಲ್ ವೀಕ್ಷಿಸಿ →",
+            "ಪ್ರೊಫೈಲ್ ವೀಕ್ಷಿಸಿ",
 
         addSkillsTrack:
-            "ನಿಮ್ಮ ಕೌಶಲ್ಯಗಳನ್ನು ಸೇರಿಸಿ ಮತ್ತು ಪ್ರಸ್ತುತ ಕೌಶಲ್ಯ ಮಟ್ಟಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ.",
+            "ಕೌಶಲ್ಯಗಳನ್ನು ಸೇರಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಪ್ರಗತಿಯನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ.",
 
         manageSkills:
-            "ಕೌಶಲ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸಿ →",
+            "ಕೌಶಲ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸಿ",
 
         ayushSkillPassport:
-            "🪪 AYUSH ಕೌಶಲ್ಯ ಪಾಸ್‌ಪೋರ್ಟ್ →",
+            "AYUSH ಸ್ಕಿಲ್ ಪಾಸ್‌ಪೋರ್ಟ್",
 
         skillMapping:
-            "ಕೌಶಲ್ಯ ಮ್ಯಾಪಿಂಗ್",
+            "ಸ್ಕಿಲ್ ಮ್ಯಾಪಿಂಗ್",
 
         identifySkillGaps:
-            "ಕೌಶಲ್ಯದ ಕೊರತೆಗಳನ್ನು ಗುರುತಿಸಿ ಮತ್ತು ಉದ್ಯೋಗದಾತರು ಏನನ್ನು ಹುಡುಕುತ್ತಿದ್ದಾರೆ ಎಂಬುದನ್ನು ತಿಳಿಯಿರಿ.",
+            "ನಿಮ್ಮ ಕೌಶಲ್ಯ ಕೊರತೆಗಳನ್ನು ಗುರುತಿಸಿ ಮತ್ತು ವೃತ್ತಿ ಸಿದ್ಧತೆಯನ್ನು ಸುಧಾರಿಸಿ.",
 
         exploreSkills:
-            "ಕೌಶಲ್ಯಗಳನ್ನು ಅನ್ವೇಷಿಸಿ →",
+            "ಕೌಶಲ್ಯಗಳನ್ನು ಅನ್ವೇಷಿಸಿ",
 
         opportunitiesTitle:
             "ಅವಕಾಶಗಳು",
 
         discoverInternships:
-            "ನಿಮ್ಮ ಪ್ರೊಫೈಲ್‌ಗೆ ಹೊಂದುವ ಇಂಟರ್ನ್‌ಶಿಪ್ ಮತ್ತು ವೃತ್ತಿ ಅವಕಾಶಗಳನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ.",
+            "ಇಂಟರ್ನ್‌ಶಿಪ್, ಉದ್ಯೋಗ ಮತ್ತು ವೃತ್ತಿ ಅವಕಾಶಗಳನ್ನು ಹುಡುಕಿ.",
 
         findOpportunities:
-            "ಅವಕಾಶಗಳನ್ನು ಹುಡುಕಿ →",
+            "ಅವಕಾಶಗಳನ್ನು ಹುಡುಕಿ",
 
         myApplications:
             "ನನ್ನ ಅರ್ಜಿಗಳು",
 
         trackApplications:
-            "ನಿಮ್ಮ ಅರ್ಜಿಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ ಮತ್ತು ಅವುಗಳ ಪ್ರಗತಿಯನ್ನು ಗಮನಿಸಿ.",
+            "ನಿಮ್ಮ ಇಂಟರ್ನ್‌ಶಿಪ್ ಮತ್ತು ಉದ್ಯೋಗ ಅರ್ಜಿಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ.",
 
         trackApplicationsButton:
-            "ಅರ್ಜಿಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ →",
+            "ಅರ್ಜಿಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ",
 
         recommendations:
             "ಶಿಫಾರಸುಗಳು",
 
         personalizedOpportunities:
-            "ನಿಮ್ಮ ಕೌಶಲ್ಯಗಳು ಮತ್ತು ಆಸಕ್ತಿಗಳ ಆಧಾರದ ಮೇಲೆ ವೈಯಕ್ತಿಕ ಅವಕಾಶಗಳನ್ನು ಪಡೆಯಿರಿ.",
+            "ನಿಮಗಾಗಿ ವೈಯಕ್ತಿಕಗೊಳಿಸಿದ ವೃತ್ತಿ ಅವಕಾಶಗಳನ್ನು ಪಡೆಯಿರಿ.",
 
         viewRecommendations:
-            "ಶಿಫಾರಸುಗಳನ್ನು ವೀಕ್ಷಿಸಿ →",
+            "ಶಿಫಾರಸುಗಳನ್ನು ವೀಕ್ಷಿಸಿ",
 
         yourProgress:
             "ನಿಮ್ಮ ಪ್ರಗತಿ",
 
         keepMovingForward:
-            "ಮುಂದೆ ಸಾಗುತ್ತಿರಿ",
+            "ಮುಂದುವರಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮ ವೃತ್ತಿಪರ ಭವಿಷ್ಯವನ್ನು ನಿರ್ಮಿಸಿ.",
 
         buildProfileSkills:
-            "ಉತ್ತಮ ಅವಕಾಶಗಳನ್ನು ಪಡೆಯಲು ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಮತ್ತು ಕೌಶಲ್ಯಗಳನ್ನು ನಿರ್ಮಿಸಿ.",
+            "ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಮತ್ತು ಕೌಶಲ್ಯಗಳನ್ನು ನಿರ್ಮಿಸಿ.",
 
         skillsAdded:
-            "ಸೇರಿಸಿದ ಕೌಶಲ್ಯಗಳು",
+            "ಸೇರಿಸಲಾದ ಕೌಶಲ್ಯಗಳು",
 
         shortlisted:
             "ಶಾರ್ಟ್‌ಲಿಸ್ಟ್ ಮಾಡಲಾಗಿದೆ",
@@ -872,42 +1220,219 @@ const translations = {
             "AYUSH ವೃತ್ತಿ ಮಾರ್ಗಗಳು",
 
         exploreDiscipline:
-            "ನಿಮ್ಮ ವಿಭಾಗವನ್ನು ಅನ್ವೇಷಿಸಿ",
+            "ನಿಮ್ಮ AYUSH discipline ಆಧಾರದ ಮೇಲೆ ಅವಕಾಶಗಳನ್ನು ಅನ್ವೇಷಿಸಿ.",
 
         ayushDomains:
-            "AYUSH ನ ವಿವಿಧ ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಅವಕಾಶಗಳನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ.",
+            "AYUSH ಕ್ಷೇತ್ರಗಳು",
 
-        ayurveda: "ಆಯುರ್ವೇದ",
-        homeopathy: "ಹೋಮಿಯೋಪಥಿ",
-        yogaNaturopathy: "ಯೋಗ ಮತ್ತು ನೈಸರ್ಗಿಕ ಚಿಕಿತ್ಸೆ",
-        unani: "ಯುನಾನಿ",
-        siddha: "ಸಿದ್ಧ",
+        ayurveda:
+            "ಆಯುರ್ವೇದ",
+
+        homeopathy:
+            "ಹೋಮಿಯೋಪತಿ",
+
+        yogaNaturopathy:
+            "ಯೋಗ ಮತ್ತು ನೈಸರ್ಗಿಕ ಚಿಕಿತ್ಸೆ",
+
+        unani:
+            "ಯುನಾನಿ",
+
+        siddha:
+            "ಸಿದ್ಧ",
 
         yourFutureStarts:
-            "🌿 ನಿಮ್ಮ ಭವಿಷ್ಯ ಇಲ್ಲಿಂದ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ",
+            "ನಿಮ್ಮ ಭವಿಷ್ಯ ಇಲ್ಲಿ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ",
 
         learnBuildConnectSucceed:
             "ಕಲಿಯಿರಿ. ನಿರ್ಮಿಸಿ. ಸಂಪರ್ಕಿಸಿ. ಯಶಸ್ವಿಯಾಗಿರಿ.",
 
         futureDescription:
-            "SAKSHAM ನಿಮ್ಮ ಕೌಶಲ್ಯಗಳನ್ನು ನೈಜ ವೃತ್ತಿ ಅವಕಾಶಗಳಾಗಿ ಪರಿವರ್ತಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.",
+            "ನಿಮ್ಮ ಕೌಶಲ್ಯಗಳನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಿ, ಅವಕಾಶಗಳೊಂದಿಗೆ ಸಂಪರ್ಕ ಹೊಂದಿ ಮತ್ತು ನಿಮ್ಮ ವೃತ್ತಿಯತ್ತ ಮುಂದಿನ ಹೆಜ್ಜೆ ಇಡಿ.",
 
         footerDescription:
-            "ಕೌಶಲ್ಯಗಳನ್ನು ಬಲಪಡಿಸುವುದು. ಅವಕಾಶಗಳೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುವುದು.",
+            "SAKSHAM ಕೌಶಲ್ಯಗಳು ಮತ್ತು ಅವಕಾಶಗಳ ಮೂಲಕ ವಿದ್ಯಾರ್ಥಿಗಳು, ಸಂಸ್ಥೆಗಳು ಮತ್ತು ಉದ್ಯಮವನ್ನು ಸಂಪರ್ಕಿಸುತ್ತದೆ.",
 
         allRightsReserved:
-            "© 2026 SAKSHAM. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.",
+            "ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.",
 
         platformDescription:
-            "ವಿದ್ಯಾರ್ಥಿ ಕೌಶಲ್ಯ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ಅವಕಾಶ ವೇದಿಕೆ"
+            "ವಿದ್ಯಾರ್ಥಿ ಕೌಶಲ್ಯ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ಅವಕಾಶಗಳ ವೇದಿಕೆ.",
+
+
+        /* Student Skills */
+
+        buildProfessionalSkillProfile:
+            "ನಿಮ್ಮ ವೃತ್ತಿಪರ ಕೌಶಲ್ಯ ಪ್ರೊಫೈಲ್ ನಿರ್ಮಿಸಿ 🪷",
+
+        buildProfessionalSkillProfileDesc:
+            "ನಿಮ್ಮ AYUSH discipline ಆಯ್ಕೆ ಮಾಡಿ, ವೃತ್ತಿಪರ ಕೌಶಲ್ಯಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಿ ಮತ್ತು ನಿಮ್ಮ ಡಿಜಿಟಲ್ SAKSHAM Skill Passport ರಚಿಸಿ.",
+
+        stepOne:
+            "ಹಂತ ಒಂದು",
+
+        selectAYUSHDiscipline:
+            "ನಿಮ್ಮ AYUSH Discipline ಆಯ್ಕೆ ಮಾಡಿ 🎓",
+
+        selectAYUSHDisciplineDesc:
+            "ನೀವು ಪ್ರಸ್ತುತ ಅಧ್ಯಯನ ಮಾಡುತ್ತಿರುವ discipline ಆಯ್ಕೆ ಮಾಡಿ.",
+
+        ayushDiscipline:
+            "AYUSH Discipline",
+
+        selectYourDiscipline:
+            "ನಿಮ್ಮ discipline ಆಯ್ಕೆ ಮಾಡಿ",
+
+        stepTwo:
+            "ಹಂತ ಎರಡು",
+
+        selectProfessionalSkills:
+            "ನಿಮ್ಮ ವೃತ್ತಿಪರ ಕೌಶಲ್ಯಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಿ 🛠️",
+
+        selectProfessionalSkillsDesc:
+            "ನಿಮ್ಮಲ್ಲಿ ಪ್ರಸ್ತುತ ಇರುವ ಕೌಶಲ್ಯಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.",
+
+        selectDisciplineToViewSkills:
+            "ಸಂಬಂಧಿತ ವೃತ್ತಿಪರ ಕೌಶಲ್ಯಗಳನ್ನು ನೋಡಲು ಮೇಲಿನ AYUSH discipline ಆಯ್ಕೆ ಮಾಡಿ.",
+
+        stepThree:
+            "ಹಂತ ಮೂರು",
+
+        selectSkillLevel:
+            "ನಿಮ್ಮ ಕೌಶಲ್ಯ ಮಟ್ಟ ಆಯ್ಕೆ ಮಾಡಿ 📈",
+
+        selectSkillLevelDesc:
+            "ನಿಮ್ಮ ಒಟ್ಟಾರೆ ವೃತ್ತಿಪರ ಕೌಶಲ್ಯ ಮಟ್ಟವನ್ನು ತಿಳಿಸಿ.",
+
+        overallSkillLevel:
+            "ನಿಮ್ಮ ಒಟ್ಟಾರೆ ಕೌಶಲ್ಯ ಮಟ್ಟ",
+
+        selectSkillLevelPlaceholder:
+            "ಕೌಶಲ್ಯ ಮಟ್ಟ ಆಯ್ಕೆ ಮಾಡಿ",
+
+        beginner:
+            "ಆರಂಭಿಕ",
+
+        beginnerDesc:
+            "ಮೂಲಭೂತ ವಿಷಯಗಳನ್ನು ಕಲಿಯುತ್ತಿದ್ದಾರೆ",
+
+        intermediate:
+            "ಮಧ್ಯಮ",
+
+        intermediateDesc:
+            "ಪ್ರಾಯೋಗಿಕ ಕೆಲಸದಲ್ಲಿ ಆರಾಮದಾಯಕ",
+
+        advanced:
+            "ಮುಂದುವರಿದ",
+
+        advancedDesc:
+            "ಬಲವಾದ ಪ್ರಾಯೋಗಿಕ ಪರಿಣತಿ",
+
+        finalStep:
+            "ಅಂತಿಮ ಹಂತ",
+
+        createYourSkillPassport:
+            "ನಿಮ್ಮ SAKSHAM Skill Passport ರಚಿಸಿ",
+
+        skillPassportSaveDesc:
+            "ನೀವು ಆಯ್ಕೆ ಮಾಡಿದ discipline, skills ಮತ್ತು skill level ಅನ್ನು ನಿಮ್ಮ SAKSHAM profile ನಲ್ಲಿ ಸುರಕ್ಷಿತವಾಗಿ ಉಳಿಸಲಾಗುತ್ತದೆ.",
+
+        generateMySkillPassport:
+            "✨ ನನ್ನ Skill Passport ರಚಿಸಿ",
+
+        digitalProfile:
+            "ಡಿಜಿಟಲ್ ಪ್ರೊಫೈಲ್",
+
+        yourAYUSHSkillPassport:
+            "ನಿಮ್ಮ AYUSH Skill Passport 🪷",
+
+        professionalProfileCreated:
+            "ನಿಮ್ಮ ವೃತ್ತಿಪರ ಕೌಶಲ್ಯ ಪ್ರೊಫೈಲ್ ರಚಿಸಲಾಗಿದೆ.",
+
+        verifiedProfile:
+            "ಪರಿಶೀಲಿಸಲಾದ ಪ್ರೊಫೈಲ್",
+
+        sakshamStudent:
+            "SAKSHAM ವಿದ್ಯಾರ್ಥಿ",
+
+        ayushSkillProfile:
+            "AYUSH Skill Profile",
+
+        discipline:
+            "DISCIPLINE",
+
+        skillLevel:
+            "SKILL LEVEL",
+
+        selectedSkills:
+            "🛠️ ಆಯ್ಕೆ ಮಾಡಿದ ಕೌಶಲ್ಯಗಳು",
+
+        professionalSkills:
+            "ವೃತ್ತಿಪರ ಕೌಶಲ್ಯಗಳು",
+
+        footerTagline:
+            "ಕೌಶಲ್ಯಗಳನ್ನು ಸಬಲೀಕರಿಸುವುದು. ಅವಕಾಶಗಳೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುವುದು.",
+
+        selectDisciplineAlert:
+            "ದಯವಿಟ್ಟು ನಿಮ್ಮ AYUSH discipline ಆಯ್ಕೆ ಮಾಡಿ.",
+
+        selectSkillAlert:
+            "ದಯವಿಟ್ಟು ಕನಿಷ್ಠ ಒಂದು skill ಆಯ್ಕೆ ಮಾಡಿ.",
+
+        selectLevelAlert:
+            "ದಯವಿಟ್ಟು ನಿಮ್ಮ skill level ಆಯ್ಕೆ ಮಾಡಿ.",
+
+        passportSaved:
+            "AYUSH Skill Passport ಯಶಸ್ವಿಯಾಗಿ ಉಳಿಸಲಾಗಿದೆ! 🎉",
+
+        saveError:
+            "Skills ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು backend ಚಾಲನೆಯಲ್ಲಿದೆಯೇ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.",
+
+        panchakarma:
+            "ಪಂಚಕರ್ಮ",
+
+        herbalFormulation:
+            "ಹರ್ಬಲ್ ಫಾರ್ಮುಲೇಶನ್",
+
+        patientCounselling:
+            "ರೋಗಿ ಕೌನ್ಸೆಲಿಂಗ್",
+
+        clinicalCaseTaking:
+            "ಕ್ಲಿನಿಕಲ್ ಕೇಸ್ ಟೇಕಿಂಗ್",
+
+        researchPublication:
+            "ಸಂಶೋಧನೆ ಮತ್ತು ಪ್ರಕಟಣೆ",
+
+        pharmacovigilance:
+            "ಫಾರ್ಮಾಕೋವಿಜಿಲೆನ್ಸ್",
+
+        homeopathicPharmacy:
+            "ಹೋಮಿಯೋಪಥಿಕ್ ಫಾರ್ಮಸಿ",
+
+        materiaMedica:
+            "ಮೆಟೀರಿಯಾ ಮೆಡಿಕಾ",
+
+        yogaTherapy:
+            "ಯೋಗ ಥೆರಪಿ",
+
+        naturopathyDietPlanning:
+            "ನ್ಯಾಚುರೋಪತಿ ಡಯಟ್ ಪ್ಲಾನಿಂಗ್",
+
+        lifestyleManagement:
+            "ಜೀವನಶೈಲಿ ನಿರ್ವಹಣೆ",
+
+        unaniClinicalPractice:
+            "ಯುನಾನಿ ಕ್ಲಿನಿಕಲ್ ಪ್ರಾಕ್ಟೀಸ್",
+
+        siddhaClinicalPractice:
+            "ಸಿದ್ಧ ಕ್ಲಿನಿಕಲ್ ಪ್ರಾಕ್ಟೀಸ್"
     }
 
 };
 
 
-// =====================================
-// TRANSLATION FUNCTION
-// =====================================
+/* =========================================================
+   LANGUAGE ENGINE
+   ========================================================= */
 
 function changeLanguage(language) {
 
@@ -918,8 +1443,7 @@ function changeLanguage(language) {
         return;
     }
 
-
-    // Normal text translation
+    /* Normal text */
 
     document
         .querySelectorAll("[data-translate]")
@@ -943,7 +1467,7 @@ function changeLanguage(language) {
         });
 
 
-    // Placeholder translation
+    /* Placeholder text */
 
     document
         .querySelectorAll(
@@ -969,19 +1493,32 @@ function changeLanguage(language) {
         });
 
 
-    // Save selected language
+    /* Save selected language */
 
     localStorage.setItem(
         "sakshamLanguage",
         language
     );
 
+
+    /* Notify pages that language changed */
+
+    document.dispatchEvent(
+        new CustomEvent(
+            "sakshamLanguageChanged",
+            {
+                detail: {
+                    language: language
+                }
+            }
+        )
+    );
 }
 
 
-// =====================================
-// GET TRANSLATION
-// =====================================
+/* =========================================================
+   GET TRANSLATION
+   ========================================================= */
 
 function getTranslation(key) {
 
@@ -998,9 +1535,9 @@ function getTranslation(key) {
 }
 
 
-// =====================================
-// LOAD SAVED LANGUAGE
-// =====================================
+/* =========================================================
+   LOAD LANGUAGE
+   ========================================================= */
 
 function loadLanguage() {
 
@@ -1039,13 +1576,12 @@ function loadLanguage() {
     changeLanguage(
         savedLanguage
     );
-
 }
 
 
-// =====================================
-// START LANGUAGE SYSTEM
-// =====================================
+/* =========================================================
+   START
+   ========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",

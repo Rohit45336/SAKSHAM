@@ -21,13 +21,27 @@
 
         <div class="dashboard-nav-right">
 
-            <span class="welcome-text">
+            <span
+                class="welcome-text"
+                data-translate="ayushSkillPassport">
                 AYUSH Skill Passport
             </span>
 
+            <div class="language-selector">
+                <span>🌐</span>
+
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="ne">नेपाली</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                </select>
+            </div>
+
             <button
                 class="logout-btn"
-                onclick="logoutStudent()">
+                onclick="logoutStudent()"
+                data-translate="logout">
                 Logout
             </button>
 
@@ -44,15 +58,17 @@
 
             <div class="skills-hero-content">
 
-                <p class="dashboard-label">
+                <p
+                    class="dashboard-label"
+                    data-translate="ayushSkillPassport">
                     AYUSH SKILL PASSPORT
                 </p>
 
-                <h1>
+                <h1 data-translate="buildProfessionalSkillProfile">
                     Build Your Professional Skill Profile 🪷
                 </h1>
 
-                <p>
+                <p data-translate="buildProfessionalSkillProfileDesc">
                     Select your AYUSH discipline, choose your professional
                     skills and create your digital SAKSHAM Skill Passport.
                 </p>
@@ -76,17 +92,21 @@
                 </div>
 
                 <div>
-                    <span class="skill-step-label">
+
+                    <span
+                        class="skill-step-label"
+                        data-translate="stepOne">
                         STEP ONE
                     </span>
 
-                    <h2>
+                    <h2 data-translate="selectAYUSHDiscipline">
                         Select Your AYUSH Discipline 🎓
                     </h2>
 
-                    <p>
+                    <p data-translate="selectAYUSHDisciplineDesc">
                         Choose the discipline you are currently studying.
                     </p>
+
                 </div>
 
             </div>
@@ -94,13 +114,17 @@
 
             <div class="skill-form-area">
 
-                <label for="discipline">
+                <label
+                    for="discipline"
+                    data-translate="ayushDiscipline">
                     AYUSH Discipline
                 </label>
 
                 <select id="discipline">
 
-                    <option value="">
+                    <option
+                        value=""
+                        data-translate="selectYourDiscipline">
                         Select your discipline
                     </option>
 
@@ -141,23 +165,27 @@
                 </div>
 
                 <div>
-                    <span class="skill-step-label">
+
+                    <span
+                        class="skill-step-label"
+                        data-translate="stepTwo">
                         STEP TWO
                     </span>
 
-                    <h2>
+                    <h2 data-translate="selectProfessionalSkills">
                         Select Your Professional Skills 🛠️
                     </h2>
 
-                    <p>
+                    <p data-translate="selectProfessionalSkillsDesc">
                         Select the skills you currently have.
                     </p>
+
                 </div>
 
             </div>
 
 
-            <!-- Dynamic skills will appear here -->
+            <!-- Dynamic skills -->
             <div
                 id="skillsContainer"
                 class="ayush-skills-container">
@@ -168,11 +196,11 @@
                         🎓
                     </div>
 
-                    <h3>
+                    <h3 data-translate="selectYourDiscipline">
                         Select Your Discipline
                     </h3>
 
-                    <p>
+                    <p data-translate="selectDisciplineToViewSkills">
                         Choose an AYUSH discipline above to view
                         relevant professional skills.
                     </p>
@@ -194,17 +222,21 @@
                 </div>
 
                 <div>
-                    <span class="skill-step-label">
+
+                    <span
+                        class="skill-step-label"
+                        data-translate="stepThree">
                         STEP THREE
                     </span>
 
-                    <h2>
+                    <h2 data-translate="selectSkillLevel">
                         Select Your Skill Level 📈
                     </h2>
 
-                    <p>
+                    <p data-translate="selectSkillLevelDesc">
                         Tell us your overall professional skill level.
                     </p>
+
                 </div>
 
             </div>
@@ -212,25 +244,35 @@
 
             <div class="skill-level-area">
 
-                <label for="skillLevel">
+                <label
+                    for="skillLevel"
+                    data-translate="overallSkillLevel">
                     Your Overall Skill Level
                 </label>
 
                 <select id="skillLevel">
 
-                    <option value="">
+                    <option
+                        value=""
+                        data-translate="selectSkillLevelPlaceholder">
                         Select skill level
                     </option>
 
-                    <option value="Beginner">
+                    <option
+                        value="Beginner"
+                        data-translate="beginner">
                         Beginner
                     </option>
 
-                    <option value="Intermediate">
+                    <option
+                        value="Intermediate"
+                        data-translate="intermediate">
                         Intermediate
                     </option>
 
-                    <option value="Advanced">
+                    <option
+                        value="Advanced"
+                        data-translate="advanced">
                         Advanced
                     </option>
 
@@ -240,27 +282,59 @@
                 <div class="skill-level-info">
 
                     <div class="level-info-item">
+
                         <span>🌱</span>
+
                         <div>
-                            <strong>Beginner</strong>
-                            <small>Learning the fundamentals</small>
+
+                            <strong data-translate="beginner">
+                                Beginner
+                            </strong>
+
+                            <small data-translate="beginnerDesc">
+                                Learning the fundamentals
+                            </small>
+
                         </div>
+
                     </div>
 
+
                     <div class="level-info-item">
+
                         <span>📚</span>
+
                         <div>
-                            <strong>Intermediate</strong>
-                            <small>Comfortable with practical work</small>
+
+                            <strong data-translate="intermediate">
+                                Intermediate
+                            </strong>
+
+                            <small data-translate="intermediateDesc">
+                                Comfortable with practical work
+                            </small>
+
                         </div>
+
                     </div>
 
+
                     <div class="level-info-item">
+
                         <span>⭐</span>
+
                         <div>
-                            <strong>Advanced</strong>
-                            <small>Strong practical expertise</small>
+
+                            <strong data-translate="advanced">
+                                Advanced
+                            </strong>
+
+                            <small data-translate="advancedDesc">
+                                Strong practical expertise
+                            </small>
+
                         </div>
+
                     </div>
 
                 </div>
@@ -279,22 +353,25 @@
 
             <div class="passport-action-content">
 
-                <span class="skill-step-label">
+                <span
+                    class="skill-step-label"
+                    data-translate="finalStep">
                     FINAL STEP
                 </span>
 
-                <h2>
+                <h2 data-translate="createYourSkillPassport">
                     Create Your SAKSHAM Skill Passport
                 </h2>
 
-                <p>
+                <p data-translate="skillPassportSaveDesc">
                     Your selected discipline, skills and skill level
                     will be securely saved to your SAKSHAM profile.
                 </p>
 
                 <button
                     class="primary-btn passport-generate-btn"
-                    onclick="generateSkillPassport()">
+                    onclick="generateSkillPassport()"
+                    data-translate="generateMySkillPassport">
 
                     ✨ Generate My Skill Passport
 
@@ -314,20 +391,26 @@
             <div class="passport-result-header">
 
                 <div>
-                    <span class="skill-step-label">
+
+                    <span
+                        class="skill-step-label"
+                        data-translate="digitalProfile">
                         DIGITAL PROFILE
                     </span>
 
-                    <h2>
+                    <h2 data-translate="yourAYUSHSkillPassport">
                         Your AYUSH Skill Passport 🪷
                     </h2>
 
-                    <p>
+                    <p data-translate="professionalProfileCreated">
                         Your professional skill profile has been created.
                     </p>
+
                 </div>
 
-                <div class="passport-badge">
+                <div
+                    class="passport-badge"
+                    data-translate="verifiedProfile">
                     VERIFIED PROFILE
                 </div>
 
@@ -342,11 +425,11 @@
 
                 <div class="passport-profile-info">
 
-                    <h3>
+                    <h3 data-translate="sakshamStudent">
                         SAKSHAM Student
                     </h3>
 
-                    <p>
+                    <p data-translate="ayushSkillProfile">
                         AYUSH Skill Profile
                     </p>
 
@@ -359,7 +442,7 @@
 
                 <div class="passport-detail-box">
 
-                    <span>
+                    <span data-translate="discipline">
                         DISCIPLINE
                     </span>
 
@@ -371,7 +454,7 @@
 
                 <div class="passport-detail-box">
 
-                    <span>
+                    <span data-translate="skillLevel">
                         SKILL LEVEL
                     </span>
 
@@ -387,11 +470,11 @@
 
                 <div class="passport-skills-title">
 
-                    <h3>
+                    <h3 data-translate="selectedSkills">
                         🛠️ Selected Skills
                     </h3>
 
-                    <span>
+                    <span data-translate="professionalSkills">
                         Professional Skills
                     </span>
 
@@ -410,7 +493,8 @@
 
             <button
                 class="dashboard-card-btn"
-                onclick="window.location.href='student-dashboard.html'">
+                onclick="window.location.href='student-dashboard.html'"
+                data-translate="backToDashboard">
 
                 ← Back to Dashboard
 
@@ -428,18 +512,22 @@
             SAKSHAM
         </div>
 
-        <p>
+        <p data-translate="footerTagline">
             Empowering Skills. Connecting Opportunities.
         </p>
 
         <p class="copyright">
-            © 2026 SAKSHAM. All Rights Reserved.
+            © 2026 SAKSHAM.
+            <span data-translate="allRightsReserved">
+                All Rights Reserved.
+            </span>
         </p>
 
     </footer>
 
 
     <script src="script.js"></script>
+    <script src="translations.js"></script>
 
 
     <!-- AYUSH Skill Logic -->
@@ -495,6 +583,28 @@
         };
 
 
+        const skillTranslationKeys = {
+
+            "Panchakarma": "panchakarma",
+            "Herbal Formulation": "herbalFormulation",
+            "Patient Counselling": "patientCounselling",
+            "Clinical Case-taking": "clinicalCaseTaking",
+            "Research & Publication": "researchPublication",
+            "Pharmacovigilance": "pharmacovigilance",
+
+            "Homeopathic Pharmacy": "homeopathicPharmacy",
+            "Materia Medica": "materiaMedica",
+
+            "Yoga Therapy": "yogaTherapy",
+            "Naturopathy Diet Planning": "naturopathyDietPlanning",
+            "Lifestyle Management": "lifestyleManagement",
+
+            "Unani Clinical Practice": "unaniClinicalPractice",
+            "Siddha Clinical Practice": "siddhaClinicalPractice"
+
+        };
+
+
         const disciplineSelect =
             document.getElementById("discipline");
 
@@ -520,11 +630,13 @@
                                 🎓
                             </div>
 
-                            <h3>
+                            <h3
+                                data-translate="selectYourDiscipline">
                                 Select Your Discipline
                             </h3>
 
-                            <p>
+                            <p
+                                data-translate="selectDisciplineToViewSkills">
                                 Choose an AYUSH discipline above to view
                                 relevant professional skills.
                             </p>
@@ -532,46 +644,69 @@
                         </div>
                     `;
 
+                    changeLanguage(
+                        localStorage.getItem(
+                            "sakshamLanguage"
+                        ) || "en"
+                    );
+
                     return;
                 }
 
 
-                const skills = ayushSkills[discipline];
+                const skills =
+                    ayushSkills[discipline];
 
 
-                skills.forEach(function (skill, index) {
+                skills.forEach(
+                    function (skill) {
 
-                    const skillItem =
-                        document.createElement("label");
+                        const skillItem =
+                            document.createElement("label");
 
-                    skillItem.className =
-                        "ayush-skill-item";
-
-
-                    skillItem.innerHTML = `
-
-                        <input
-                            type="checkbox"
-                            value="${skill}"
-                            class="skill-checkbox"
-                        >
-
-                        <span class="skill-check-box">
-                            ✓
-                        </span>
-
-                        <span class="skill-item-text">
-                            ${skill}
-                        </span>
-
-                    `;
+                        skillItem.className =
+                            "ayush-skill-item";
 
 
-                    skillsContainer.appendChild(
-                        skillItem
-                    );
+                        const translationKey =
+                            skillTranslationKeys[skill] ||
+                            skill;
 
-                });
+
+                        skillItem.innerHTML = `
+
+                            <input
+                                type="checkbox"
+                                value="${skill}"
+                                class="skill-checkbox"
+                            >
+
+                            <span class="skill-check-box">
+                                ✓
+                            </span>
+
+                            <span
+                                class="skill-item-text"
+                                data-translate="${translationKey}">
+                                ${skill}
+                            </span>
+
+                        `;
+
+
+                        skillsContainer.appendChild(
+                            skillItem
+                        );
+
+                    }
+                );
+
+
+                changeLanguage(
+                    localStorage.getItem(
+                        "sakshamLanguage"
+                    ) || "en"
+                );
 
             }
         );
@@ -588,7 +723,9 @@
 
             if (!studentId) {
 
-                alert("Please login first.");
+                alert(
+                    getTranslation("loginFirst")
+                );
 
                 window.location.href =
                     "login.html";
@@ -619,7 +756,9 @@
             if (!discipline) {
 
                 alert(
-                    "Please select your AYUSH discipline."
+                    getTranslation(
+                        "selectDisciplineAlert"
+                    )
                 );
 
                 return;
@@ -630,7 +769,9 @@
             if (selectedSkills.length === 0) {
 
                 alert(
-                    "Please select at least one skill."
+                    getTranslation(
+                        "selectSkillAlert"
+                    )
                 );
 
                 return;
@@ -641,7 +782,9 @@
             if (!level) {
 
                 alert(
-                    "Please select your skill level."
+                    getTranslation(
+                        "selectLevelAlert"
+                    )
                 );
 
                 return;
@@ -692,7 +835,9 @@
 
                 if (!response.ok) {
 
-                    alert(data.message);
+                    alert(
+                        data.message
+                    );
 
                     return;
 
@@ -733,6 +878,17 @@
                             "passport-skill";
 
 
+                        const translationKey =
+                            skillTranslationKeys[skill] ||
+                            skill;
+
+
+                        skillTag.setAttribute(
+                            "data-translate",
+                            translationKey
+                        );
+
+
                         skillTag.textContent =
                             skill;
 
@@ -742,6 +898,13 @@
                         );
 
                     }
+                );
+
+
+                changeLanguage(
+                    localStorage.getItem(
+                        "sakshamLanguage"
+                    ) || "en"
                 );
 
 
@@ -758,7 +921,9 @@
 
 
                 alert(
-                    "AYUSH Skill Passport saved successfully! 🎉"
+                    getTranslation(
+                        "passportSaved"
+                    )
                 );
 
 
@@ -771,8 +936,9 @@
 
 
                 alert(
-                    "Unable to save skills. " +
-                    "Please make sure the backend is running."
+                    getTranslation(
+                        "saveError"
+                    )
                 );
 
             }
